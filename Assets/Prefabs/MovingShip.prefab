@@ -68,6 +68,7 @@ Transform:
   - {fileID: 7521571652333901624}
   - {fileID: 6124284291763613344}
   - {fileID: 7533716155423390006}
+  - {fileID: 2342210284985324257}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -103,6 +104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_boatController: {fileID: 0}
   m_steerFactor: 0
+  IsMoving: 0
   slowTurnMultiplier: 0
   slowTurnFactorCurve:
     serializedVersion: 2
@@ -5071,9 +5073,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   m_firstRotationDuration: 2
   m_secondRotationDuration: 2
-  m_ship: {fileID: 7521571652333901624}
-  m_accumulatedQuat: {x: 0, y: 0, z: 0, w: 0}
-  boatManager: {fileID: 0}
+  m_boatManager: {fileID: 0}
 --- !u!1 &7521571652392006891
 GameObject:
   m_ObjectHideFlags: 0
@@ -15250,6 +15250,68 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!1001 &6390623679605114142
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6096775002554344039}
+    m_Modifications:
+    - target: {fileID: 1774629956662017945, guid: bf8ee6e1a77a29c4e8ca023e523297dc, type: 3}
+      propertyPath: m_Name
+      value: ShipAudio
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660771421405911039, guid: bf8ee6e1a77a29c4e8ca023e523297dc, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660771421405911039, guid: bf8ee6e1a77a29c4e8ca023e523297dc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660771421405911039, guid: bf8ee6e1a77a29c4e8ca023e523297dc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660771421405911039, guid: bf8ee6e1a77a29c4e8ca023e523297dc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660771421405911039, guid: bf8ee6e1a77a29c4e8ca023e523297dc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660771421405911039, guid: bf8ee6e1a77a29c4e8ca023e523297dc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660771421405911039, guid: bf8ee6e1a77a29c4e8ca023e523297dc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660771421405911039, guid: bf8ee6e1a77a29c4e8ca023e523297dc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660771421405911039, guid: bf8ee6e1a77a29c4e8ca023e523297dc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660771421405911039, guid: bf8ee6e1a77a29c4e8ca023e523297dc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660771421405911039, guid: bf8ee6e1a77a29c4e8ca023e523297dc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bf8ee6e1a77a29c4e8ca023e523297dc, type: 3}
+--- !u!4 &2342210284985324257 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8660771421405911039, guid: bf8ee6e1a77a29c4e8ca023e523297dc, type: 3}
+  m_PrefabInstance: {fileID: 6390623679605114142}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7482627174334599510
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15304,6 +15366,10 @@ PrefabInstance:
     - target: {fileID: 1106340869151647843, guid: a0a009160a9b23a4d93303f86e3013cd, type: 3}
       propertyPath: m_Name
       value: NighttimeLight
+      objectReference: {fileID: 0}
+    - target: {fileID: 1106340869151647902, guid: a0a009160a9b23a4d93303f86e3013cd, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0a009160a9b23a4d93303f86e3013cd, type: 3}
