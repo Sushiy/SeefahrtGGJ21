@@ -22,11 +22,10 @@ public class CameraTarget : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         Shader.SetGlobalVector(shader_SphereOriginID, transform.position);
 
         transform.position = Vector3.Lerp(transform.position, ship.transform.position + ship.transform.forward * ship.ForwardVel * aheadFactor, 1 - Mathf.Exp(-followSpeed * Time.deltaTime));
-
     }
 }
