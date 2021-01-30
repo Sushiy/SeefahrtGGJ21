@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2567ecd61bc8ed47a699ea635b1a911, type: 3}
+  m_Name: Curve_Polarstar_Scaling
+  m_EditorClassIdentifier: 
+  _data:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.00858897
+      inSlope: 0.262855
+      outSlope: 0.262855
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.08975944
+    - serializedVersion: 3
+      time: 0.36003363
+      value: 1.0737981
+      inSlope: 4.5816827
+      outSlope: 4.5816827
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.6010693
+      value: 1.005897
+      inSlope: -12.680752
+      outSlope: -12.680752
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.044798806
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.66017985
+      value: 1.0943654
+      inSlope: -8.48567
+      outSlope: -8.48567
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 1
+    - serializedVersion: 3
+      time: 0.7145144
+      value: 1.0044541
+      inSlope: 0.26438767
+      outSlope: 0.26438767
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 1
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
