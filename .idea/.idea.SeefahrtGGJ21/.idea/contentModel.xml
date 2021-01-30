@@ -7,16 +7,37 @@
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="CameraTarget.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="Boat" t="Include">
             <e p="BoatControl.cs" t="Include" />
             <e p="BoatManager.cs" t="Include" />
+            <e p="BoatRotator.cs" t="Include" />
           </e>
           <e p="Camera" t="Include">
             <e p="OrbitalCamera.cs" t="Include" />
           </e>
+          <e p="QuestSystem" t="Include">
+            <e p="Classes" t="Include">
+              <e p="QuestCompletionParameters.cs" t="Include" />
+              <e p="QuestObjectiveAsset.cs" t="Include" />
+              <e p="QuestTextCompassProcessor.cs" t="Include" />
+              <e p="QuestTextProcessor.cs" t="Include" />
+            </e>
+            <e p="QuestObjective.cs" t="Include" />
+            <e p="QuestPopup.cs" t="Include" />
+            <e p="QuestSubsystem.cs" t="Include" />
+          </e>
           <e p="SimpleCameraController.cs" t="Include" />
         </e>
+        <e p="SeagullRotator.cs" t="Include" />
+        <e p="Shaders" t="Include">
+          <e p="DioramaMain.shader" t="Include" />
+          <e p="MainClipped.shader" t="Include" />
+          <e p="NewSurfaceShader.shader" t="Include" />
+          <e p="WaterClipped.shader" t="Include" />
+        </e>
+        <e p="SkyManager.cs" t="Include" />
         <e p="TutorialInfo" t="Include">
           <e p="Scripts" t="Include">
             <e p="Editor" t="Include">
