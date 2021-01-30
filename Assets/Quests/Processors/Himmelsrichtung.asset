@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6538238f65aef614987d9da36658d1f1, type: 3}
-  m_Name: Himmelskompass
+  m_Name: Himmelsrichtung
   m_EditorClassIdentifier: 
   Tag: '{Himmelsrichtung}'
   ColorizeReplacement: 1

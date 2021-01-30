@@ -8,7 +8,7 @@ public class QuestPlayerObjectiveDirection : QuestTextCompassProcessor
     /// <inheritdoc />
     public override float CalculateAngle(QuestCompletionParameters Params)
     {
-        return Vector3.Angle(Params.CompletedObjective.transform.position - Params.CompletionPlayerLocation,
+        return Vector3.Angle(Params.CompletionPlayerLocation - Params.CompletedObjective.transform.position ,
             Vector3.forward) % 360.0F;
     }
 }

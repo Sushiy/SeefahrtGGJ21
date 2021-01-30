@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _objectiveTitle: 'Destination: Mystico'
   _objectiveTexts:
-  - 'We arrived from {PlayerDirection} at {Place(Shipwrecking Grove)}. {Time(At 4
-    o'' clock)} we discovered the {Place(Shimmering Observatory)} and sailed {Time(two
+  - 'We arrived from {PlayerObjectiveDir} at {Place(Shipwrecking Grove)}. {Time(At
+    4 o'' clock)} we discovered the {Place(Shimmering Observatory)} and sailed {Time(two
     days)} into this direction.
 
     There we made a {Time(quarter clock-wise turn)}

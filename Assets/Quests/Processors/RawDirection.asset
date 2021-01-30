@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50209662db100234abe31d6299a53df0, type: 3}
   m_Name: RawDirection
   m_EditorClassIdentifier: 
-  Tag: '{Place}'
+  Tag: '{RawDirection}'
   ColorizeReplacement: 1
   ReplacementColor: {r: 0.4117647, g: 0.2509804, b: 0.64705884, a: 1}
   MakeReplacementBold: 1

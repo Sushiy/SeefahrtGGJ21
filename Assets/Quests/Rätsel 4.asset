@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _objectiveTitle: 'Destination: Mystico'
   _objectiveTexts:
-  - Sail towards {Himmelskompass} until you cross the {Place(Spinereef)}. Sail from
+  - Sail towards {Himmelsrichtung} until you cross the {Place(Spinereef)}. Sail from
     their onward toward {RawDirection(North-East)}. {Time(3 days)} you must change
     your course 30 degree {RawDirection(Southwards)}. On the next day you should
     hear the seagulls on the shores of the {Place(Habour of Newport)}.
@@ -22,6 +22,7 @@ MonoBehaviour:
   ConfirmText: Auf auf und davon!
   _objectiveTeller: {fileID: 21300000, guid: de005c1e8625c8d41aa176e39b6e4d63, type: 3}
   TextProcessors:
+  - {fileID: 11400000, guid: de08bae9e55e1394f81fee8872d5753c, type: 2}
   - {fileID: 11400000, guid: d844ecffa23b6954aabb86ecf6844355, type: 2}
   - {fileID: 11400000, guid: 57b116ae7f4cdeb4daff9afb4c0045b0, type: 2}
   - {fileID: 11400000, guid: 3aa48c9f1177f764c91f68781a11de89, type: 2}
