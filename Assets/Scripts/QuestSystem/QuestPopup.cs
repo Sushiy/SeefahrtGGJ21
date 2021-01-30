@@ -15,9 +15,17 @@ public class QuestPopup : MonoBehaviour
 
     private string[] ContentTexts;
 
+    private QuestTextProcessor[] Processors;
+    private QuestCompletionParameters CompletionParams;
+
+
     public virtual void Setup(QuestObjectiveAsset Asset, QuestCompletionParameters Params)
     {
         TitleTextElement.text = Asset.ObjectiveTitle;
+
+        Processors = Asset.TextProcessors.ToArray();
+
+        CompletionParams = Params;
 
         ContentTexts = Asset.ObjectiveTexts;
         StartCoroutine(DisplayFurtherText());
@@ -36,7 +44,12 @@ public class QuestPopup : MonoBehaviour
         int i = 0;
         for (; i < ContentTexts.Length; ++i)
         {
-            ContentTextElement.text += ContentTexts[i];
+            string NewContent = ContentTexts[i];
+            foreach (var questTextProcessor in Processors)
+            {
+                NewContent = questTextProcessor.Process(NewContent, CompletionParams);
+            }
+            ContentTextElement.text += NewContent;
             yield return new WaitForSeconds(0.5F);
         }
     }
