@@ -2,16 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="79f8d6d4-204f-450a-a47b-f287f684f0c2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Boat/BoatRotator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Boat/BoatRotator.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SeefahrtGGJ21/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SeefahrtGGJ21/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SeefahrtGGJ21/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SeefahrtGGJ21/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SeefahrtGGJ21/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SeefahrtGGJ21/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MovingShip.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MovingShip.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Movement_Test.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Movement_Test.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Boat/BoatManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Boat/BoatManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Boat/BoatRotator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Boat/BoatRotator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera/OrbitalCamera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Camera/OrbitalCamera.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,9 +21,9 @@
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Scripts/Boat/BoatControl.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Camera/OrbitalCamera.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Boat/BoatManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Boat/BoatRotator.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Camera/OrbitalCamera.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1nl8USvz4lq7Nb7ZDH6AZjA3ASf" />

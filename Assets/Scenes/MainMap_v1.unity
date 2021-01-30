@@ -1034,7 +1034,6 @@ GameObject:
   m_Component:
   - component: {fileID: 723207428}
   - component: {fileID: 723207427}
-  - component: {fileID: 723207426}
   - component: {fileID: 723207429}
   - component: {fileID: 723207430}
   m_Layer: 0
@@ -1044,14 +1043,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &723207426
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 723207425}
-  m_Enabled: 1
 --- !u!20 &723207427
 Camera:
   m_ObjectHideFlags: 0
@@ -2038,6 +2029,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1232900331, guid: 14ffe6cb29468a54da4f18e524952c37, type: 3}
+      propertyPath: _allowDoubleQuests
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6096775002554344034, guid: 14ffe6cb29468a54da4f18e524952c37, type: 3}
       propertyPath: m_Name
       value: MovingShip
@@ -2086,9 +2081,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7533716155423390152, guid: 14ffe6cb29468a54da4f18e524952c37, type: 3}
-      propertyPath: m_Shadows.m_Type
-      value: 0
+    - target: {fileID: 7533716155423390007, guid: 14ffe6cb29468a54da4f18e524952c37, type: 3}
+      propertyPath: _isNighttime
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14ffe6cb29468a54da4f18e524952c37, type: 3}

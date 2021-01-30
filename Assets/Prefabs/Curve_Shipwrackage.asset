@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2567ecd61bc8ed47a699ea635b1a911, type: 3}
+  m_Name: Curve_Shipwrackage
+  m_EditorClassIdentifier: 
+  _data:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 136
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.4431439
+      value: 0.48482406
+      inSlope: 0.86543614
+      outSlope: 0.86543614
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.31493708
+    - serializedVersion: 3
+      time: 1.2824596
+      value: -0.42096445
+      inSlope: -5.65995
+      outSlope: -5.65995
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.08633276
+    - serializedVersion: 3
+      time: 1.9684119
+      value: 0.36746275
+      inSlope: -8.674333
+      outSlope: -8.674333
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.07119425
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 2.6013842
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 136
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 0
+    m_RotationOrder: 4

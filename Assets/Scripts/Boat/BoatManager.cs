@@ -12,6 +12,7 @@ public class BoatManager : MonoBehaviour
    
     public float m_steerFactor;
 
+    public bool IsMoving;
     // Start is called before the first frame update
     void Start()
     {
@@ -43,6 +44,7 @@ public class BoatManager : MonoBehaviour
     private void Move()
     {
         float forwardVel = Mathf.Abs(m_boatController.ForwardVel) <= 0.5f ? 0 : m_boatController.ForwardVel;
+        IsMoving = forwardVel > 0;
         transform.position += transform.forward * forwardVel * Time.fixedDeltaTime;
     }
 
