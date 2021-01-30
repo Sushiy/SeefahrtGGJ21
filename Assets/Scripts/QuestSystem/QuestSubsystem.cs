@@ -31,19 +31,32 @@ public class QuestSubsystem : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         //~ todo(Hati) This should be attached to the player
-        QuestObjective objectives = other.GetComponent<QuestObjective>();
-        if (objectives)
+        QuestObjective objective = other.GetComponent<QuestObjective>();
+        if (objective)
         {
+            /// Abort Handling this quest when we already had it
+            if (FinishedQuests.Contains(objective)) return;
+            
+            FinishedQuests.Add(objective);
+            
             Debug.LogFormat("QuestSubsystem found Objective: {0}", other.gameObject.name);
 
-            GameObject prefabToInstantiate = objectives.GetAsset().PrefabToInstantiate;
+            GameObject prefabToInstantiate = objective.GetAsset().PrefabToInstantiate;
             if (prefabToInstantiate)
             {
-                var go = GameObject.Instantiate(objectives.GetAsset().PrefabToInstantiate);
+                var go = GameObject.Instantiate(objective.GetAsset().PrefabToInstantiate);
 
                 var popup = go.GetComponent<QuestPopup>();
 
-                popup.Setup(objectives.GetAsset());
+                Transform playerTransform = this.transform;
+                popup.Setup(objective.GetAsset(), new QuestCompletionParameters()
+                {
+                    CompletedObjective = objective,
+                    PlayerGameObject = this.gameObject,
+
+                    CompletionLocation = playerTransform.position,
+                    CompletionRotation = playerTransform.rotation
+                });
             }
         }
     }
