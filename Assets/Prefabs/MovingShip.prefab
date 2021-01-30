@@ -44,6 +44,9 @@ GameObject:
   - component: {fileID: 6096775002554344039}
   - component: {fileID: 6096775002554344036}
   - component: {fileID: 6096775002554344037}
+  - component: {fileID: 1232900333}
+  - component: {fileID: 1232900332}
+  - component: {fileID: 1232900331}
   m_Layer: 0
   m_Name: MovingShip
   m_TagString: Untagged
@@ -58,9 +61,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6096775002554344034}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.4, y: 0.098, z: 42.5}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7521571652333901624}
   - {fileID: 6124284291763613344}
@@ -82,9 +85,9 @@ MonoBehaviour:
   m_forwardVel: 0
   m_turnVel: 0
   m_speedModifier: 0.01
-  m_turnModifier: 0.01
-  m_maxVerticalSpeed: 10
-  m_maxTurnSpeed: 0.5
+  m_turnModifier: 0.2
+  m_maxVerticalSpeed: 3
+  m_maxTurnSpeed: 0.75
 --- !u!114 &6096775002554344037
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -99,6 +102,49 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_boatController: {fileID: 0}
   m_steerFactor: 0
+--- !u!54 &1232900333
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6096775002554344034}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!135 &1232900332
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6096775002554344034}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2.42
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1232900331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6096775002554344034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5496c4bc4db93314b892f0ec57c384f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FinishedQuests: []
+  _allowDoubleQuests: 0
 --- !u!1 &7290860326140094192
 GameObject:
   m_ObjectHideFlags: 0
@@ -126,7 +172,7 @@ Transform:
   m_GameObject: {fileID: 7290860326140094192}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0.524}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_Children: []
   m_Father: {fileID: 6124284291763613344}
   m_RootOrder: 2
@@ -204,7 +250,7 @@ ParticleSystem:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  moveWithTransform: 0
+  moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
   randomSeed: 0
@@ -267,7 +313,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 0
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -2187,7 +2233,7 @@ ParticleSystem:
         m_RotationOrder: 4
     inWorldSpace: 0
   InheritVelocityModule:
-    enabled: 1
+    enabled: 0
     m_Mode: 0
     m_Curve:
       serializedVersion: 2
@@ -5025,7 +5071,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c9cc333978dc3f44ca21d040ff2d5bbd, type: 2}
+  - {fileID: 2100000, guid: 93c455d8830bcdf4cba972740f6518ab, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5172,7 +5218,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c9cc333978dc3f44ca21d040ff2d5bbd, type: 2}
+  - {fileID: 2100000, guid: 93c455d8830bcdf4cba972740f6518ab, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5221,7 +5267,7 @@ Transform:
   m_GameObject: {fileID: 7521571653118239876}
   m_LocalRotation: {x: -0.041462943, y: 0.9372859, z: 0.13440149, w: 0.31892356}
   m_LocalPosition: {x: 0.11599994, y: -0.034999847, z: -0.2765007}
-  m_LocalScale: {x: 0.19999997, y: 0.2, z: 0.2}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_Children: []
   m_Father: {fileID: 6124284291763613344}
   m_RootOrder: 0
@@ -10065,7 +10111,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c9cc333978dc3f44ca21d040ff2d5bbd, type: 2}
+  - {fileID: 2100000, guid: 93c455d8830bcdf4cba972740f6518ab, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10146,7 +10192,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c9cc333978dc3f44ca21d040ff2d5bbd, type: 2}
+  - {fileID: 2100000, guid: 93c455d8830bcdf4cba972740f6518ab, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10227,7 +10273,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c9cc333978dc3f44ca21d040ff2d5bbd, type: 2}
+  - {fileID: 2100000, guid: 93c455d8830bcdf4cba972740f6518ab, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10308,7 +10354,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c9cc333978dc3f44ca21d040ff2d5bbd, type: 2}
+  - {fileID: 2100000, guid: 93c455d8830bcdf4cba972740f6518ab, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10357,7 +10403,7 @@ Transform:
   m_GameObject: {fileID: 9184355236794349898}
   m_LocalRotation: {x: 0.05054151, y: 0.9337715, z: 0.13125746, w: -0.32907122}
   m_LocalPosition: {x: -0.17605874, y: -0.034999847, z: -0.22374344}
-  m_LocalScale: {x: 0.20000002, y: 0.2, z: 0.19999999}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_Children: []
   m_Father: {fileID: 6124284291763613344}
   m_RootOrder: 1

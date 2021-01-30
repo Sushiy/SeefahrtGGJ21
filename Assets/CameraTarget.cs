@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[ExecuteAlways]
 public class CameraTarget : MonoBehaviour
 {
-    string shader_SphereOrigin = "_SphereOrigin";
     int shader_SphereOriginID;
+    int shader_useClip;
 
     public Material[] dioramaMaterials;
 
@@ -18,7 +17,13 @@ public class CameraTarget : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        shader_SphereOriginID = Shader.PropertyToID(shader_SphereOrigin);
+        shader_SphereOriginID = Shader.PropertyToID("_SphereOrigin");
+        shader_useClip = Shader.PropertyToID("_UseClip");
+    }
+
+    private void Start()
+    {
+        Shader.SetGlobalFloat(shader_useClip, 1);
     }
 
     // Update is called once per frame
@@ -27,5 +32,10 @@ public class CameraTarget : MonoBehaviour
         Shader.SetGlobalVector(shader_SphereOriginID, transform.position);
 
         transform.position = Vector3.Lerp(transform.position, ship.transform.position + ship.transform.forward * ship.ForwardVel * aheadFactor, 1 - Mathf.Exp(-followSpeed * Time.deltaTime));
+    }
+
+    private void OnDisable()
+    {
+        Shader.SetGlobalFloat(shader_useClip, 0);
     }
 }
