@@ -32,11 +32,8 @@ public class QuestPopup : MonoBehaviour
 
         TellerIcon.sprite = Asset.ObjectiveTeller;
         ConfirmButtonText.text = Asset.ConfirmText;
-        
-        ConfirmButton.onClick.AddListener(() =>
-        {
-            Destroy(this.gameObject);
-        });
+
+        ConfirmButton.onClick.AddListener(() => { Destroy(this.gameObject); });
     }
 
     private IEnumerator DisplayFurtherText()
@@ -47,10 +44,17 @@ public class QuestPopup : MonoBehaviour
             string NewContent = ContentTexts[i];
             foreach (var questTextProcessor in Processors)
             {
-                NewContent = questTextProcessor.Process(NewContent, CompletionParams);
+                string previousProcess;
+                do
+                {
+                    previousProcess = NewContent;
+                    NewContent = questTextProcessor.Process(NewContent, CompletionParams);
+                } while (NewContent != previousProcess);
             }
+
             ContentTextElement.text += NewContent;
             yield return new WaitForSeconds(0.5F);
+            ContentTextElement.text += '\n';
         }
     }
 }
