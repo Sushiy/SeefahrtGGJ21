@@ -54,8 +54,9 @@ public class QuestSubsystem : MonoBehaviour
                     CompletedObjective = objective,
                     PlayerGameObject = this.gameObject,
 
-                    CompletionLocation = playerTransform.position,
-                    CompletionRotation = playerTransform.rotation
+                    CompletionPlayerLocation = playerTransform.position,
+                    CompletionRotation = playerTransform.rotation,
+                    NextObjective = objective.NextObjective,
                 });
             }
         }
