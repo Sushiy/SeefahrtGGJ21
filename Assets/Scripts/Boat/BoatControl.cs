@@ -29,7 +29,7 @@ public class BoatControl : MonoBehaviour
     {
         
         m_forwardVel += (speed * m_speedModifier);
-        m_forwardVel = Mathf.Clamp(m_forwardVel, -m_maxVerticalSpeed, m_maxVerticalSpeed);
+        m_forwardVel = Mathf.Clamp(m_forwardVel, 0, m_maxVerticalSpeed);
     }
 
     public void AddTurnSpeed(float turnSpeed)
