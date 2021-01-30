@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -13,17 +14,28 @@ public class SkyManager : MonoBehaviour
     public Gradient skyGradient;
     public float skyLightIntensityControl = 1.0f;
 
+    /// <summary>
+    /// Value = 1, there is daylight
+    /// Value = 0 there no daylight
+    /// Value (0..1) transition
+    /// </summary>
     public UnityEvent<float> DayNightEvent { get; protected set; }
     private bool broadcasted;
 
 
     private int shader_TimeValue;
 
+    private void Awake()
+    {
+        DayNightEvent = new UnityEvent<float>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
         timeSpeed = 24.0f / dayLengthMinutes / 60.0f;
         shader_TimeValue = Shader.PropertyToID("_TimeValue");
+
     }
 
     // Update is called once per frame
@@ -38,21 +50,22 @@ public class SkyManager : MonoBehaviour
         float timeOfDayNorm = timeOfDay / 24.0f;
         Shader.SetGlobalFloat(shader_TimeValue, timeOfDayNorm);
         RenderSettings.ambientLight = skyGradient.Evaluate(timeOfDayNorm) * skyLightIntensityControl;
-        
+
+        float SunLightAlpha = skyGradient.Evaluate(timeOfDayNorm).r;
         /// broadcast anything between 0-1 but >=0 and <=1 only once
-        if (timeOfDayNorm >= 1.0F && !broadcasted)
+        if (SunLightAlpha >= 1.0F && !broadcasted)
         {
             broadcasted = true;
-            DayNightEvent.Invoke(timeOfDayNorm);
+            DayNightEvent.Invoke(SunLightAlpha);
         }
-        else if (timeOfDayNorm <= 0.0F && !broadcasted)
+        else if (SunLightAlpha <= 0.0F && !broadcasted)
         {
             broadcasted = true;
-            DayNightEvent.Invoke(timeOfDayNorm);
+            DayNightEvent.Invoke(SunLightAlpha);
         }
         else
         {
-            DayNightEvent.Invoke(timeOfDayNorm);
+            DayNightEvent.Invoke(SunLightAlpha);
             broadcasted = false;
         }
 

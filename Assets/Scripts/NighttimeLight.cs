@@ -23,12 +23,21 @@ public class NighttimeLight : MonoBehaviour
     private float FlickerTarget;
     [SerializeField] private float FlickerTiming = 0.5F;
 
+    private SkyManager _skyManager;
+    
     private void Start()
     {
         light = GetComponent<Light>();
 
         StartCoroutine(StartFlickering());
         FlickerValue = FlickerTarget;
+
+        _skyManager = FindObjectOfType<SkyManager>();
+
+        _skyManager.DayNightEvent.AddListener((float V) =>
+        {
+            _isNighttime = V < 0.5F;
+        });
     }
 
     private IEnumerator StartFlickering()
