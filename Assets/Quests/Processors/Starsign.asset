@@ -27,3 +27,13 @@ MonoBehaviour:
     Value: Cygnus
   - Key: Widder
     Value: Aries
+  - Key: Skorpion
+    Value: Scorpio
+  - Key: Jungfrau
+    Value: Virgo
+  - Key: "Gro\xDFerWagen"
+    Value: Big Dipper
+  - Key: KleinerWagen
+    Value: Little Dipper
+  - Key: "Sch\xFCtze"
+    Value: Sagittarius

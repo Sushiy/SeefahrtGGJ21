@@ -10,11 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78704c3b0d194a14ab6d31176cf4b08e, type: 3}
-  m_Name: Test Objective 2
+  m_Name: "R\xE4tsel 3"
   m_EditorClassIdentifier: 
-  _objectiveTitle: Flaschenpost!
+  _objectiveTitle: 'Destination: Mystico'
   _objectiveTexts:
-  - "Ah der Norden. Sch\xF6n k\xFChl hier"
+  - "The {Starsign(Gro\xDFerWagen)} protects the {Starsign(KleinerWagen)} on his
+    first hunt.\nFollow along."
   _prefabToInstantiate: {fileID: 7722018539782406556, guid: 43ee0fb7caeac964ebf5465c8fa5584b, type: 3}
-  ConfirmText: Ziel erreicht.
+  ConfirmText: Auf auf und davon!
   _objectiveTeller: {fileID: 21300000, guid: de005c1e8625c8d41aa176e39b6e4d63, type: 3}
+  TextProcessors:
+  - {fileID: 11400000, guid: d844ecffa23b6954aabb86ecf6844355, type: 2}
+  - {fileID: 11400000, guid: 57b116ae7f4cdeb4daff9afb4c0045b0, type: 2}
+  - {fileID: 11400000, guid: 3aa48c9f1177f764c91f68781a11de89, type: 2}

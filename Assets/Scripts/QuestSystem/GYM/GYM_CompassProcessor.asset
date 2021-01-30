@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6538238f65aef614987d9da36658d1f1, type: 3}
+  m_Name: GYM_CompassProcessor
+  m_EditorClassIdentifier: 
+  Tag: '{Richtung}'
+  ColorizeReplacement: 0
+  ReplacementColor: {r: 0, g: 0, b: 0, a: 0}
+  MakeReplacementBold: 0
+  DirectionMapping:
+  - MinAngle: 315
+    MaxAngle: 360
+    ReplacementText: North
+  - MinAngle: 0
+    MaxAngle: 45
+    ReplacementText: North
+  - MinAngle: 45
+    MaxAngle: 135
+    ReplacementText: East
+  - MinAngle: 135
+    MaxAngle: 225
+    ReplacementText: South
+  - MinAngle: 225
+    MaxAngle: 315
+    ReplacementText: West

@@ -39,6 +39,7 @@ public class QuestPopup : MonoBehaviour
     private IEnumerator DisplayFurtherText()
     {
         int i = 0;
+        ContentTextElement.text = "";
         for (; i < ContentTexts.Length; ++i)
         {
             string NewContent = ContentTexts[i];
