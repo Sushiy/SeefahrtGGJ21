@@ -10,6 +10,7 @@ public class BoatRotator : MonoBehaviour
     public float m_maxDelta;
     public float m_maxSecondDelta;
     public float m_timeElapsed;
+    public AnimationCurve pingPong;
     public float m_firstRotationDuration;
     public float m_secondRotationDuration;
 
@@ -18,21 +19,37 @@ public class BoatRotator : MonoBehaviour
     private float m_secondTimeElapsed;
     private Quaternion m_frameRot;
     public Quaternion m_accumulatedQuat;
+
+    public BoatManager boatManager;
+
+    private Quaternion sidewaysRotation;
+
     private void Start()
     {
+        boatManager = GetComponentInParent<BoatManager>();
         m_currentDelta = Quaternion.identity;
-        m_firstRotation = Quaternion.AngleAxis(-m_maxDelta, transform.forward);
-        m_secondRotation = Quaternion.AngleAxis(m_maxSecondDelta, transform.forward);
+        m_firstRotation = Quaternion.Euler(0, 90, m_maxDelta);
+        m_secondRotation = Quaternion.Euler(0, 90, -m_maxSecondDelta);
+
+        sidewaysRotation = Quaternion.AngleAxis(10.0f, transform.forward);
+
         transform.rotation = m_firstRotation;
     }
 
     private void Update()
     {
-        transform.rotation *= GetRotationDelta();
+        //transform.localRotation *= GetRotationDelta();
+
+        float swayT = boatManager.m_steerFactor;
+
+        float swayAngle = swayT * -20.0f;
+
+        transform.localRotation = Quaternion.Euler(swayAngle, 90, 0);
     }
 
     public Quaternion GetRotationDelta()
     {
+
         m_timeElapsed += Time.smoothDeltaTime;
         Quaternion rslt;
         if (m_timeElapsed < m_firstRotationDuration)

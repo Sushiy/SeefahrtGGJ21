@@ -10,6 +10,7 @@ public class SkyManager : MonoBehaviour
     private float timeSpeed;
 
     public Gradient skyGradient;
+    public float skyLightIntensityControl = 1.0f;
 
     private int shader_TimeValue;
     // Start is called before the first frame update
@@ -30,7 +31,7 @@ public class SkyManager : MonoBehaviour
         }
         float timeOfDayNorm = timeOfDay / 24.0f;
         Shader.SetGlobalFloat(shader_TimeValue, timeOfDayNorm);
-        RenderSettings.ambientLight = skyGradient.Evaluate(timeOfDayNorm);
+        RenderSettings.ambientLight = skyGradient.Evaluate(timeOfDayNorm) * skyLightIntensityControl;
 
         float sunRotation = Mathf.Lerp(0, 360, timeOfDayNorm);
         sunParent.localRotation = Quaternion.Euler(-30.0f, 0.0f, sunRotation);

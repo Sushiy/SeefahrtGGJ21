@@ -35,3 +35,5 @@ MonoBehaviour:
     Value: Big Dipper
   - Key: KleinerWagen
     Value: Little Dipper
+  - Key: "Sch\xFCtze"
+    Value: Sagittarius

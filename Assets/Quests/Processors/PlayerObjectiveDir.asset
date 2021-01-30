@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5208bf4ad192e8b4890121eb813c617a, type: 3}
-  m_Name: PlayerObjectiveDirection
+  m_Name: PlayerObjectiveDir
   m_EditorClassIdentifier: 
-  Tag: '{PlayerDirection}'
+  Tag: '{PlayerObjectiveDir}'
   ColorizeReplacement: 1
   ReplacementColor: {r: 0.4117647, g: 0.2509804, b: 0.64705884, a: 1}
   MakeReplacementBold: 1
