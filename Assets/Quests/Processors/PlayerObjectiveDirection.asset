@@ -9,10 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6538238f65aef614987d9da36658d1f1, type: 3}
-  m_Name: GYM_CompassProcessor
+  m_Script: {fileID: 11500000, guid: 5208bf4ad192e8b4890121eb813c617a, type: 3}
+  m_Name: PlayerObjectiveDirection
   m_EditorClassIdentifier: 
-  Tag: '{Richtung}'
+  Tag: '{PlayerDirection}'
+  ColorizeReplacement: 1
+  ReplacementColor: {r: 0.4117647, g: 0.2509804, b: 0.64705884, a: 1}
+  MakeReplacementBold: 1
   DirectionMapping:
   - MinAngle: 315
     MaxAngle: 360

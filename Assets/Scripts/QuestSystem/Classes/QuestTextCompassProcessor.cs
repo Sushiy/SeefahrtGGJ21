@@ -40,13 +40,18 @@ public class QuestTextCompassProcessor : QuestTextProcessor
         return false;
     }
 
+    public virtual float CalculateAngle(QuestCompletionParameters Params)
+    {
+        return Vector3.Angle(Params.NextObjective.transform.position - Params.CompletionPlayerLocation,
+            Vector3.forward) % 360.0F;
+    } 
+
     /// <inheritdoc />
     public override string Process(string InputText, QuestCompletionParameters Params)
     {
         if (Params.NextObjective)
         {
-            float angle = Vector3.Angle(Params.NextObjective.transform.position - Params.CompletionPlayerLocation,
-                Vector3.forward) % 360.0F;
+            float angle = CalculateAngle(Params);
             FCompassDirection foundCompassDirection;
             if (GetCompassDirectionFroMAngle(angle, out foundCompassDirection))
             {

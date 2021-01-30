@@ -9,11 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f04c873887ef1944aaffd5733212c7b9, type: 3}
-  m_Name: IsleMysticoProcessor
+  m_Script: {fileID: 11500000, guid: 50209662db100234abe31d6299a53df0, type: 3}
+  m_Name: RawDirection
   m_EditorClassIdentifier: 
-  Tag: '{IsleMystico}'
+  Tag: '{Place}'
   ColorizeReplacement: 1
-  ReplacementColor: {r: 0.8784314, g: 0.24313726, b: 0.24313726, a: 1}
+  ReplacementColor: {r: 0.4117647, g: 0.2509804, b: 0.64705884, a: 1}
   MakeReplacementBold: 1
-  Text: Isle Mystico
+  ArgumentIndex: 0
+  KeyIsValue: 1
+  ArgumentToString: []
