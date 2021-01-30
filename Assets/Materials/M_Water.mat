@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: M_Water
-  m_Shader: {fileID: 4800000, guid: 4ba89039c2c582f47a2a300fa387fe22, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 9bdec9d1000d7b347b61115d0cac8585, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -19,6 +19,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - Texture2D_15F94300:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BumpMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -56,6 +60,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Vector1_16B5FF51: 15
     - _Alpha: 0.3
     - _BumpScale: 1
     - _CutDistance: 30
@@ -63,7 +68,7 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _GlossMapScale: 1
-    - _Glossiness: 0.5
+    - _Glossiness: 0.2
     - _GlossyReflections: 1
     - _Metallic: 0
     - _Mode: 0
@@ -77,7 +82,8 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.29716977, g: 0.6498447, b: 1, a: 0.31764707}
+    - Color_729CDCD7: {r: 0.24313724, g: 0.78030026, b: 0.93333334, a: 0.5019608}
+    - _Color: {r: 0.29716974, g: 0.6498447, b: 1, a: 0.20784314}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SphereOrigin: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []

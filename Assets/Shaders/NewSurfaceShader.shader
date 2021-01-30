@@ -1,4 +1,4 @@
-﻿Shader "Custom/WaterClipped"
+﻿Shader "Custom/NewSurfaceShader"
 {
     Properties
     {
@@ -6,18 +6,15 @@
         _MainTex ("Albedo (RGB)", 2D) = "white" {}
         _Glossiness ("Smoothness", Range(0,1)) = 0.5
         _Metallic ("Metallic", Range(0,1)) = 0.0
-        _CutDistance("CutDistance", Float) = 5
-
     }
     SubShader
     {
-        Tags { "RenderType"="Transparent" "Queue"="Transparent"}
-        Blend SrcAlpha OneMinusSrcAlpha
+        Tags { "RenderType"="Opaque" }
         LOD 200
 
         CGPROGRAM
         // Physically based Standard lighting model, and enable shadows on all light types
-        #pragma surface surf Standard Lambert alpha:fade
+        #pragma surface surf Standard fullforwardshadows
 
         // Use shader model 3.0 target, to get nicer looking lighting
         #pragma target 3.0
@@ -26,27 +23,12 @@
 
         struct Input
         {
-            float2 uv_MainTex;                
-            float3 worldPos;
+            float2 uv_MainTex;
         };
 
         half _Glossiness;
         half _Metallic;
         fixed4 _Color;
-        float _CutDistance;
-        uniform float3 _SphereOrigin;
-
-
-        float invLerp(float from, float to, float value)
-        {
-            return (value - from) / (to - from);
-        }
-
-        float remap(float origFrom, float origTo, float targetFrom, float targetTo, float value)
-        {
-            float rel = invLerp(origFrom, origTo, value);
-            return lerp(targetFrom, targetTo, rel);
-        }
 
         // Add instancing support for this shader. You need to check 'Enable Instancing' on materials that use the shader.
         // See https://docs.unity3d.com/Manual/GPUInstancing.html for more information about instancing.
@@ -64,12 +46,6 @@
             o.Metallic = _Metallic;
             o.Smoothness = _Glossiness;
             o.Alpha = c.a;
-
-            //Set up radial clip
-            float3 dis = distance(_SphereOrigin, IN.worldPos);
-            float3 sphereCut = 1- saturate(dis/_CutDistance);
-            float clipper = remap(0,1,-1,1,sphereCut);
-            clip(clipper);
         }
         ENDCG
     }

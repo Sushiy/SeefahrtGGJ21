@@ -11,10 +11,10 @@ public class OrbitalCamera : MonoBehaviour
 
     [SerializeField] private float m_armLength = 5f;
 
-    public Vector2 m_orbitAngles;
+    public Vector2 m_orbitAngles = new Vector2(35,0);
 
     public float m_rotationSpeed = 90f;
-    
+    public float m_slerpSpeed = 1.0f;
     
     void Start()
     {
@@ -28,7 +28,7 @@ public class OrbitalCamera : MonoBehaviour
         transform.LookAt(m_target);
         
         RotateCamera();
-        Quaternion lookRot = Quaternion.Euler(m_orbitAngles);
+        Quaternion lookRot = Quaternion.Slerp(transform.rotation, Quaternion.Euler(m_orbitAngles), 1 - Mathf.Exp(-m_slerpSpeed * Time.deltaTime));
         Vector3 lookDir = lookRot * Vector3.forward;
         Vector3 lookPos = m_target.position - lookDir * m_armLength;
         transform.SetPositionAndRotation(lookPos, lookRot);
@@ -39,7 +39,7 @@ public class OrbitalCamera : MonoBehaviour
         Vector2 input = new Vector2(Input.GetAxis("HorCam"), Input.GetAxis("VertCam"));
         if (input.sqrMagnitude > 0.1f)
         {
-            m_orbitAngles += m_rotationSpeed * Time.fixedDeltaTime * input;
+            m_orbitAngles += m_rotationSpeed * Time.deltaTime * input;
         }
     }
 }
