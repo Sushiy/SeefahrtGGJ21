@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78704c3b0d194a14ab6d31176cf4b08e, type: 3}
+  m_Name: Test Objective 1
+  m_EditorClassIdentifier: 
+  _objectiveTitle: Flaschenpost!
+  _objectiveTexts:
+  - "Arr, eine Flaschenpost! Schauen wir maaaaal..\n\nIm Norden liegt eine Insel
+    mit einem Schatz?!\n\nOha! Wir m\xFCssen dringends nach Norden!"
+  - Los gehts! Auf nach {Richtung}
+  _prefabToInstantiate: {fileID: 7722018539782406556, guid: 43ee0fb7caeac964ebf5465c8fa5584b, type: 3}
+  ConfirmText: Auf auf und davon!
+  _objectiveTeller: {fileID: 21300000, guid: de005c1e8625c8d41aa176e39b6e4d63, type: 3}
