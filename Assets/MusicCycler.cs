@@ -9,7 +9,7 @@ public class MusicCycler : MonoBehaviour
     private int clipAmount;
     private int prevClipIndex;
     public AudioClip[] soundClips;
-    public float minWaitTime;
+    public float minWaitTime = 2;
 
     private void Awake() 
     {
@@ -25,9 +25,9 @@ public class MusicCycler : MonoBehaviour
 
     IEnumerator playAudioSnippets()
     {
+        yield return new WaitForSeconds(2);
         while(true)
         {
-            yield return new WaitForSeconds(2);
 
             var clipIndex = Random.Range(0, clipAmount);
             if(prevClipIndex == clipIndex)
