@@ -35,7 +35,7 @@ public class BoatControl : MonoBehaviour
     public void AddTurnSpeed(float turnSpeed)
     {
         float sign = Mathf.Sign(turnSpeed);
-        m_turnVel = sign == m_lastInput
+        m_turnVel = (sign == m_lastInput)
             ? m_turnVel + (turnSpeed * m_turnModifier)
             : 0;
         m_turnVel = Mathf.Clamp(m_turnVel, -m_maxTurnSpeed, m_maxTurnSpeed);
