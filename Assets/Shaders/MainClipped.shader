@@ -7,7 +7,6 @@
         _MainTex ("Albedo (RGB)", 2D) = "white" {}
         _Glossiness ("Smoothness", Range(0,1)) = 0.5
         _Metallic ("Metallic", Range(0,1)) = 0.0
-        _SphereOrigin("Sphere Origin", Vector) = (0,0,0,1)
         _CutDistance("CutDistance", Float) = 5
 
     }
@@ -37,8 +36,7 @@
         half _Alpha;
         fixed4 _Color;
         float _CutDistance;
-        float3 _SphereOrigin;
-
+        uniform float3 _SphereOrigin;
 
         float invLerp(float from, float to, float value)
         {

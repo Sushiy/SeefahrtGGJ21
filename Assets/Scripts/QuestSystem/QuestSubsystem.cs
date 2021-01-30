@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class QuestSubsystem : MonoBehaviour
 {
-    [Header("Runtime)")] public List<QuestObjective> FinishedQuests;
+    [Header("(Runtime)")] public List<QuestObjective> FinishedQuests;
 
     private void Start()
     {
