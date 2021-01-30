@@ -33,9 +33,9 @@ public class QuestSubsystem : MonoBehaviour
             {
                 /// Abort Handling this quest when we already had it
                 if (FinishedQuests.Contains(objective)) return;
-
-                FinishedQuests.Add(objective);
             }
+
+            FinishedQuests.Add(objective);
 
             Debug.LogFormat("QuestSubsystem found Objective: {0}", other.gameObject.name);
 
