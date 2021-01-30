@@ -17,6 +17,8 @@ public class QuestObjectiveAsset : ScriptableObject
 //~ todo(Hati) Structure for Prefab Parameters ?
     [SerializeField] private Sprite _objectiveTeller;
 
+    public List<QuestTextProcessor> TextProcessors;
+    
     public string ObjectiveTitle => _objectiveTitle;
 
     public string[] ObjectiveTexts => _objectiveTexts;
