@@ -8,19 +8,14 @@ using UnityEngine;
 [RequireComponent(typeof(BoatControl))]
 public class BoatManager : MonoBehaviour
 {
-    [SerializeField] private BoatControl m_boatController;
-    private BoatRotator m_boatRotator;
-
+    public BoatControl m_boatController;
    
-    private Quaternion m_shakeRot;
     public float m_steerFactor;
-    private Vector3 m_forwardVec;
 
     // Start is called before the first frame update
     void Start()
     {
         m_boatController = GetComponent<BoatControl>();
-        m_boatRotator = GetComponentInParent<BoatRotator>();
     }
 
     // Update is called once per frame
@@ -40,10 +35,7 @@ public class BoatManager : MonoBehaviour
     }
 
     private void FixedUpdate()
-    {
-       
-        m_forwardVec = transform.forward;
-        
+    {        
         Move();
         Steer();
     }
@@ -51,17 +43,19 @@ public class BoatManager : MonoBehaviour
     private void Move()
     {
         float forwardVel = Mathf.Abs(m_boatController.ForwardVel) <= 0.5f ? 0 : m_boatController.ForwardVel;
-        transform.position += m_forwardVec * forwardVel * Time.fixedDeltaTime;
+        transform.position += transform.forward * forwardVel * Time.fixedDeltaTime;
     }
 
+    public float slowTurnMultiplier;
+    public AnimationCurve slowTurnFactorCurve;
     private void Steer()
     {
         float turnVel = m_boatController.TurnVel < 0 ? m_boatController.TurnVel * -1 : m_boatController.TurnVel;
-        float offset = Mathf.Clamp(m_boatController.m_maxVerticalSpeed - m_boatController.ForwardVel, 0,
-            m_boatController.m_maxTurnSpeed);
+        float slowTurnMultiplierT = (1.0f - (m_boatController.ForwardVel)/ m_boatController.m_maxVerticalSpeed);
+        slowTurnMultiplier = slowTurnFactorCurve.Evaluate(slowTurnMultiplierT);
 
-        m_steerFactor = Mathf.Lerp(m_steerFactor, Input.GetAxis("Turn"), Time.fixedDeltaTime * offset);
+        m_steerFactor = Mathf.Lerp(m_steerFactor, Input.GetAxis("Turn"), Time.fixedDeltaTime);
         
-        transform.Rotate(Vector3.up, m_steerFactor * turnVel);
+        transform.Rotate(Vector3.up, m_steerFactor * turnVel * slowTurnMultiplier);
     }
 }

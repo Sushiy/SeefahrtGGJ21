@@ -20,6 +20,14 @@ public class OrbitalCamera : MonoBehaviour
     void Start()
     {
         m_target = FindObjectOfType<BoatManager>().transform;
+        transform.LookAt(m_target);
+
+        RotateCamera();
+        Quaternion lookRot = Quaternion.Euler(m_orbitAngles);
+        Vector3 lookDir = lookRot * Vector3.forward;
+        Vector3 lookPos = m_target.position - lookDir * m_armLength;
+        transform.position = lookPos;
+        transform.rotation = lookRot;
     }
 
 
@@ -37,11 +45,11 @@ public class OrbitalCamera : MonoBehaviour
     }
 
     private void RotateCamera()
-    {
-        Vector2 input = new Vector2(Input.GetAxis("MouseY"), Input.GetAxis("MouseX"));
+    {/*
+        Vector2 input;// new Vector2(Input.GetAxis("MouseY"), Input.GetAxis("MouseX"));
         if (input.sqrMagnitude > 0.1f && m_shouldRotate)
         {
             m_orbitAngles += m_rotationSpeed * Time.deltaTime * 1.5f * input;
-        }
+        }*/
     }
 }

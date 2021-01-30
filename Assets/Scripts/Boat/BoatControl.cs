@@ -41,4 +41,9 @@ public class BoatControl : MonoBehaviour
         m_turnVel = Mathf.Clamp(m_turnVel, -m_maxTurnSpeed, m_maxTurnSpeed);
         m_lastInput = sign;
     }
+
+    public void ForceStop()
+    {
+        m_turnVel = 0.0f;
+    }
 }
