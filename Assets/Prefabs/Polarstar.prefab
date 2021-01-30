@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 347704093772660800}
   - component: {fileID: 347704093772660807}
   - component: {fileID: 347704093772660806}
+  - component: {fileID: 5196975552038725011}
+  - component: {fileID: 34280710695977342}
   m_Layer: 0
   m_Name: Polarstar
   m_TagString: Untagged
@@ -26,7 +28,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 347704093772660804}
-  m_LocalRotation: {x: -0.094100416, y: -0.3449201, z: 0.24580227, w: 0.9009753}
+  m_LocalRotation: {x: -0.0941014, y: -0.34492272, z: 0.24580264, w: 0.9009741}
   m_LocalPosition: {x: 0, y: 10.33, z: 9.85}
   m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_Children: []
@@ -96,3 +98,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 10
   SteeringChangeEverySeconds: 10
+--- !u!114 &5196975552038725011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 347704093772660804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dc82ed019cb70646962586b4b1d6760, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowDuringDayTime: 0
+  ShowDuringNighttime: 1
+  ShowDuringTransition: 0
+  ThresholdForDayNight: 0.25
+--- !u!114 &34280710695977342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 347704093772660804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58f142f0d11415a46a599a558b767a8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScaleCurve: {fileID: 11400000, guid: 5fa826833c911a14ebb35aac5ef92311, type: 2}

@@ -24,12 +24,18 @@ public class BoatControl : MonoBehaviour
 
     public float m_maxVerticalSpeed;
     public float m_maxTurnSpeed;
-    
+
+    public float m_maxDeaccelerationPercentage;
+    public float m_maxSpeedReductionPercentage;
+
     public void AddSpeed(float speed)
     {
-        
-        m_forwardVel += (speed * m_speedModifier);
-        m_forwardVel = Mathf.Clamp(m_forwardVel, 0, m_maxVerticalSpeed);
+        var accel = speed * m_speedModifier;
+        // Make stopping faster against the wind too
+        m_forwardVel += accel > 0 ? 
+            CheckWindForward(accel, m_maxDeaccelerationPercentage) : 
+            CheckWindForward(accel, 1 + m_maxDeaccelerationPercentage);
+        m_forwardVel = Mathf.Clamp(m_forwardVel, 0, CheckWindForward(m_maxVerticalSpeed, 1 - m_maxSpeedReductionPercentage));
     }
 
     public void AddTurnSpeed(float turnSpeed)
@@ -41,9 +47,10 @@ public class BoatControl : MonoBehaviour
         m_turnVel = Mathf.Clamp(m_turnVel, -m_maxTurnSpeed, m_maxTurnSpeed);
         m_lastInput = sign;
     }
-
-    public void ForceStop()
+    
+    private float CheckWindForward(float rawVelocity, float decreasePercentage)
     {
-        m_turnVel = 0.0f;
+        float MoW = (Vector3.Dot(WindSource.WindDirection, transform.forward) + 1) * 0.5f;
+        return Mathf.Lerp(rawVelocity, rawVelocity * decreasePercentage, 1 - MoW);
     }
 }

@@ -21,6 +21,7 @@ public class SkyManager : MonoBehaviour
     /// </summary>
     public UnityEvent<float> DayNightEvent { get; protected set; }
     private bool broadcasted;
+    private float _skyGradientMaximumR;
 
 
     private int shader_TimeValue;
@@ -36,6 +37,12 @@ public class SkyManager : MonoBehaviour
         timeSpeed = 24.0f / dayLengthMinutes / 60.0f;
         shader_TimeValue = Shader.PropertyToID("_TimeValue");
 
+
+        _skyGradientMaximumR = 0.0F;
+        foreach (GradientColorKey skyGradientColorKey in skyGradient.colorKeys)
+        {
+            _skyGradientMaximumR = Mathf.Max(_skyGradientMaximumR, skyGradientColorKey.color.r);
+        }
     }
 
     // Update is called once per frame
@@ -51,7 +58,7 @@ public class SkyManager : MonoBehaviour
         Shader.SetGlobalFloat(shader_TimeValue, timeOfDayNorm);
         RenderSettings.ambientLight = skyGradient.Evaluate(timeOfDayNorm) * skyLightIntensityControl;
 
-        float SunLightAlpha = skyGradient.Evaluate(timeOfDayNorm).r;
+        float SunLightAlpha = skyGradient.Evaluate(timeOfDayNorm).r / _skyGradientMaximumR;
         /// broadcast anything between 0-1 but >=0 and <=1 only once
         if (SunLightAlpha >= 1.0F && !broadcasted)
         {
@@ -77,11 +84,11 @@ public class SkyManager : MonoBehaviour
 
     bool IsNight(float Threshold = 0.5F)
     {
-        return skyGradient.Evaluate(TimeOfDayNormalized).r <= Threshold;
+        return (skyGradient.Evaluate(TimeOfDayNormalized).r / _skyGradientMaximumR) <= Threshold;
     }
 
     bool IsDay(float Threshold = 0.5F)
     {
-        return skyGradient.Evaluate(TimeOfDayNormalized).r >= Threshold;
+        return (skyGradient.Evaluate(TimeOfDayNormalized).r/_skyGradientMaximumR) >= Threshold;
     }
 }
