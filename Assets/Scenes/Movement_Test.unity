@@ -470,6 +470,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33fe0bb5d4413fb49997ad8cf2e53073, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sunParent: {fileID: 0}
+  timeOfDay: 0
+  dayLengthMinutes: 3
+  skyGradient:
+    serializedVersion: 2
+    key0: {r: 1, g: 1, b: 1, a: 1}
+    key1: {r: 1, g: 1, b: 1, a: 1}
+    key2: {r: 0, g: 0, b: 0, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 65535
+    ctime2: 0
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 2
+    m_NumAlphaKeys: 2
 --- !u!4 &420955782
 Transform:
   m_ObjectHideFlags: 0
@@ -789,6 +821,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: cf8cfa3bbe0c7b34a833264968630aaf, type: 3}
       propertyPath: m_Name
       value: S_DioramaSphere
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cf8cfa3bbe0c7b34a833264968630aaf, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf8cfa3bbe0c7b34a833264968630aaf, type: 3}

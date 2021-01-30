@@ -42,7 +42,7 @@ public class BoatManager : MonoBehaviour
     private void FixedUpdate()
     {
        
-        m_forwardVec = -transform.right;
+        m_forwardVec = transform.forward;
         
         Move();
         Steer();
@@ -59,6 +59,7 @@ public class BoatManager : MonoBehaviour
         float turnVel = m_boatController.TurnVel < 0 ? m_boatController.TurnVel * -1 : m_boatController.TurnVel;
         float offset = Mathf.Clamp(m_boatController.m_maxVerticalSpeed - m_boatController.ForwardVel, 0,
             m_boatController.m_maxTurnSpeed);
+
         m_steerFactor = Mathf.Lerp(m_steerFactor, Input.GetAxis("Turn"), Time.fixedDeltaTime * offset);
         
         transform.Rotate(Vector3.up, m_steerFactor * turnVel);
