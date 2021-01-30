@@ -15,7 +15,7 @@ public class QuestPopup : MonoBehaviour
 
     private string[] ContentTexts;
 
-    public virtual void Setup(QuestObjectiveAsset Asset)
+    public virtual void Setup(QuestObjectiveAsset Asset, QuestCompletionParameters Params)
     {
         TitleTextElement.text = Asset.ObjectiveTitle;
 
