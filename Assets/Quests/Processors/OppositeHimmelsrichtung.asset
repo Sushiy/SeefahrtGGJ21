@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: OppositeHimmelsrichtung
   m_EditorClassIdentifier: 
   Tag: '{OppositeHimmelsrichtung}'
+  ColorizeReplacement: 1
+  ReplacementColor: {r: 0.4117647, g: 0.2509804, b: 0.64705884, a: 1}
+  MakeReplacementBold: 1
   DirectionMapping:
   - MinAngle: 315
     MaxAngle: 360
