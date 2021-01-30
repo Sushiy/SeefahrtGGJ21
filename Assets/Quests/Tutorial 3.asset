@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78704c3b0d194a14ab6d31176cf4b08e, type: 3}
+  m_Name: Tutorial 3
+  m_EditorClassIdentifier: 
+  _objectiveTitle: In the far!
+  _objectiveTexts:
+  - Ship wreckage! There is some ship wreckage to the {Himmelsrichtung}. Let's go
+    there!
+  _prefabToInstantiate: {fileID: 7722018539782406556, guid: 43ee0fb7caeac964ebf5465c8fa5584b, type: 3}
+  ConfirmText: Auf auf und davon!
+  _objectiveTeller: {fileID: 21300000, guid: de005c1e8625c8d41aa176e39b6e4d63, type: 3}
+  TextProcessors:
+  - {fileID: 11400000, guid: de08bae9e55e1394f81fee8872d5753c, type: 2}
+  - {fileID: 11400000, guid: da7163114d1a1d044bd367de0e283f7d, type: 2}

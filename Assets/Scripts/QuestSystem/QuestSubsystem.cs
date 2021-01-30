@@ -8,17 +8,12 @@ using UnityEngine;
 public class QuestSubsystem : MonoBehaviour
 {
     [Header("Runtime)")] public List<QuestObjective> FinishedQuests;
+    [SerializeField] private bool _allowDoubleQuests;
 
     private void Start()
     {
         FinishedQuests.Clear();
     }
-
-    private void Update()
-    {
-        this.transform.position += Vector3.forward * Time.deltaTime;
-    }
-
 
     //~ todo(Hati) Publish Event for finished quests here
     //~ todo(Hati) Query finished Quests
@@ -34,11 +29,14 @@ public class QuestSubsystem : MonoBehaviour
         QuestObjective objective = other.GetComponent<QuestObjective>();
         if (objective)
         {
-            /// Abort Handling this quest when we already had it
-            if (FinishedQuests.Contains(objective)) return;
-            
-            FinishedQuests.Add(objective);
-            
+            if (!_allowDoubleQuests)
+            {
+                /// Abort Handling this quest when we already had it
+                if (FinishedQuests.Contains(objective)) return;
+
+                FinishedQuests.Add(objective);
+            }
+
             Debug.LogFormat("QuestSubsystem found Objective: {0}", other.gameObject.name);
 
             GameObject prefabToInstantiate = objective.GetAsset().PrefabToInstantiate;
