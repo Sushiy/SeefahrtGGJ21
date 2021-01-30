@@ -16,7 +16,7 @@ MonoBehaviour:
   _objectiveTexts:
   - "Arr, eine Flaschenpost! Schauen wir maaaaal..\n\nIm Norden liegt eine Insel
     mit einem Schatz?!\n\nOha! Wir m\xFCssen dringends nach Norden!"
-  - Los gehts!
+  - Los gehts! Auf nach {Richtung}
   _prefabToInstantiate: {fileID: 7722018539782406556, guid: 43ee0fb7caeac964ebf5465c8fa5584b, type: 3}
   ConfirmText: Auf auf und davon!
   _objectiveTeller: {fileID: 21300000, guid: de005c1e8625c8d41aa176e39b6e4d63, type: 3}
