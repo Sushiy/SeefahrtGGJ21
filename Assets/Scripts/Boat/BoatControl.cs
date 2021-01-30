@@ -18,13 +18,7 @@ public class BoatControl : MonoBehaviour
         get => m_turnVel;
     }
 
-    private Quaternion m_turnRotation;
-
-    public Quaternion TurnRotation
-    {
-        get => m_turnRotation;
-    }
-
+    private float m_lastInput;
     [SerializeField]private float m_speedModifier;
     [SerializeField] private float m_turnModifier;
 
@@ -40,8 +34,11 @@ public class BoatControl : MonoBehaviour
 
     public void AddTurnSpeed(float turnSpeed)
     {
-        m_turnVel += (turnSpeed * m_turnModifier);
+        float sign = Mathf.Sign(turnSpeed);
+        m_turnVel = sign == m_lastInput
+            ? m_turnVel + (turnSpeed * m_turnModifier)
+            : 0;
         m_turnVel = Mathf.Clamp(m_turnVel, -m_maxTurnSpeed, m_maxTurnSpeed);
-        m_turnRotation = Quaternion.AngleAxis(m_turnVel * m_turnModifier, transform.up);
+        m_lastInput = sign;
     }
 }

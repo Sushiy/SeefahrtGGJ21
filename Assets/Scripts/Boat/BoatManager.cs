@@ -43,7 +43,7 @@ public class BoatManager : MonoBehaviour
 
     private void Move()
     {
-        float forwardVel = Mathf.Abs(m_boatController.ForwardVel) <= 0.4f ? 0 : m_boatController.ForwardVel;
+        float forwardVel = Mathf.Abs(m_boatController.ForwardVel) <= 0.5f ? 0 : m_boatController.ForwardVel;
         transform.position += transform.forward * forwardVel * Time.fixedDeltaTime;
     }
 
@@ -51,6 +51,7 @@ public class BoatManager : MonoBehaviour
     {
         m_steerFactor = Mathf.Lerp(m_steerFactor, Input.GetAxis("Turn"), Time.fixedDeltaTime);
         float turnVel = m_boatController.TurnVel < 0 ? m_boatController.TurnVel * -1 : m_boatController.TurnVel;
+        //GetComponent<Rigidbody>().angularVelocity += (transform.up * m_steerFactor * turnVel);
         transform.Rotate(transform.up, m_steerFactor * turnVel);
     }
 }
