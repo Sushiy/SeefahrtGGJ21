@@ -13,14 +13,14 @@ public class BoatRotator : MonoBehaviour
     public AnimationCurve pingPong;
     public float m_firstRotationDuration;
     public float m_secondRotationDuration;
-
+    private float m_adjustedFirstDuration;
+    private float m_adjustedSecondDuration;
+    
     public BoatManager m_boatManager;
     private float m_firstTimeElapsed;
     private float m_secondTimeElapsed;
     private Quaternion m_frameRot;
     private Quaternion m_accumulatedQuat;
-
-    private Quaternion sidewaysRotation;
 
     enum ShipState
     {
@@ -36,8 +36,10 @@ public class BoatRotator : MonoBehaviour
         m_firstRotation = Quaternion.Euler(m_maxDelta, 90, 0);
         m_secondRotation = Quaternion.Euler(m_maxSecondDelta, 90, 0);
 
-        sidewaysRotation = Quaternion.AngleAxis(10.0f, transform.forward);
         m_accumulatedQuat = Quaternion.identity;
+        
+        m_adjustedFirstDuration = m_firstRotationDuration + m_boatManager.m_boatController.m_forwardVel;
+        m_adjustedSecondDuration = m_secondRotationDuration + m_boatManager.m_boatController.m_forwardVel;
         
     }
 
@@ -64,6 +66,7 @@ public class BoatRotator : MonoBehaviour
 
         if (m_shipState == ShipState.ShipHalting)
         {
+           
             m_firstTimeElapsed = 0;
             m_secondTimeElapsed = 0;
             m_timeElapsed = 0;
@@ -76,18 +79,21 @@ public class BoatRotator : MonoBehaviour
     public void GetRotationDelta()
     {
         m_timeElapsed += Time.smoothDeltaTime;
-        if (m_timeElapsed < m_firstRotationDuration)
+        if (m_timeElapsed < m_adjustedFirstDuration)
         {
-            m_accumulatedQuat *= GetDeltaQuat(m_firstRotationDuration, m_firstTimeElapsed, m_firstRotation, m_secondRotation);
+            m_accumulatedQuat *= GetDeltaQuat(m_adjustedFirstDuration, m_firstTimeElapsed, m_firstRotation, m_secondRotation);
             m_firstTimeElapsed += Time.smoothDeltaTime;
         }
-        else if (m_timeElapsed < m_firstRotationDuration + m_secondRotationDuration)
+        else if (m_timeElapsed < m_adjustedFirstDuration + m_adjustedSecondDuration)
         {
-            m_accumulatedQuat *= GetDeltaQuat(m_secondRotationDuration, m_secondTimeElapsed, m_secondRotation, m_firstRotation);
+            m_accumulatedQuat *= GetDeltaQuat(m_adjustedSecondDuration, m_secondTimeElapsed, m_secondRotation, m_firstRotation);
             m_secondTimeElapsed += Time.smoothDeltaTime;
         }
         else
         {
+            m_adjustedFirstDuration = m_firstRotationDuration + m_boatManager.m_boatController.m_forwardVel;
+            m_adjustedSecondDuration = m_secondRotationDuration + m_boatManager.m_boatController.m_forwardVel;
+            
             m_firstTimeElapsed = 0;
             m_secondTimeElapsed = 0;
             m_timeElapsed = 0;
