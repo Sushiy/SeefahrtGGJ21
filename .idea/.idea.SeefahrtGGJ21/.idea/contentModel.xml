@@ -8,7 +8,11 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="CameraTarget.cs" t="Include" />
+        <e p="MusicCycler.cs" t="Include" />
         <e p="Scripts" t="Include">
+          <e p="Assets" t="Include">
+            <e p="CurveAsset.cs" t="Include" />
+          </e>
           <e p="Boat" t="Include">
             <e p="BoatControl.cs" t="Include" />
             <e p="BoatManager.cs" t="Include" />
@@ -17,18 +21,27 @@
           <e p="Camera" t="Include">
             <e p="OrbitalCamera.cs" t="Include" />
           </e>
+          <e p="FloatyBoaty.cs" t="Include" />
+          <e p="NighttimeLight.cs" t="Include" />
           <e p="QuestSystem" t="Include">
             <e p="Classes" t="Include">
               <e p="QuestCompletionParameters.cs" t="Include" />
               <e p="QuestObjectiveAsset.cs" t="Include" />
+              <e p="QuestPlayerObjectiveDirection.cs" t="Include" />
+              <e p="QuestTextArgsProcessor.cs" t="Include" />
               <e p="QuestTextCompassProcessor.cs" t="Include" />
               <e p="QuestTextProcessor.cs" t="Include" />
+              <e p="QuestTextSimpleProcessor.cs" t="Include" />
             </e>
             <e p="QuestObjective.cs" t="Include" />
             <e p="QuestPopup.cs" t="Include" />
             <e p="QuestSubsystem.cs" t="Include" />
           </e>
+          <e p="RandomLocalRotator.cs" t="Include" />
           <e p="SimpleCameraController.cs" t="Include" />
+          <e p="Wind" t="Include">
+            <e p="WindSource.cs" t="Include" />
+          </e>
         </e>
         <e p="SeagullRotator.cs" t="Include" />
         <e p="Shaders" t="Include">

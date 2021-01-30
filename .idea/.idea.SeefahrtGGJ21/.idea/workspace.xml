@@ -2,13 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="79f8d6d4-204f-450a-a47b-f287f684f0c2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Wind.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Wind/WindSource.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Wind/WindSource.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SeefahrtGGJ21/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SeefahrtGGJ21/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SeefahrtGGJ21/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SeefahrtGGJ21/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Movement_Test.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Movement_Test.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Boat/BoatManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Boat/BoatManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Scenes.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMap_v1.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Scenes/MainMap_v1.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMap_v1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Scenes/MainMap_v1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMap_v1.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Scenes/MainMap_v1.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMap_v1/Main Camera Profile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Scenes/MainMap_v1/Main Camera Profile.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMap_v1/Main Camera Profile.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Scenes/MainMap_v1/Main Camera Profile.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ModelTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Scenes/ModelTest.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ModelTest.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Scenes/ModelTest.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Movement_Test.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Scenes/Movement_Test.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Movement_Test.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Scenes/Movement_Test.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Ray.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Scenes/Ray.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Ray.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Scenes/Ray.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleSceneLightingSettings.lighting" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Scenes/SampleSceneLightingSettings.lighting" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleSceneLightingSettings.lighting.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Scenes/SampleSceneLightingSettings.lighting.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Boat/BoatControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Boat/BoatControl.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Boat/BoatRotator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Boat/BoatRotator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera/OrbitalCamera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Camera/OrbitalCamera.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,10 +35,11 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/Boat/BoatControl.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Boat/BoatManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Boat/BoatRotator.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Camera/OrbitalCamera.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Boat/BoatRotator.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Boat/BoatControl.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Wind/WindSource.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1nl8USvz4lq7Nb7ZDH6AZjA3ASf" />
