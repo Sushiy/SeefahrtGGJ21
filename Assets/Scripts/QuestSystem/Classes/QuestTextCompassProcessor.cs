@@ -50,7 +50,7 @@ public class QuestTextCompassProcessor : QuestTextProcessor
             FCompassDirection foundCompassDirection;
             if (GetCompassDirectionFroMAngle(angle, out foundCompassDirection))
             {
-                return InputText.Replace(base.Tag, foundCompassDirection.ReplacementText);
+                return InputText.Replace(base.Tag, Bold(Colorize(foundCompassDirection.ReplacementText)));
             }
         }
 
