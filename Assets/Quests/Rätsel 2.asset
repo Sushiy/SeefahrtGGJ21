@@ -19,10 +19,10 @@ MonoBehaviour:
     there:
 
 
-    Sail towards {Himmelsrichtung} until you pass the {Place(Red Gorge)}.
-    Right when you leave it, you need to do a sharp turn to {RawDirection(North-East)}.
-    After {Time(1 days)} you must change your course 30 degrees {RawDirection(south)}.
-    On the next day you should hear the seagulls on the shores of the {Place(Spinereef)}.'
+    Sail towards {Himmelsrichtung} until you pass the {Place(Twin Palms)}.
+    When, you reach it, make a sharp turn to {RawDirection(North-West)}. After {Time(1
+    days)} you must change your course {RawDirection(90 degrees starboard)}. On the
+    next day you should hear the seagulls on the shores of the {Place(Spinereef)}.'
   _prefabToInstantiate: {fileID: 7722018539782406556, guid: 43ee0fb7caeac964ebf5465c8fa5584b, type: 3}
   ConfirmText: Onwards!
   _objectiveTeller: {fileID: 21300000, guid: de005c1e8625c8d41aa176e39b6e4d63, type: 3}
@@ -30,3 +30,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d844ecffa23b6954aabb86ecf6844355, type: 2}
   - {fileID: 11400000, guid: 57b116ae7f4cdeb4daff9afb4c0045b0, type: 2}
   - {fileID: 11400000, guid: 3aa48c9f1177f764c91f68781a11de89, type: 2}
+  - {fileID: 11400000, guid: de08bae9e55e1394f81fee8872d5753c, type: 2}

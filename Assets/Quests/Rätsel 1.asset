@@ -18,13 +18,14 @@ MonoBehaviour:
     go further south, but don't get lost! So your best bet is to find my old seacharts
     in {Place(Swanport)}! How do ye get there ye ask? Well ye're in luck, cause there's
     a great ol' story about just that to follow!\n\r\nSo back in the day proud {Starsign(L\xF6we)}
-    lived as a fisher on lonely {Place(Pine Peak)}. One day, when his fishing didn'
-    quite keep him fed and the {Starsign(L\xF6we)} was gettin real hangry, he started\r
-    chasing his neighbour, the {Starsign(Schwan)} - to eat'im you see? {Time(Two
-    days and two nights)} he chased it until the swan managed to hide out on the
-    desolate rocks of {Place(Swanport)}, where he founded the small town that stands
-    there today!\n\r\nWell get going then, will ye! Follow the {Starsign(L\xF6we)}
-    to {Place(Pine Peak)}! Its only a short ride!"
+    lived as a fisher on lonely {Place(Pine Peak)}. One day, when their fishing didn'
+    quite keep 'em fed and the {Starsign(L\xF6we)} was gettin real hangry, they started\r
+    chasing their neighbour, the {Starsign(Schwan)} - to eat'em you see? {Time(One
+    day and one night)} they chased them until the swan managed to hide out on the
+    desolate rocks of {Place(Swanport)}, where they founded the small town that stands
+    there today! Even build a lighthouse! You can see it from far away at night!\n\r\nWell
+    get going then, will ye! Follow the {Starsign(L\xF6we)} to {Place(Pine Peak)}
+    to start your journey! Its only a short ride!"
   _prefabToInstantiate: {fileID: 7722018539782406556, guid: 43ee0fb7caeac964ebf5465c8fa5584b, type: 3}
   ConfirmText: Onwards!
   _objectiveTeller: {fileID: 21300000, guid: de005c1e8625c8d41aa176e39b6e4d63, type: 3}
@@ -33,3 +34,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 57b116ae7f4cdeb4daff9afb4c0045b0, type: 2}
   - {fileID: 11400000, guid: 3aa48c9f1177f764c91f68781a11de89, type: 2}
   - {fileID: 11400000, guid: b20075f91a371c642a8e700a69ada4f1, type: 2}
+  - {fileID: 11400000, guid: c3f5b4810c8ac96458d3e518af5c7131, type: 2}

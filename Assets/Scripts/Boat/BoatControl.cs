@@ -64,4 +64,10 @@ public class BoatControl : MonoBehaviour
     {
         return Mathf.Lerp(rawVelocity, rawVelocity * decreasePercentage, 1 - m_currentWindFactor);
     }
+
+    public void StopBoat()
+    {
+        m_forwardVel = 0;
+        m_turnVel = 0;
+    }
 }

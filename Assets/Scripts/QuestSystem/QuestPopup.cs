@@ -2,16 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class QuestPopup : MonoBehaviour
 {
-    public Text TitleTextElement;
-    public Text ContentTextElement;
+    public TMP_Text TitleTextElement;
+    public TMP_Text ContentTextElement;
 
     public Image TellerIcon;
 
     public Button ConfirmButton;
-    public Text ConfirmButtonText;
+    public TMP_Text ConfirmButtonText;
 
     private string[] ContentTexts;
 
@@ -33,7 +34,7 @@ public class QuestPopup : MonoBehaviour
         TellerIcon.sprite = Asset.ObjectiveTeller;
         ConfirmButtonText.text = Asset.ConfirmText;
 
-        ConfirmButton.onClick.AddListener(() => { Destroy(this.gameObject); });
+        ConfirmButton.onClick.AddListener(() => { QuestSubsystem.isJournalOpen = false; Destroy(this.gameObject); });
     }
 
     private IEnumerator DisplayFurtherText()
