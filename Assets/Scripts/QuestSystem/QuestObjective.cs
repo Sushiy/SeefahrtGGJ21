@@ -32,9 +32,11 @@ public class QuestObjective : MonoBehaviour
             T1 = (transform.position - otherObjective.transform.position) * 0.5F;
             T1 = (T1 * 0.75F) + Vector3.up * (T1.magnitude * MagScaling);
             T1 = otherObjective.transform.position + T1;
-
+#if UNITY_EDITOR
             Handles.DrawBezier(transform.position, otherObjective.transform.position, T0, T1,
                 color, null, Thickness);
+#endif
+
         }
     }
     
