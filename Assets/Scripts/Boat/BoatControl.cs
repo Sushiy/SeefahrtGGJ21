@@ -54,7 +54,7 @@ public class BoatControl : MonoBehaviour
 
     public void AddSpeed(float speed)
     {
-        var accel = speed * m_speedModifier;
+        var accel = speed * m_speedModifier * Time.deltaTime;
         // Make stopping faster against the wind too
         m_forwardVel += accel > 0 ?
             CheckWindForward(accel, m_maxDeaccelerationPercentage) :
@@ -66,7 +66,7 @@ public class BoatControl : MonoBehaviour
     {
         float sign = Mathf.Sign(turnSpeed);
         m_turnVel = (sign == m_lastInput)
-            ? m_turnVel + (turnSpeed * m_turnModifier)
+            ? m_turnVel + (turnSpeed * m_turnModifier * Time.deltaTime)
             : 0;
         m_turnVel = Mathf.Clamp(m_turnVel, -m_maxTurnSpeed, m_maxTurnSpeed);
         m_lastInput = sign;
