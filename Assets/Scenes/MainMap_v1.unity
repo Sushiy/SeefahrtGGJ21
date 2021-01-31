@@ -7149,6 +7149,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MovingShip
       objectReference: {fileID: 0}
+    - target: {fileID: 6096775002554344036, guid: 14ffe6cb29468a54da4f18e524952c37, type: 3}
+      propertyPath: m_speedModifier
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 6096775002554344039, guid: 14ffe6cb29468a54da4f18e524952c37, type: 3}
       propertyPath: m_RootOrder
       value: 17
