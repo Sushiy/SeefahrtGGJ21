@@ -14,15 +14,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _objectiveTitle: 'Destination: Mystico'
   _objectiveTexts:
-  - 'We arrived from {PlayerObjectiveDir} at {Place(Shipwrecking Grove)}. {Time(At
-    4 o'' clock)} we discovered the {Place(Shimmering Observatory)} and sailed {Time(two
-    days)} into this direction.
+  - 'Ohh a visitarrr! Aye we''ve seen the daring old couple! Let me tell ya the storry
+    of how it went down, arrr!
 
-    There we made a {Time(quarter clock-wise turn)}
-    to prevent being split apart by the rocks and sailed {Time(two more days)} until
-    we arrived at our destination.'
+    We''d been out on plunder and were just returning
+    to this ''ere beautiful island! So..we arrrrived at {Place(Shipwreck Stinger)}
+    from the north, aye? When suddenly Bobby here called out! {RawDirection(At 9
+    o'' clock)} he''d spotted your grandda''s ship and we decided to follow them
+    for  even more booty! {Time(Two days)} we tailed them that way, aye? We thtought
+    we''d catch them for sure!
+
+    Then - suddenly they did a sharp {RawDirection(clock-wise
+    quarter turn)} after passing through some {Place(nasty Rocks)}. Surprised, we
+    retreated. However, we could already see a big storm coming up, so they could''t
+    have gotten far.
+
+
+    Well there ya have it little one!
+
+    Good Luck, aye?!'
   _prefabToInstantiate: {fileID: 7722018539782406556, guid: 43ee0fb7caeac964ebf5465c8fa5584b, type: 3}
-  ConfirmText: Auf auf und davon!
+  ConfirmText: Onwards!
   _objectiveTeller: {fileID: 21300000, guid: de005c1e8625c8d41aa176e39b6e4d63, type: 3}
   TextProcessors:
   - {fileID: 11400000, guid: d844ecffa23b6954aabb86ecf6844355, type: 2}

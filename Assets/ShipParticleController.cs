@@ -26,7 +26,7 @@ public class ShipParticleController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float normalizedSpeed = controller.ForwardVel/ controller.m_maxVerticalSpeed;
+        float normalizedSpeed = controller.m_windVelocity/ controller.m_maxVerticalSpeed;
         bugWellenPS_L.emissionRate = 200 * normalizedSpeed;
         velocity_L.speedModifierMultiplier = normalizedSpeed;
         bugWellenPS_R.emissionRate = 200 * normalizedSpeed;

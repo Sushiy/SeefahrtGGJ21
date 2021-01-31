@@ -14,9 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _objectiveTitle: In search for the polar star.
   _objectiveTexts:
-  - The sun always rises in the {Himmelsrichtung}, and sets in the {OppositeHimmelsrichtung}.
+  - Alright! You found some of the things you needed! But there should be some more
+    {Himmelsrichtung} of here. But alas, the sun has risen, no polar star to guide
+    you! However, the sun always rises in the {Himmelsrichtung}, and sets in the
+    {OppositeHimmelsrichtung}. That's quite useful during the day!
   _prefabToInstantiate: {fileID: 7722018539782406556, guid: 43ee0fb7caeac964ebf5465c8fa5584b, type: 3}
-  ConfirmText: Auf auf und davon!
+  ConfirmText: Onwards!
   _objectiveTeller: {fileID: 21300000, guid: de005c1e8625c8d41aa176e39b6e4d63, type: 3}
   TextProcessors:
   - {fileID: 11400000, guid: de08bae9e55e1394f81fee8872d5753c, type: 2}

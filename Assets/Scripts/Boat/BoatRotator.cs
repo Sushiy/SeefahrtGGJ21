@@ -30,9 +30,13 @@ public class BoatRotator : MonoBehaviour
 
     private ShipState m_shipState;
 
-    private void Start()
+    private void Awake()
     {
         m_boatManager = GetComponentInParent<BoatManager>();
+    }
+
+    private void Start()
+    {
         m_firstRotation = Quaternion.Euler(m_maxDelta, 90, 0);
         m_secondRotation = Quaternion.Euler(m_maxSecondDelta, 90, 0);
 
