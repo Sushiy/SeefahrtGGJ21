@@ -14,9 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _objectiveTitle: In search for the polar star.
   _objectiveTexts:
-  - So dark! You were supposed to find some things to the {Himmelsrichtung}. Luckily,
-    at night you can navigate using the bright, white polar star, which is always
-    {Himmelsrichtung} of you.
+  - 'So dark!
+
+
+    You were supposed to find some things to the {Himmelsrichtung}.
+    Luckily, at night you can navigate using the bright, white polar star, which
+    is always {Himmelsrichtung} of you.'
   _prefabToInstantiate: {fileID: 7722018539782406556, guid: 43ee0fb7caeac964ebf5465c8fa5584b, type: 3}
   ConfirmText: Onwards!
   _objectiveTeller: {fileID: 21300000, guid: de005c1e8625c8d41aa176e39b6e4d63, type: 3}

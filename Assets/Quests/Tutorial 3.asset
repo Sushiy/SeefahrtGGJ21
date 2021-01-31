@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _objectiveTitle: In the far!
   _objectiveTexts:
-  - That's all the stuff you needed! But what's that? Do I see a shipwreck {Himmelsrichtung}
-    of here? Let's check it out!
+  - "That's all the stuff you needed! \nBut what's that? Do I see a shipwreck {Himmelsrichtung}
+    of here? Let's check it out!"
   _prefabToInstantiate: {fileID: 7722018539782406556, guid: 43ee0fb7caeac964ebf5465c8fa5584b, type: 3}
   ConfirmText: Onwards!
   _objectiveTeller: {fileID: 21300000, guid: de005c1e8625c8d41aa176e39b6e4d63, type: 3}

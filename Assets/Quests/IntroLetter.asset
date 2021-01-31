@@ -14,17 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _objectiveTitle: A message in a bottle!
   _objectiveTexts:
-  - "Dear Descendant,\nif you read this letter, that means through chance or fate,
-    it has found it's way far enough northward to reach you. As you know, we have
-    gone on a journey to uncharted islands. But alas, our journey came to an abrupt
-    end, when our ship capsized in a storm. Luckily we were swept onto a small island
+  - "Dear Descendant,\n\nif you read this letter, that means through chance or fate,
+    it has found it's way far enough northward to reach you. \nAs you know, we have
+    gone on a journey to uncharted islands. But our journey came to an abrupt end,
+    when our ship capsized in a storm. Luckily we were swept onto a small island
     called {Place(Isle Mystico)}. There is not much here, but a large birdstatue
     that overlooks a hill and our wrecked ship. \n\nPerhaps you could send help?
     Try asking the old sailor at the foot of {Place(Snow Peak)}. You can follow the
     {Starsign(Sch\xFCtze)} {Himmelsrichtung} to reach it.\n\nBest Regards,\nNanna
     and Granda!"
   _prefabToInstantiate: {fileID: 7722018539782406556, guid: 43ee0fb7caeac964ebf5465c8fa5584b, type: 3}
-  ConfirmText: Auf auf und davon!
+  ConfirmText: Onwards!
   _objectiveTeller: {fileID: 21300000, guid: de005c1e8625c8d41aa176e39b6e4d63, type: 3}
   TextProcessors:
   - {fileID: 11400000, guid: 57b116ae7f4cdeb4daff9afb4c0045b0, type: 2}
