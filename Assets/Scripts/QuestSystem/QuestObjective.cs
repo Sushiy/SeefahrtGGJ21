@@ -14,6 +14,8 @@ public class QuestObjective : MonoBehaviour
 
     public UnityEvent onQuestReached;
 
+    public bool m_isLast;
+    
     public virtual QuestObjectiveAsset GetAsset()
     {
         return Asset;

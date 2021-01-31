@@ -44,7 +44,6 @@ public class BoatRotator : MonoBehaviour
         
         m_adjustedFirstDuration = m_firstRotationDuration + m_boatManager.m_boatController.m_forwardVel;
         m_adjustedSecondDuration = m_secondRotationDuration + m_boatManager.m_boatController.m_forwardVel;
-        
     }
 
     private void Update()

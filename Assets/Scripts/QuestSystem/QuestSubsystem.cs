@@ -71,6 +71,8 @@ public class QuestSubsystem : MonoBehaviour
 
                 FinishedQuestAssets.Add(Tuple.Create(objective.GetAsset(), questCompletionParameters));
             }
+            if(objective.m_isLast)
+                FindObjectOfType<FadeOutManager>().StartFade();
         }
     }
 
