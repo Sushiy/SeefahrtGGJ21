@@ -10,6 +10,10 @@ public class Cloud : MonoBehaviour
 
     public bool rotateYRandomly;
 
+    public float WindDirectionAlign = 1.0F;
+
+    private Vector3 targetForward;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -49,6 +53,14 @@ public class Cloud : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position += transform.forward * (Speed * Time.deltaTime);
+        targetForward = WindSource.WindDirection;
+
+        if (WindDirectionAlign > 0.0F)
+        {
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(targetForward),
+                Time.deltaTime * WindDirectionAlign);
+        }
+
+        transform.position += targetForward * (Speed * Time.deltaTime);
     }
 }

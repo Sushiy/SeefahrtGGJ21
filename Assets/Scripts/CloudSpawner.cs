@@ -41,7 +41,7 @@ public class CloudSpawner : MonoBehaviour
 
         Vector3 dir = new Vector3(1, 0, 1);
         dir.Scale(Vector3.zero - lp);
-        transform.forward = dir.normalized;
+        transform.forward = WindSource.WindDirection;
 
         var go = Instantiate(SelectRandomPrefab(), transform.position + offset, transform.rotation);
 
