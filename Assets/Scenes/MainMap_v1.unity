@@ -4627,13 +4627,25 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 2094186515593906901, guid: 3473f59a3f9a41b4080dac7a01fc2782, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.6
+      objectReference: {fileID: 0}
     - target: {fileID: 8506086138328232063, guid: 3473f59a3f9a41b4080dac7a01fc2782, type: 3}
       propertyPath: SpawnDistance
       value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 8506086138328232063, guid: 3473f59a3f9a41b4080dac7a01fc2782, type: 3}
+      propertyPath: SpawnIntervalMax
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8506086138328232063, guid: 3473f59a3f9a41b4080dac7a01fc2782, type: 3}
+      propertyPath: SpawnIntervalMin
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8506086138328232063, guid: 3473f59a3f9a41b4080dac7a01fc2782, type: 3}
       propertyPath: SpawnLocalRadius
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3473f59a3f9a41b4080dac7a01fc2782, type: 3}

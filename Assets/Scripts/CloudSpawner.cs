@@ -43,7 +43,7 @@ public class CloudSpawner : MonoBehaviour
         dir.Scale(Vector3.zero - lp);
         transform.forward = WindSource.WindDirection;
 
-        var go = Instantiate(SelectRandomPrefab(), lp + offset, transform.rotation);
+        var go = Instantiate(SelectRandomPrefab(), lp + offset + transform.position, transform.rotation);
 
         var cloud = go.GetComponent<Cloud>();
         cloud.Speed = cloud.Speed;
