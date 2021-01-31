@@ -30,8 +30,8 @@ public class MusicCycler : MonoBehaviour
         {
 
             var clipIndex = Random.Range(0, clipAmount);
-            if(prevClipIndex == clipIndex)
-            {clipIndex = soundClips.Length - 1;}
+            // if(prevClipIndex == clipIndex)
+            // {clipIndex = soundClips.Length - 1;}
 
             audSource.clip = soundClips[clipIndex];
             audSource.Play();
