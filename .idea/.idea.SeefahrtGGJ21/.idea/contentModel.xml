@@ -9,6 +9,7 @@
       <e p="Assets" t="Include">
         <e p="CameraTarget.cs" t="Include" />
         <e p="MusicCycler.cs" t="Include" />
+        <e p="SailAnimator.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="Assets" t="Include">
             <e p="CurveAsset.cs" t="Include" />
@@ -17,15 +18,20 @@
             <e p="BoatControl.cs" t="Include" />
             <e p="BoatManager.cs" t="Include" />
             <e p="BoatRotator.cs" t="Include" />
+            <e p="InputManager.cs" t="Include" />
           </e>
           <e p="Camera" t="Include">
             <e p="OrbitalCamera.cs" t="Include" />
           </e>
+          <e p="Cloud.cs" t="Include" />
+          <e p="CloudSpawner.cs" t="Include" />
+          <e p="DaytimeComponent.cs" t="Include" />
           <e p="FloatyBoaty.cs" t="Include" />
           <e p="NighttimeLight.cs" t="Include" />
           <e p="QuestSystem" t="Include">
             <e p="Classes" t="Include">
               <e p="QuestCompletionParameters.cs" t="Include" />
+              <e p="QuestJournalButton.cs" t="Include" />
               <e p="QuestObjectiveAsset.cs" t="Include" />
               <e p="QuestPlayerObjectiveDirection.cs" t="Include" />
               <e p="QuestTextArgsProcessor.cs" t="Include" />
@@ -38,6 +44,7 @@
             <e p="QuestSubsystem.cs" t="Include" />
           </e>
           <e p="RandomLocalRotator.cs" t="Include" />
+          <e p="ScaleOnShow.cs" t="Include" />
           <e p="SimpleCameraController.cs" t="Include" />
           <e p="Wind" t="Include">
             <e p="WindSource.cs" t="Include" />
@@ -50,7 +57,9 @@
           <e p="NewSurfaceShader.shader" t="Include" />
           <e p="WaterClipped.shader" t="Include" />
         </e>
+        <e p="ShipParticleController.cs" t="Include" />
         <e p="SkyManager.cs" t="Include" />
+        <e p="TurnInWindDirection.cs" t="Include" />
         <e p="TutorialInfo" t="Include">
           <e p="Scripts" t="Include">
             <e p="Editor" t="Include">

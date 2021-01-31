@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel.Design.Serialization;
 using UnityEngine;
+using UnityTemplateProjects.Boat;
 
 [RequireComponent(typeof(BoatControl))]
 public class BoatManager : MonoBehaviour
@@ -13,26 +14,14 @@ public class BoatManager : MonoBehaviour
     public float m_steerFactor;
 
     public bool IsMoving;
+
+    public float TurnAxis;
+    
     // Start is called before the first frame update
     void Awake()
     {
         m_boatController = GetComponent<BoatControl>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        var vertSpeed = Input.GetAxis("SpeedUp");
-        if (vertSpeed != 0)
-        {
-            m_boatController.AddSpeed(vertSpeed);
-        }
-
-        var horizontSpeed = Input.GetAxis("Turn");
-        if (horizontSpeed != 0)
-        {
-            m_boatController.AddTurnSpeed(horizontSpeed);
-        }
+        gameObject.AddComponent<InputManager>();
     }
 
     private void FixedUpdate()
@@ -56,7 +45,7 @@ public class BoatManager : MonoBehaviour
         float slowTurnMultiplierT = (1.0f - (m_boatController.m_windVelocity) / m_boatController.m_maxVerticalSpeed);
         slowTurnMultiplier = slowTurnFactorCurve.Evaluate(slowTurnMultiplierT);
 
-        m_steerFactor = Mathf.Lerp(m_steerFactor, Input.GetAxis("Turn"), Time.fixedDeltaTime);
+        m_steerFactor = Mathf.Lerp(m_steerFactor, TurnAxis, Time.fixedDeltaTime);
         
         transform.Rotate(Vector3.up, m_steerFactor * turnVel * slowTurnMultiplier);
     }
