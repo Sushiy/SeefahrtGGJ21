@@ -290,6 +290,7 @@ MonoBehaviour:
   m_boatController: {fileID: 0}
   m_steerFactor: 0
   IsMoving: 0
+  TurnAxis: 0
   slowTurnMultiplier: 0
   slowTurnFactorCurve:
     serializedVersion: 2

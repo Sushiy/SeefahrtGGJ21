@@ -14,13 +14,16 @@ public class BoatManager : MonoBehaviour
     public float m_steerFactor;
 
     public bool IsMoving;
+    public bool spawnInputManager = true;
 
     public float TurnAxis;
+
     
     // Start is called before the first frame update
     void Awake()
     {
         m_boatController = GetComponent<BoatControl>();
+        if(!spawnInputManager) return;
         gameObject.AddComponent<InputManager>();
     }
 
