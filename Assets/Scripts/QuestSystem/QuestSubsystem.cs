@@ -13,6 +13,8 @@ public class QuestSubsystem : MonoBehaviour
 
     public UnityEvent<bool> onJournalOpened;
 
+    public UnityEvent<Vector3> onNewQuestFinished;
+
     public UnityEvent<QuestObjective> OnQuestObjectiveChange = new UnityEvent<QuestObjective>();
 
     public QuestObjective NextObjective;
@@ -68,6 +70,7 @@ public class QuestSubsystem : MonoBehaviour
 
                 OpenJournal(objective.GetAsset(), questCompletionParameters);
 
+                onNewQuestFinished.Invoke(playerTransform.position);
 
                 FinishedQuestAssets.Add(Tuple.Create(objective.GetAsset(), questCompletionParameters));
             }

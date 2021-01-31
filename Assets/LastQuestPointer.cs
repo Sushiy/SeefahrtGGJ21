@@ -24,7 +24,14 @@ public class LastQuestPointer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        lastQuestDirection = Vector3.Normalize(lastQuestPosition - transform.position);
-        indicator.position = transform.position + lastQuestDirection * 15.0f;
+        lastQuestDirection = lastQuestPosition - transform.position;
+        float distance = lastQuestDirection.magnitude;
+
+        float t = Mathf.Clamp(distance / 15.0f, 0,1);
+        float mult = Mathf.Lerp(distance * 0.25f, 15.0f, t);
+
+        indicator.position = transform.position + lastQuestDirection.normalized * mult;
+        indicator.rotation = Quaternion.LookRotation(lastQuestDirection);
+
     }
 }
