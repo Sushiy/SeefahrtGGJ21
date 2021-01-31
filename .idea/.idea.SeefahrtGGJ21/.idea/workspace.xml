@@ -2,16 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="79f8d6d4-204f-450a-a47b-f287f684f0c2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Boat/InputManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Boat/InputManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/QuestSystem/FadeOutManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/QuestSystem/FadeOutManager.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SeefahrtGGJ21/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SeefahrtGGJ21/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SeefahrtGGJ21/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SeefahrtGGJ21/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quests/Rätsel Wagen.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quests/Rätsel Wagen.asset.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Movement_Test.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Movement_Test.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Boat/BoatManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Boat/BoatManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Boat/New Material.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Boat/New Material.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera/OrbitalCamera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Camera/OrbitalCamera.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Boat/BoatRotator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Boat/BoatRotator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Boat/InputManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Boat/InputManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/QuestSystem/QuestObjective.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/QuestSystem/QuestObjective.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/QuestSystem/QuestSubsystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/QuestSystem/QuestSubsystem.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,12 +23,17 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/Boat/BoatRotator.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Boat/BoatControl.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Wind/WindSource.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Boat/BoatManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Camera/OrbitalCamera.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/QuestSystem/QuestPopup.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Boat/InputManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/QuestSystem/FadeOutManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/QuestSystem/Classes/QuestJournalButton.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/QuestSystem/QuestObjective.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/QuestSystem/QuestSubsystem.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Boat/BoatRotator.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1nl8USvz4lq7Nb7ZDH6AZjA3ASf" />
@@ -75,7 +80,7 @@
       <updated>1611953332818</updated>
       <workItem from="1611953335217" duration="10363000" />
       <workItem from="1612001852233" duration="21969000" />
-      <workItem from="1612095266385" duration="6383000" />
+      <workItem from="1612095266385" duration="10783000" />
     </task>
     <servers />
   </component>

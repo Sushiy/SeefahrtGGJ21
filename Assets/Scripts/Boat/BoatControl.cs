@@ -34,6 +34,18 @@ public class BoatControl : MonoBehaviour
 
     public float m_currentWindFactor;
 
+    private void Start()
+    {
+        
+        PopupOpenButton.GlobalPopupHandler.AddListener((isAnyPopup) =>
+        {
+            if (isAnyPopup)
+            {
+                StopBoat();
+            }
+        });
+    }
+
     private void Update()
     {
         m_currentWindFactor = (Vector3.Dot(WindSource.WindDirection, transform.forward) + 1) * 0.5f;

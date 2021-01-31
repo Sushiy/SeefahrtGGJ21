@@ -13,11 +13,12 @@ public class QuestSubsystem : MonoBehaviour
 
     public UnityEvent<bool> onJournalOpened;
 
-    public UnityEvent<Vector3> onNewQuestFinished;
+    public UnityEvent<QuestObjective> OnQuestObjectiveChange = new UnityEvent<QuestObjective>();
+
+    public QuestObjective NextObjective;
+    public bool NoNextObjectiveMeansAny = true;
 
     BoatControl controller;
-
-    public static bool isJournalOpen = false;
 
     private void Awake()
     {
@@ -35,7 +36,7 @@ public class QuestSubsystem : MonoBehaviour
     {
         //~ todo(Hati) This should be attached to the player
         QuestObjective objective = other.GetComponent<QuestObjective>();
-        if (objective)
+        if (objective && (NextObjective == objective || (NoNextObjectiveMeansAny && NextObjective == null)))
         {
             if (!_allowDoubleQuests)
             {
@@ -46,6 +47,8 @@ public class QuestSubsystem : MonoBehaviour
             FinishedQuests.Add(objective);
             objective.onQuestReached.Invoke();
 
+            NextObjective = objective.NextObjective;
+            OnQuestObjectiveChange.Invoke(NextObjective);
 
             Debug.LogFormat("QuestSubsystem found Objective: {0}", other.gameObject.name);
 
@@ -67,15 +70,14 @@ public class QuestSubsystem : MonoBehaviour
 
 
                 FinishedQuestAssets.Add(Tuple.Create(objective.GetAsset(), questCompletionParameters));
-                onNewQuestFinished.Invoke(playerTransform.position);
-                controller.StopBoat();
             }
+            if(objective.m_isLast)
+                FindObjectOfType<FadeOutManager>().StartFade();
         }
     }
 
     public UnityEvent OpenJournal(QuestObjectiveAsset Asset, QuestCompletionParameters Params)
     {
-        isJournalOpen = true;
         var go = GameObject.Instantiate(Asset.PrefabToInstantiate);
         var popup = go.GetComponent<QuestPopup>();
         if (popup)

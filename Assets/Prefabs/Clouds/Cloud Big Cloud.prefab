@@ -25,6 +25,10 @@ PrefabInstance:
       propertyPath: rotateYRandomly
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6264695322205469880, guid: 1d3f6cdc9df869b4e848f56dc3aabeed, type: 3}
+      propertyPath: WindDirectionAlign
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6264695322205469882, guid: 1d3f6cdc9df869b4e848f56dc3aabeed, type: 3}
       propertyPath: m_Name
       value: Cloud Big Cloud

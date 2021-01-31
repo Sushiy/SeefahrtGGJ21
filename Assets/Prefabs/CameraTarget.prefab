@@ -516,6 +516,7 @@ Transform:
   - {fileID: 1228561598174442326}
   - {fileID: 1228561598652801731}
   - {fileID: 7619700822268707877}
+  - {fileID: 2094186515593906901}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1053,6 +1054,60 @@ Transform:
   m_Father: {fileID: 1228561598015091494}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 77.816, z: 0}
+--- !u!1 &7737189399312261919
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2094186515593906901}
+  - component: {fileID: 8506086138328232063}
+  m_Layer: 0
+  m_Name: CloudSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2094186515593906901
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7737189399312261919}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 10.67, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1228561598015091494}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8506086138328232063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7737189399312261919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0049e05ae395f941ade247c0d84ee9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpawnDistance: 15.97
+  SpawnLocalRadius: 2
+  Clouds:
+  - {fileID: 8430675110915169123, guid: c9de054a1ed03ea449fd0ac6674c9076, type: 3}
+  - {fileID: 8430675110915169123, guid: 27714219716dfb94fb51e4b5bcac6272, type: 3}
+  - {fileID: 8430675110915169123, guid: 06170da1b1ca8f74db03a04f1d90831a, type: 3}
+  - {fileID: 8430675110915169123, guid: 718d48303fc980745a19ea809088df2f, type: 3}
+  - {fileID: 6264695322205469882, guid: 1d3f6cdc9df869b4e848f56dc3aabeed, type: 3}
+  SpawnIntervalMin: 5
+  SpawnIntervalMax: 6.39
+  LifetimeFactor: 2
 --- !u!1001 &1228561597769577660
 PrefabInstance:
   m_ObjectHideFlags: 0
