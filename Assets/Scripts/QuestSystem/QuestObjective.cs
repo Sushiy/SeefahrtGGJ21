@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Windows.WebCam;
 
 public class QuestObjective : MonoBehaviour
@@ -10,6 +11,8 @@ public class QuestObjective : MonoBehaviour
     [SerializeField] private QuestObjectiveAsset Asset;
 
     public QuestObjective NextObjective;
+
+    public UnityEvent onQuestReached;
 
     public virtual QuestObjectiveAsset GetAsset()
     {

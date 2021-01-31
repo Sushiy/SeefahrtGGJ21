@@ -270,7 +270,7 @@ MonoBehaviour:
   m_windVelocity: 0
   m_speedModifier: 0.005
   m_turnModifier: 0.6
-  m_maxVerticalSpeed: 3
+  m_maxVerticalSpeed: 4
   m_maxTurnSpeed: 0.75
   m_maxDeaccelerationPercentage: 0.7
   m_maxSpeedReductionPercentage: 0.6
@@ -365,8 +365,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5496c4bc4db93314b892f0ec57c384f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FinishedQuests: []
   _allowDoubleQuests: 0
+  FinishedQuests: []
+  onJournalOpened:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &7234267959408997925
 MonoBehaviour:
   m_ObjectHideFlags: 0
