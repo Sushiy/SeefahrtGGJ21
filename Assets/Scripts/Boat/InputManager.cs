@@ -27,7 +27,6 @@ namespace UnityTemplateProjects.Boat
                 m_boatManager.m_boatController.AddSpeed(keyboardY);
                 m_boatManager.m_boatController.AddTurnSpeed(keyboardX);
                 m_boatManager.TurnAxis = keyboardX;
-                Debug.Log("Keybaord");
             }
             float controllerY = Input.GetAxis("ControllerSpeedUp") * sign;
             float controllerX = Input.GetAxis("ControllerTurn") * sign;
@@ -64,7 +63,6 @@ namespace UnityTemplateProjects.Boat
             {
                 m_camera.RotateCamera(controllerInput, magnitudeC, true);
             }
-            Debug.Log(Input.GetAxis("ControllerConfirm"));
         }
     }
 }
