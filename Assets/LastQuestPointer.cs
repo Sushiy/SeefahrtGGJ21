@@ -31,7 +31,8 @@ public class LastQuestPointer : MonoBehaviour
         float mult = Mathf.Lerp(distance * 0.25f, 15.0f, t);
 
         indicator.position = transform.position + lastQuestDirection.normalized * mult;
-        indicator.rotation = Quaternion.LookRotation(lastQuestDirection);
+        if(distance > 0.1f)
+            indicator.rotation = Quaternion.LookRotation(lastQuestDirection);
 
     }
 }

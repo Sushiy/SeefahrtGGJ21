@@ -1503,7 +1503,6 @@ GameObject:
   m_Component:
   - component: {fileID: 723207428}
   - component: {fileID: 723207427}
-  - component: {fileID: 723207426}
   - component: {fileID: 723207429}
   - component: {fileID: 723207430}
   m_Layer: 0
@@ -1513,14 +1512,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &723207426
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 723207425}
-  m_Enabled: 0
 --- !u!20 &723207427
 Camera:
   m_ObjectHideFlags: 0
@@ -3210,6 +3201,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1882239944, guid: edc9f900807f49f42a403cd844b31c93, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1882239944, guid: edc9f900807f49f42a403cd844b31c93, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1882239944, guid: edc9f900807f49f42a403cd844b31c93, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1882239944, guid: edc9f900807f49f42a403cd844b31c93, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1882239944, guid: edc9f900807f49f42a403cd844b31c93, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -173
+      objectReference: {fileID: 0}
+    - target: {fileID: 1882239944, guid: edc9f900807f49f42a403cd844b31c93, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -188
+      objectReference: {fileID: 0}
     - target: {fileID: 4833305216990743559, guid: edc9f900807f49f42a403cd844b31c93, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -4945,6 +4960,10 @@ PrefabInstance:
       value: Tutorial2
       objectReference: {fileID: 0}
     - target: {fileID: 5019323009885266830, guid: 41386de3dc8a5314fa20f3e331fea95a, type: 3}
+      propertyPath: m_isLast
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5019323009885266830, guid: 41386de3dc8a5314fa20f3e331fea95a, type: 3}
       propertyPath: NextObjective
       value: 
       objectReference: {fileID: 440220838}
@@ -5241,6 +5260,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: d7178b4fbc081c544862698e6121221a, type: 3}
+    - target: {fileID: 6810018654576613591, guid: 4f6af884aeeb0124cb55772bf11bc250, type: 3}
+      propertyPath: Asset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8c8c92d99cc8f884c8cd03dad20c51f4, type: 2}
     - target: {fileID: 6810018654576613591, guid: 4f6af884aeeb0124cb55772bf11bc250, type: 3}
       propertyPath: m_isLast
       value: 1
