@@ -451,6 +451,17 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 2.45
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &396341050 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1233150425, guid: fb82fc1040200d1479010ca2bd6f9ef3, type: 3}
+  m_PrefabInstance: {fileID: 65105601}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 396341047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdf092484b6ed41499be1ae313a44ff1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &397574910
 GameObject:
   m_ObjectHideFlags: 0
@@ -3055,6 +3066,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1232900331, guid: 14ffe6cb29468a54da4f18e524952c37, type: 3}
+      propertyPath: NextObjective
+      value: 
+      objectReference: {fileID: 396341050}
     - target: {fileID: 6096775002554344034, guid: 14ffe6cb29468a54da4f18e524952c37, type: 3}
       propertyPath: m_Name
       value: MovingShip
