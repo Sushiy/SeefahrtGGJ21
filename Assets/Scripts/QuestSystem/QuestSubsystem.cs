@@ -13,6 +13,10 @@ public class QuestSubsystem : MonoBehaviour
 
     public UnityEvent<bool> onJournalOpened;
 
+    public UnityEvent<QuestObjective> OnQuestObjectiveChange = new UnityEvent<QuestObjective>();
+    
+    public QuestObjective NextObjective;
+
     BoatControl controller;
 
     private void Awake()
@@ -31,7 +35,7 @@ public class QuestSubsystem : MonoBehaviour
     {
         //~ todo(Hati) This should be attached to the player
         QuestObjective objective = other.GetComponent<QuestObjective>();
-        if (objective)
+        if (objective && NextObjective == objective)
         {
             if (!_allowDoubleQuests)
             {
@@ -42,6 +46,8 @@ public class QuestSubsystem : MonoBehaviour
             FinishedQuests.Add(objective);
             objective.onQuestReached.Invoke();
 
+            NextObjective = objective.NextObjective;
+            OnQuestObjectiveChange.Invoke(NextObjective);
 
             Debug.LogFormat("QuestSubsystem found Objective: {0}", other.gameObject.name);
 
