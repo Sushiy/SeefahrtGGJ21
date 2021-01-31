@@ -13,6 +13,8 @@ public class QuestSubsystem : MonoBehaviour
 
     public UnityEvent<bool> onJournalOpened;
 
+    public UnityEvent<Vector3> onNewQuestFinished;
+
     BoatControl controller;
 
     public static bool isJournalOpen = false;
@@ -65,7 +67,7 @@ public class QuestSubsystem : MonoBehaviour
 
 
                 FinishedQuestAssets.Add(Tuple.Create(objective.GetAsset(), questCompletionParameters));
-
+                onNewQuestFinished.Invoke(playerTransform.position);
                 controller.StopBoat();
             }
         }

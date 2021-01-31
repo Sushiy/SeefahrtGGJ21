@@ -27,7 +27,7 @@ public class CameraTarget : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         Shader.SetGlobalVector(shader_SphereOriginID, transform.position);
 
