@@ -49,7 +49,10 @@ public class QuestSubsystem : MonoBehaviour
             FinishedQuests.Add(objective);
             objective.onQuestReached.Invoke();
 
+            objective.ToggleArrow(false);
             NextObjective = objective.NextObjective;
+            if(NextObjective)
+                NextObjective.ToggleArrow(true);
             OnQuestObjectiveChange.Invoke(NextObjective);
 
             Debug.LogFormat("QuestSubsystem found Objective: {0}", other.gameObject.name);

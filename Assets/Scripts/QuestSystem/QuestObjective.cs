@@ -15,6 +15,8 @@ public class QuestObjective : MonoBehaviour
     public UnityEvent onQuestReached;
 
     public bool m_isLast;
+
+    public GameObject arrow;
     
     public virtual QuestObjectiveAsset GetAsset()
     {
@@ -65,5 +67,10 @@ public class QuestObjective : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void ToggleArrow(bool active)
+    {
+        arrow.SetActive(active);
     }
 }
