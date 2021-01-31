@@ -17,7 +17,12 @@ public class QuestObjective : MonoBehaviour
     public bool m_isLast;
 
     public GameObject arrow;
-    
+
+    private void Start()
+    {
+        ToggleArrow(false);
+    }
+
     public virtual QuestObjectiveAsset GetAsset()
     {
         return Asset;
@@ -71,6 +76,7 @@ public class QuestObjective : MonoBehaviour
 
     public void ToggleArrow(bool active)
     {
-        arrow.SetActive(active);
+        if(arrow)
+            arrow.SetActive(active);
     }
 }
