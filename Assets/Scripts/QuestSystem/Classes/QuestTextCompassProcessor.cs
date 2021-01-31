@@ -58,6 +58,10 @@ public class QuestTextCompassProcessor : QuestTextProcessor
                 return InputText.Replace(base.Tag, Bold(Colorize(foundCompassDirection.ReplacementText)));
             }
         }
+        else
+        {
+            return InputText.Replace(Tag, Bold(Colorize("NO NEXT OBJECTIVE SET")));
+        }
 
         return InputText;
     }
