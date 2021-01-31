@@ -13,6 +13,14 @@ public class QuestSubsystem : MonoBehaviour
 
     public UnityEvent<bool> onJournalOpened;
 
+    BoatControl controller;
+
+    public static bool isJournalOpen = false;
+
+    private void Awake()
+    {
+        controller = GetComponent<BoatControl>();
+    }
 
     private void Start()
     {
@@ -34,6 +42,7 @@ public class QuestSubsystem : MonoBehaviour
             }
 
             FinishedQuests.Add(objective);
+            objective.onQuestReached.Invoke();
 
 
             Debug.LogFormat("QuestSubsystem found Objective: {0}", other.gameObject.name);
@@ -56,12 +65,15 @@ public class QuestSubsystem : MonoBehaviour
 
 
                 FinishedQuestAssets.Add(Tuple.Create(objective.GetAsset(), questCompletionParameters));
+
+                controller.StopBoat();
             }
         }
     }
 
     public UnityEvent OpenJournal(QuestObjectiveAsset Asset, QuestCompletionParameters Params)
     {
+        isJournalOpen = true;
         var go = GameObject.Instantiate(Asset.PrefabToInstantiate);
         var popup = go.GetComponent<QuestPopup>();
         if (popup)

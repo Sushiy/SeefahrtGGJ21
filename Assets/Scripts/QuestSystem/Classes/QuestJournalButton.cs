@@ -13,7 +13,6 @@ public class QuestJournalButton : MonoBehaviour
     private Sprite closedImage;
     public Sprite openImage;
 
-
     // Start is called before the first frame update
     void Start()
     {

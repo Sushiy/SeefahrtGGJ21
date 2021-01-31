@@ -17,18 +17,30 @@ MonoBehaviour:
   ReplacementColor: {r: 0.4117647, g: 0.2509804, b: 0.64705884, a: 1}
   MakeReplacementBold: 1
   DirectionMapping:
-  - MinAngle: 315
+  - MinAngle: 337.5
     MaxAngle: 360
     ReplacementText: SOUTH
   - MinAngle: 0
-    MaxAngle: 45
+    MaxAngle: 22.5
     ReplacementText: SOUTH
-  - MinAngle: 45
-    MaxAngle: 135
+  - MinAngle: 22.5
+    MaxAngle: 67.5
+    ReplacementText: SOUTH-WEST
+  - MinAngle: 67.5
+    MaxAngle: 112.5
     ReplacementText: WEST
-  - MinAngle: 135
-    MaxAngle: 225
+  - MinAngle: 112.5
+    MaxAngle: 157.5
+    ReplacementText: NORTH-WEST
+  - MinAngle: 157.5
+    MaxAngle: 202.5
     ReplacementText: NORTH
-  - MinAngle: 225
-    MaxAngle: 315
+  - MinAngle: 202.5
+    MaxAngle: 247.5
+    ReplacementText: NORTH-EAST
+  - MinAngle: 247.5
+    MaxAngle: 292.5
     ReplacementText: EAST
+  - MinAngle: 292.5
+    MaxAngle: 337.5
+    ReplacementText: SOUTH-EAST

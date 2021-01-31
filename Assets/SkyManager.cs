@@ -48,6 +48,7 @@ public class SkyManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //if (QuestSubsystem.isJournalOpen) return;
         timeOfDay += timeSpeed * Time.deltaTime;
         if (timeOfDay > 24.0f)
         {

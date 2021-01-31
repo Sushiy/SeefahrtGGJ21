@@ -14,25 +14,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _objectiveTitle: 'Destination: Mystico'
   _objectiveTexts:
-  - 'What did you say little human? You want to have the old sailors seacharts? No
-    can do! But I can help you along your journey...the pirates of {Place(Shipwreck
-    Stinger)} told me they hunted a ship with an old couple a few weeks back! There''s
-    an old Legend on how you can get to {Place(Shipwreck Stinger)} from here! If
-    you can make it, they''ll surely help you!
+  - 'Ahoyyy visitarrr! What brings ya to this ''ere stinky old dump! Your grandparents?
 
 
-    A suitor chased after a {Starsign(Jungfrau)}.
-    He was a real creep about it and didn''t leave her alone, though she denied him!
-    He followed her night and day, and she ran straight ahead. At {Place(Red Bay)}
-    the fleeing maiden noticed the mighty {Starsign(Skorpion)} in the sky and fled
-    in his direction, hoping he''d protect her! And She was quite lucky, as the suitor
-    crashed at {Place(Shipwreck Stinger)} and she was finally free.'
+    Aye
+    we''ve seen that daring old couple! Almost caught''em too! Let me tell ya the
+    storry of how it went down, arrr!
+
+    We''d been out on plunder and were just
+    returning to this ''ere beautiful island! So..we arrrrived at {Place(Shipwreck
+    Stinger)} from the {RawDirection(North)}, aye? When suddenly Bobby here called
+    out! He''d spotted your grandda''s ship moving to {RawDirection(9 o'' clock)}
+    and we decided to seize them for  even more booty! {Time(Two days)} we tailed
+    them that way, aye? We thought we''d catch them for surrrre!
+
+
+    Suddenly earrrsplitting
+    thunderr shook our boat! By the nine devils! A storm was acoming! In our confusion.
+    suddenly your grandma did a sharp {RawDirection(clock-wise quarter turn)}, slipping
+    through some {Place(nasty Rocks)}. With the storm closing in and the rocks in
+    sight, we decided this was not a wagerr we''d like to take. So we let them go!
+    But they could''t have gotten far, sailing straight into the storm like that.
+
+
+    Well
+    there ya have it little one!
+
+    Good Luck, aye?!'
   _prefabToInstantiate: {fileID: 7722018539782406556, guid: 43ee0fb7caeac964ebf5465c8fa5584b, type: 3}
   ConfirmText: Onwards!
   _objectiveTeller: {fileID: 21300000, guid: de005c1e8625c8d41aa176e39b6e4d63, type: 3}
   TextProcessors:
-  - {fileID: 11400000, guid: de08bae9e55e1394f81fee8872d5753c, type: 2}
   - {fileID: 11400000, guid: d844ecffa23b6954aabb86ecf6844355, type: 2}
   - {fileID: 11400000, guid: 57b116ae7f4cdeb4daff9afb4c0045b0, type: 2}
   - {fileID: 11400000, guid: 3aa48c9f1177f764c91f68781a11de89, type: 2}
   - {fileID: 11400000, guid: c3f5b4810c8ac96458d3e518af5c7131, type: 2}
+  - {fileID: 11400000, guid: b20075f91a371c642a8e700a69ada4f1, type: 2}
