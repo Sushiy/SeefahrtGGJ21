@@ -42,8 +42,8 @@ public class QuestTextCompassProcessor : QuestTextProcessor
 
     public virtual float CalculateAngle(QuestCompletionParameters Params)
     {
-        return Vector3.Angle(Params.NextObjective.transform.position - Params.CompletionPlayerLocation,
-            Vector3.forward) % 360.0F;
+        return (Vector3.SignedAngle(Vector3.forward,
+            Params.NextObjective.transform.position - Params.CompletionPlayerLocation, Vector3.up) + 360.0F) % 360.0F;
     } 
 
     /// <inheritdoc />
