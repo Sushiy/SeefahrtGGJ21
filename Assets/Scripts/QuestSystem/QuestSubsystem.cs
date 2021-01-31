@@ -14,8 +14,9 @@ public class QuestSubsystem : MonoBehaviour
     public UnityEvent<bool> onJournalOpened;
 
     public UnityEvent<QuestObjective> OnQuestObjectiveChange = new UnityEvent<QuestObjective>();
-    
+
     public QuestObjective NextObjective;
+    public bool NoNextObjectiveMeansAny = true;
 
     BoatControl controller;
 
@@ -35,7 +36,7 @@ public class QuestSubsystem : MonoBehaviour
     {
         //~ todo(Hati) This should be attached to the player
         QuestObjective objective = other.GetComponent<QuestObjective>();
-        if (objective && NextObjective == objective)
+        if (objective && (NextObjective == objective || (NoNextObjectiveMeansAny && NextObjective == null)))
         {
             if (!_allowDoubleQuests)
             {
