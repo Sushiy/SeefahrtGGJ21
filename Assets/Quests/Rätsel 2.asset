@@ -14,11 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _objectiveTitle: 'Destination: Mystico'
   _objectiveTexts:
-  - "A suitor chased a {Starsign(Jungfrau)}. She didn't like him. In the {Place(Red
-    Bay)} she found the {Starsign(Skorpion)} and fled in his direction until the
-    {Starsign(Sch\xFCtze)} succumbed to the {Place(Great Stinger)}."
+  - 'The old sailors seacharts? Oh man. I think they were taken by the seaserpent
+    last year! You can find her at {Place(Spinereef)}! It''s not that hard to get
+    there:
+
+
+    Sail towards {Himmelsrichtung} until you pass the {Place(Red Gorge)}.
+    Right when you leave it, you need to do a sharp turn to {RawDirection(North-East)}.
+    After {Time(1 days)} you must change your course 30 degrees {RawDirection(south)}.
+    On the next day you should hear the seagulls on the shores of the {Place(Spinereef)}.'
   _prefabToInstantiate: {fileID: 7722018539782406556, guid: 43ee0fb7caeac964ebf5465c8fa5584b, type: 3}
-  ConfirmText: Auf auf und davon!
+  ConfirmText: Onwards!
   _objectiveTeller: {fileID: 21300000, guid: de005c1e8625c8d41aa176e39b6e4d63, type: 3}
   TextProcessors:
   - {fileID: 11400000, guid: d844ecffa23b6954aabb86ecf6844355, type: 2}

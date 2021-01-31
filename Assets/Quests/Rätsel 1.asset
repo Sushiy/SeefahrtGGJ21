@@ -14,16 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _objectiveTitle: 'Destination: Mystico'
   _objectiveTexts:
-  - "You look for the {Place(Isle Mystico)}? I heard long ago I heard that at the
-    foot of the {Place(Snow Peak)} lives an good ol' sailor. Maybe he can lend you
-    a hand. How are you getting there?\r\n\r\nThere is this ol' legend that an old
-    {Starsign(L\xF6we)} lived on {Place(Twin Palm)}. When the fishing didn' work
-    out as desired and the {Starsign(L\xF6we)} was getting very hangry, he started\r\nchasing
-    the {Starsign(Schwan)}. {Time(Two days and two nights)} he chased it until the
-    the great ram {Starsign(Widder)} on the {Place(Snow Peak)}, where he still lives
-    today.\r\n\r\nThat's all I know for now.\r"
+  - "Ye're looking for {Place(Isle Mystico)}? Sure sure. Well first you'll have to
+    go further south, but don't get lost! So your best bet is to find my old seacharts
+    in {Place(Swanport)}! How do ye get there ye ask? Well ye're in luck, cause there's
+    a great ol' story about just that to follow!\n\r\nSo back in the day proud {Starsign(L\xF6we)}
+    lived as a fisher on lonely {Place(Pine Peak)}. One day, when his fishing didn'
+    quite keep him fed and the {Starsign(L\xF6we)} was gettin real hangry, he started\r
+    chasing his neighbour, the {Starsign(Schwan)} - to eat'im you see? {Time(Two
+    days and two nights)} he chased it until the swan managed to hide out on the
+    desolate rocks of {Place(Swanport)}, where he founded the small town that stands
+    there today!\n\r\nWell get going then, will ye! Follow the {Starsign(L\xF6we)}
+    to {Place(Pine Peak)}! Its only a short ride!"
   _prefabToInstantiate: {fileID: 7722018539782406556, guid: 43ee0fb7caeac964ebf5465c8fa5584b, type: 3}
-  ConfirmText: Auf auf und davon!
+  ConfirmText: Onwards!
   _objectiveTeller: {fileID: 21300000, guid: de005c1e8625c8d41aa176e39b6e4d63, type: 3}
   TextProcessors:
   - {fileID: 11400000, guid: d844ecffa23b6954aabb86ecf6844355, type: 2}

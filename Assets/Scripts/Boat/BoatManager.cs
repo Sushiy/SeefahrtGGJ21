@@ -14,7 +14,7 @@ public class BoatManager : MonoBehaviour
 
     public bool IsMoving;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         m_boatController = GetComponent<BoatControl>();
     }
@@ -43,7 +43,7 @@ public class BoatManager : MonoBehaviour
 
     private void Move()
     {
-        float forwardVel = Mathf.Abs(m_boatController.ForwardVel) <= 0.5f ? 0 : m_boatController.ForwardVel;
+        float forwardVel = m_boatController.m_windVelocity;
         IsMoving = forwardVel > 0;
         transform.position += transform.forward * forwardVel * Time.fixedDeltaTime;
     }
@@ -53,7 +53,7 @@ public class BoatManager : MonoBehaviour
     private void Steer()
     {
         float turnVel = m_boatController.TurnVel < 0 ? m_boatController.TurnVel * -1 : m_boatController.TurnVel;
-        float slowTurnMultiplierT = (1.0f - (m_boatController.ForwardVel)/ m_boatController.m_maxVerticalSpeed);
+        float slowTurnMultiplierT = (1.0f - (m_boatController.m_windVelocity) / m_boatController.m_maxVerticalSpeed);
         slowTurnMultiplier = slowTurnFactorCurve.Evaluate(slowTurnMultiplierT);
 
         m_steerFactor = Mathf.Lerp(m_steerFactor, Input.GetAxis("Turn"), Time.fixedDeltaTime);
