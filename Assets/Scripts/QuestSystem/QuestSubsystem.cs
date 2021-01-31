@@ -1,26 +1,24 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using Unity.Collections;
-using UnityEditor.SceneManagement;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class QuestSubsystem : MonoBehaviour
 {
-    [Header("Runtime)")] public List<QuestObjective> FinishedQuests;
     [SerializeField] private bool _allowDoubleQuests;
+
+    [Header("Runtime)")] public List<QuestObjective> FinishedQuests;
+    public List<Tuple<QuestObjectiveAsset, QuestCompletionParameters>> FinishedQuestAssets;
+
+    public UnityEvent<bool> onJournalOpened;
+
 
     private void Start()
     {
+        FinishedQuestAssets = new List<Tuple<QuestObjectiveAsset, QuestCompletionParameters>>();
+
         FinishedQuests.Clear();
-    }
-
-    //~ todo(Hati) Publish Event for finished quests here
-    //~ todo(Hati) Query finished Quests
-
-    public void FinishQuest(QuestObjective Objective)
-    {
-        FinishedQuests.Add(Objective);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -37,17 +35,14 @@ public class QuestSubsystem : MonoBehaviour
 
             FinishedQuests.Add(objective);
 
+
             Debug.LogFormat("QuestSubsystem found Objective: {0}", other.gameObject.name);
 
             GameObject prefabToInstantiate = objective.GetAsset().PrefabToInstantiate;
             if (prefabToInstantiate)
             {
-                var go = GameObject.Instantiate(objective.GetAsset().PrefabToInstantiate);
-
-                var popup = go.GetComponent<QuestPopup>();
-
                 Transform playerTransform = this.transform;
-                popup.Setup(objective.GetAsset(), new QuestCompletionParameters()
+                QuestCompletionParameters questCompletionParameters = new QuestCompletionParameters()
                 {
                     CompletedObjective = objective,
                     PlayerGameObject = this.gameObject,
@@ -55,8 +50,42 @@ public class QuestSubsystem : MonoBehaviour
                     CompletionPlayerLocation = playerTransform.position,
                     CompletionRotation = playerTransform.rotation,
                     NextObjective = objective.NextObjective,
-                });
+                };
+
+                OpenJournal(objective.GetAsset(), questCompletionParameters);
+
+
+                FinishedQuestAssets.Add(Tuple.Create(objective.GetAsset(), questCompletionParameters));
             }
         }
+    }
+
+    public UnityEvent OpenJournal(QuestObjectiveAsset Asset, QuestCompletionParameters Params)
+    {
+        var go = GameObject.Instantiate(Asset.PrefabToInstantiate);
+        var popup = go.GetComponent<QuestPopup>();
+        if (popup)
+        {
+            onJournalOpened.Invoke(true);
+            popup.Setup(Asset, Params);
+            popup.ConfirmButton.onClick.AddListener(() => onJournalOpened.Invoke(false));
+
+            return (UnityEvent) popup.ConfirmButton.onClick;
+        }
+
+        Destroy(go);
+
+        return null;
+    }
+
+    public bool GetLastQuest(out Tuple<QuestObjectiveAsset, QuestCompletionParameters> FinishedQuest)
+    {
+        FinishedQuest = null;
+        if (FinishedQuestAssets.Count > 0)
+        {
+            FinishedQuest = FinishedQuestAssets.Last();
+        }
+
+        return FinishedQuest != null;
     }
 }
