@@ -37,7 +37,7 @@ public class QuestObjective : MonoBehaviour
                 color, null, Thickness);
         }
     }
-
+    
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = new Color(1f, 0.26f, 0.27f);
