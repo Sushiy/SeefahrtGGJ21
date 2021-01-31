@@ -34,7 +34,14 @@ public class QuestPopup : MonoBehaviour
         TellerIcon.sprite = Asset.ObjectiveTeller;
         ConfirmButtonText.text = Asset.ConfirmText;
 
-        ConfirmButton.onClick.AddListener(() => { QuestSubsystem.isJournalOpen = false; Destroy(this.gameObject); });
+        ConfirmButton.onClick.AddListener(() =>
+        {
+            PopupOpenButton.PopPopup(this);
+            
+            Destroy(this.gameObject);
+        });
+
+        PopupOpenButton.PushPopup(this);
     }
 
     private IEnumerator DisplayFurtherText()

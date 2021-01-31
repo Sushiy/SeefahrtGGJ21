@@ -22,7 +22,7 @@ public class BoatManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(QuestSubsystem.isJournalOpen)return;
+        if(PopupOpenButton.IsAnyPopupOnStack()) return;
         var vertSpeed = Input.GetAxis("SpeedUp");
         if (vertSpeed != 0)
         {

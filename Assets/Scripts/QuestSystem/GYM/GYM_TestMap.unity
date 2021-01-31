@@ -431,6 +431,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Asset: {fileID: 11400000, guid: 5b170d65520cd99478ba18677d55dc9a, type: 2}
   NextObjective: {fileID: 466779367}
+  onQuestReached:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!135 &396341049
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -762,8 +765,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdf092484b6ed41499be1ae313a44ff1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Asset: {fileID: 11400000, guid: 9be9275f6e959f542b712eda9aaba679, type: 2}
+  Asset: {fileID: 0}
   NextObjective: {fileID: 0}
+  onQuestReached:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!135 &427825755
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -946,6 +952,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Asset: {fileID: 11400000, guid: 02546c661cc3969418691806c217f95d, type: 2}
   NextObjective: {fileID: 1986123970}
+  onQuestReached:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!135 &466779368
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1423,6 +1432,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Asset: {fileID: 11400000, guid: 9e4c83feedfe7614ea50a9bd8c418583, type: 2}
   NextObjective: {fileID: 427825754}
+  onQuestReached:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!135 &696645241
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2433,6 +2445,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Asset: {fileID: 11400000, guid: 6626d9000e0c97e43aa36f7019c2f16f, type: 2}
   NextObjective: {fileID: 396341048}
+  onQuestReached:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!135 &1679848757
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2917,6 +2932,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Asset: {fileID: 11400000, guid: 9a5542a305eaef44e8fe25805e32a992, type: 2}
   NextObjective: {fileID: 696645240}
+  onQuestReached:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!135 &1986123971
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3089,9 +3107,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4833305216990745593, guid: edc9f900807f49f42a403cd844b31c93, type: 3}
-      propertyPath: m_PreserveAspect
-      value: 1
+    - target: {fileID: 1882239945, guid: edc9f900807f49f42a403cd844b31c93, type: 3}
+      propertyPath: popupPrefab
+      value: 
+      objectReference: {fileID: 7722018539782406556, guid: 6b1b0a482d498464c8c3b1e3911e76da, type: 3}
+    - target: {fileID: 1882239946, guid: edc9f900807f49f42a403cd844b31c93, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.a
+      value: 0.30588236
+      objectReference: {fileID: 0}
+    - target: {fileID: 1882239946, guid: edc9f900807f49f42a403cd844b31c93, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.b
+      value: 0.5283019
+      objectReference: {fileID: 0}
+    - target: {fileID: 1882239946, guid: edc9f900807f49f42a403cd844b31c93, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.g
+      value: 0.5283019
+      objectReference: {fileID: 0}
+    - target: {fileID: 1882239946, guid: edc9f900807f49f42a403cd844b31c93, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.r
+      value: 0.5283019
       objectReference: {fileID: 0}
     - target: {fileID: 4833305217716606392, guid: edc9f900807f49f42a403cd844b31c93, type: 3}
       propertyPath: m_Name

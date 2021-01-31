@@ -19,14 +19,14 @@ public class QuestJournalButton : MonoBehaviour
         _selfButton = GetComponent<Button>();
         closedImage = _selfButton.image.sprite;
 
+        PopupOpenButton.GlobalPopupHandler.AddListener((anyPopupOpen) => MakePopupInteractable(!anyPopupOpen));
 
         _questSubsystem = FindObjectOfType<QuestSubsystem>();
         if (_questSubsystem)
         {
             _questSubsystem.onJournalOpened.AddListener(opened =>
             {
-                _selfButton.enabled = !opened;
-                _selfButton.interactable = !opened;
+                MakePopupInteractable(!opened);
                 if (openImage && closedImage)
                 {
                     _selfButton.image.sprite = opened ? openImage : closedImage;
@@ -46,5 +46,12 @@ public class QuestJournalButton : MonoBehaviour
                 }
             });
         }
+    }
+
+    void MakePopupInteractable(bool isClosed)
+    {
+        _selfButton.enabled = isClosed;
+        _selfButton.interactable = isClosed;
+        
     }
 }
