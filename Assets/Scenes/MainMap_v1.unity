@@ -1985,7 +1985,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_settings:
-    m_ResolutionMultiplier: 0
+    m_ResolutionMultiplier: 2
     m_ClipPlaneOffset: 0.07
     m_ReflectLayers:
       serializedVersion: 2
@@ -6132,6 +6132,46 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 68919180}
     m_Modifications:
+    - target: {fileID: 1151037007, guid: 9c44af9707cd0f24d834cb319bf0c7ed, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151037007, guid: 9c44af9707cd0f24d834cb319bf0c7ed, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151037007, guid: 9c44af9707cd0f24d834cb319bf0c7ed, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151037007, guid: 9c44af9707cd0f24d834cb319bf0c7ed, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151037007, guid: 9c44af9707cd0f24d834cb319bf0c7ed, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151037007, guid: 9c44af9707cd0f24d834cb319bf0c7ed, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151037009, guid: 9c44af9707cd0f24d834cb319bf0c7ed, type: 3}
+      propertyPath: m_Type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151037009, guid: 9c44af9707cd0f24d834cb319bf0c7ed, type: 3}
+      propertyPath: m_Range
+      value: 1.9947257
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151037009, guid: 9c44af9707cd0f24d834cb319bf0c7ed, type: 3}
+      propertyPath: m_SpotAngle
+      value: 179
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151037009, guid: 9c44af9707cd0f24d834cb319bf0c7ed, type: 3}
+      propertyPath: m_InnerSpotAngle
+      value: 144.23306
+      objectReference: {fileID: 0}
     - target: {fileID: 338877953040949532, guid: 9c44af9707cd0f24d834cb319bf0c7ed, type: 3}
       propertyPath: NextObjective
       value: 
