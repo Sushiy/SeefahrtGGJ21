@@ -1,4 +1,5 @@
 ﻿
+
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -26,16 +27,9 @@ public class BoatManager : MonoBehaviour
         if(!spawnInputManager) return;
         gameObject.AddComponent<InputManager>();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-    }
-
     private void FixedUpdate()
     {
         Steer();
-        if (FastForwardManager.isActive) return;
         Move();
     }
 
