@@ -50,16 +50,24 @@ public class SkyManager : MonoBehaviour
     {
         //if (QuestSubsystem.isJournalOpen) return;
         timeOfDay += timeSpeed * Time.deltaTime;
+
         if (timeOfDay > 24.0f)
         {
             timeOfDay -= 24.0f;
         }
 
-        float timeOfDayNorm = timeOfDay / 24.0f;
-        Shader.SetGlobalFloat(shader_TimeValue, timeOfDayNorm);
-        RenderSettings.ambientLight = skyGradient.Evaluate(timeOfDayNorm) * skyLightIntensityControl;
+        Shader.SetGlobalFloat(shader_TimeValue, TimeOfDayNormalized);
+        RenderSettings.ambientLight = skyGradient.Evaluate(TimeOfDayNormalized) * skyLightIntensityControl;
 
-        float SunLightAlpha = skyGradient.Evaluate(timeOfDayNorm).r / _skyGradientMaximumR;
+        CheckForTimeEvent(TimeOfDayNormalized);
+
+        float sunRotation = Mathf.Lerp(0, 360, TimeOfDayNormalized);
+        sunParent.localRotation = Quaternion.Euler(-30.0f, 0.0f, sunRotation);
+    }
+
+    private void CheckForTimeEvent(float timeOfDayNormalized)
+    {
+        float SunLightAlpha = skyGradient.Evaluate(timeOfDayNormalized).r / _skyGradientMaximumR;
         /// broadcast anything between 0-1 but >=0 and <=1 only once
         if (SunLightAlpha >= 1.0F && !broadcasted)
         {
@@ -77,9 +85,15 @@ public class SkyManager : MonoBehaviour
             broadcasted = false;
         }
 
-        float sunRotation = Mathf.Lerp(0, 360, timeOfDayNorm);
-        sunParent.localRotation = Quaternion.Euler(-30.0f, 0.0f, sunRotation);
     }
+
+
+    public void SetTime(float time)
+    {
+        timeOfDay = time;
+        CheckForTimeEvent(TimeOfDayNormalized);
+    }
+
 
     public float TimeOfDayNormalized => timeOfDay / 24.0F;
 

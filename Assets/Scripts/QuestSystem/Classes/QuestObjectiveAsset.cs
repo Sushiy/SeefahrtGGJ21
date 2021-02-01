@@ -10,6 +10,8 @@ public class QuestObjectiveAsset : ScriptableObject
 
     [SerializeField, TextArea(5, 10)] private string[] _objectiveTexts;
 
+    [SerializeField] private string _objectiveShort;
+
     [SerializeField] private GameObject _prefabToInstantiate;
 
     public string ConfirmText = "Auf auf und davon!";

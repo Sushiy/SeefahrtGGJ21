@@ -16,6 +16,8 @@ public class OrbitalCamera : MonoBehaviour
     public float m_rotationSpeed = 90f;
     public float m_slerpSpeed = 1.0f;
     public bool m_shouldRotate;
+
+    public bool invertY = true;
     
     void Start()
     {

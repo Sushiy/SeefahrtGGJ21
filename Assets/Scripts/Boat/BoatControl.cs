@@ -34,16 +34,11 @@ public class BoatControl : MonoBehaviour
 
     public float m_currentWindFactor;
 
+    QuestSubsystem subsystem;
+
     private void Start()
     {
-        
-        PopupOpenButton.GlobalPopupHandler.AddListener((isAnyPopup) =>
-        {
-            if (isAnyPopup)
-            {
-                StopBoat();
-            }
-        });
+        GetComponent<QuestSubsystem>().onNewQuestFinished.AddListener((a) => {StopBoat(); });
     }
 
     private void Update()

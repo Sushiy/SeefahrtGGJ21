@@ -19,6 +19,7 @@ public class WindSource : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Gizmos.DrawLine(transform.position, transform.position + transform.forward * 10);
+        Gizmos.color = Color.magenta;
+        Gizmos.DrawRay(transform.position, transform.forward * 10);
     }
 }

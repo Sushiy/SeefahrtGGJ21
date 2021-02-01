@@ -12,12 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78704c3b0d194a14ab6d31176cf4b08e, type: 3}
   m_Name: Tutorial 2
   m_EditorClassIdentifier: 
-  _objectiveTitle: In search for the polar star.
+  _objectiveTitle: Daytime Navigation!
   _objectiveTexts:
-  - "Alright! You found some of the things you needed! But there should be some more
-    {Himmelsrichtung} of here. \n\nBut alas, the sun has risen, no polar star to
-    guide you! However, the sun always rises in the {Himmelsrichtung}, and sets in
-    the {OppositeHimmelsrichtung}. That's quite useful during the day!"
+  - 'Alright! You found some cargo! But this isn''t all of it. Maybe the wind swept
+    some of it further {Himmelsrichtung} of here. '
+  - Navigating during the day is a little bit more difficult! However, the sun always
+    rises in the {RawDirection(East)}, and sets in the {RawDirection(West)}. You
+    can also try to listen out for seagulls.
+  _objectiveShort: Find lost cargo (1/2)
   _prefabToInstantiate: {fileID: 7722018539782406556, guid: 43ee0fb7caeac964ebf5465c8fa5584b, type: 3}
   ConfirmText: Onwards!
   _objectiveTeller: {fileID: 21300000, guid: de005c1e8625c8d41aa176e39b6e4d63, type: 3}

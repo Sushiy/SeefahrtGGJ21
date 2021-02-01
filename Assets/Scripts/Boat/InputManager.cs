@@ -9,7 +9,7 @@ namespace UnityTemplateProjects.Boat
         private OrbitalCamera m_camera;
 
         public bool m_areAxisInverted;
-        
+
         private void Start()
         {
             m_boatManager = FindObjectOfType<BoatManager>();
@@ -24,6 +24,7 @@ namespace UnityTemplateProjects.Boat
             
             if (keyboardY != 0 || keyboardX != 0)
             {
+                if (FastForwardManager.isActive) return;
                 m_boatManager.m_boatController.AddSpeed(keyboardY);
                 m_boatManager.m_boatController.AddTurnSpeed(keyboardX);
                 m_boatManager.TurnAxis = keyboardX;
@@ -33,6 +34,7 @@ namespace UnityTemplateProjects.Boat
             
             if (controllerX != 0 || controllerY != 0)
             {
+                if (FastForwardManager.isActive) return;
                 m_boatManager.m_boatController.AddSpeed(controllerY);
                 m_boatManager.m_boatController.AddTurnSpeed(controllerX);
                 m_boatManager.TurnAxis = controllerX;

@@ -30,13 +30,13 @@ public class BoatManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(PopupOpenButton.IsAnyPopupOnStack()) return;
     }
 
     private void FixedUpdate()
-    {        
-        Move();
+    {
         Steer();
+        if (FastForwardManager.isActive) return;
+        Move();
     }
 
     private void Move()
