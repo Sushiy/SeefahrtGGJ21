@@ -21,11 +21,15 @@ MonoBehaviour:
     and {RawDirection(S)}.
 
 
-    Reach the {Place(Green Arrow)} to continue. The
-    {Place(Red Arrow)} always points back to your last location.'
+    Reach the {Green Arrow} to continue. The {Place(Red
+    Arrow)} always points back to your last location. A {Yellow Arrow} indicates
+    a subobjective.'
+  _objectiveShort: 
   _prefabToInstantiate: {fileID: 7722018539782406556, guid: 43ee0fb7caeac964ebf5465c8fa5584b, type: 3}
   ConfirmText: Onwards!
   _objectiveTeller: {fileID: 21300000, guid: de005c1e8625c8d41aa176e39b6e4d63, type: 3}
   TextProcessors:
   - {fileID: 11400000, guid: c3f5b4810c8ac96458d3e518af5c7131, type: 2}
   - {fileID: 11400000, guid: 57b116ae7f4cdeb4daff9afb4c0045b0, type: 2}
+  - {fileID: 11400000, guid: fd94641b6d2f296459278b8537f184b4, type: 2}
+  - {fileID: 11400000, guid: 65139a4cc5b1ec040829c498f48d12f6, type: 2}

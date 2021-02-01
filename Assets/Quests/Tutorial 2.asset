@@ -17,7 +17,7 @@ MonoBehaviour:
   - 'Alright! You found some cargo! But this isn''t all of it. Maybe the wind swept
     some of it further {Himmelsrichtung} of here. '
   - Navigating during the day is a little bit more difficult! However, the sun always
-    rises in the {RawDirection(East)}, and sets in the {RawDirection(West)}. You
+    rises in the {RawDirection(EAST)}, and sets in the {RawDirection(WEST)}. You
     can also try to listen out for seagulls.
   _objectiveShort: Find lost cargo (1/2)
   _prefabToInstantiate: {fileID: 7722018539782406556, guid: 43ee0fb7caeac964ebf5465c8fa5584b, type: 3}
@@ -26,3 +26,4 @@ MonoBehaviour:
   TextProcessors:
   - {fileID: 11400000, guid: de08bae9e55e1394f81fee8872d5753c, type: 2}
   - {fileID: 11400000, guid: da7163114d1a1d044bd367de0e283f7d, type: 2}
+  - {fileID: 11400000, guid: c3f5b4810c8ac96458d3e518af5c7131, type: 2}
