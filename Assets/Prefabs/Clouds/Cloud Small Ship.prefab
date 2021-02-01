@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6264695322205469882, guid: 1d3f6cdc9df869b4e848f56dc3aabeed, type: 3}
       propertyPath: m_Name
-      value: CloudPrefab
+      value: Cloud Small Ship
       objectReference: {fileID: 0}
     - target: {fileID: 6264695322205469883, guid: 1d3f6cdc9df869b4e848f56dc3aabeed, type: 3}
       propertyPath: m_RootOrder

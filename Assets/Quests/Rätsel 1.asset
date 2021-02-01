@@ -12,20 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78704c3b0d194a14ab6d31176cf4b08e, type: 3}
   m_Name: "R\xE4tsel 1"
   m_EditorClassIdentifier: 
-  _objectiveTitle: 'Destination: Mystico'
+  _objectiveTitle: Lion and Swan
   _objectiveTexts:
-  - "Ye're looking for {Place(Isle Mystico)}? Sure sure. Well first you'll have to
-    go further south, but don't get lost! So your best bet is to find my old seacharts
-    in {Place(Swanport)}! How do ye get there ye ask? Well ye're in luck, cause there's
-    a great ol' story about just that to follow!\n\r\nSo back in the day proud {Starsign(L\xF6we)}
-    lived as a fisher on lonely {Place(Pine Peak)}. One day, when their fishing didn'
-    quite keep 'em fed and the {Starsign(L\xF6we)} was gettin real hangry, they started\r
+  - "Ye're looking for {Place(Isle Mystico)}? \nNever heard of it, but you can check
+    my old seacharts! I left them at {Place(Swanport)}!\n\nYou can follow this old
+    story to get there:\n\r\nSo back in the day proud {Starsign(L\xF6we)} lived as
+    a fisher on lonely {Place(Pine Peak)}. One day, when their fishing didn' quite
+    keep 'em fed and the {Starsign(L\xF6we)} was gettin real hangry, they started\r
     chasing their neighbour, the {Starsign(Schwan)} - to eat'em you see? \n\n{Time(One
     day and one night)} they chased them until the swan managed to hide out on the
     desolate rocks of {Place(Swanport)}, where they founded the small town that stands
     there today! Even build a lighthouse! You can see it from far away at night!\n\r\nWell
     get going then, will ye! Follow the {Starsign(L\xF6we)} {RawDirection(westwards)}
     to {Place(Pine Peak)} to start your journey! Its only a short ride!"
+  _objectiveShort: Get the seacharts from Swanport
   _prefabToInstantiate: {fileID: 7722018539782406556, guid: 43ee0fb7caeac964ebf5465c8fa5584b, type: 3}
   ConfirmText: Onwards!
   _objectiveTeller: {fileID: 21300000, guid: de005c1e8625c8d41aa176e39b6e4d63, type: 3}

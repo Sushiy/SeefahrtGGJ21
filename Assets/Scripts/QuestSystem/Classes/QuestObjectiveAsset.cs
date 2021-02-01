@@ -23,6 +23,8 @@ public class QuestObjectiveAsset : ScriptableObject
     
     public string ObjectiveTitle => _objectiveTitle;
 
+    public string ObjectiveShort => _objectiveShort;
+
     public string[] ObjectiveTexts => _objectiveTexts;
 
     public GameObject PrefabToInstantiate => _prefabToInstantiate;

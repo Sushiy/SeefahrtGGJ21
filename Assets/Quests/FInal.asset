@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78704c3b0d194a14ab6d31176cf4b08e, type: 3}
-  m_Name: FInal
+  m_Name: Final
   m_EditorClassIdentifier: 
   _objectiveTitle: Reunion
   _objectiveTexts:
@@ -22,6 +22,7 @@ MonoBehaviour:
 
     {Time(YOU DID
     IT!)}'
+  _objectiveShort: 
   _prefabToInstantiate: {fileID: 7722018539782406556, guid: 43ee0fb7caeac964ebf5465c8fa5584b, type: 3}
   ConfirmText: Onwards!
   _objectiveTeller: {fileID: 21300000, guid: de005c1e8625c8d41aa176e39b6e4d63, type: 3}

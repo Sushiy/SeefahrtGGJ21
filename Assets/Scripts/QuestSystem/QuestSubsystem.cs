@@ -22,6 +22,8 @@ public class QuestSubsystem : MonoBehaviour
 
     BoatControl controller;
 
+    public TMPro.TMP_Text text;
+
     private void Awake()
     {
         controller = GetComponent<BoatControl>();
@@ -76,6 +78,7 @@ public class QuestSubsystem : MonoBehaviour
                 onNewQuestFinished.Invoke(playerTransform.position);
 
                 FinishedQuestAssets.Add(Tuple.Create(objective.GetAsset(), questCompletionParameters));
+                text.text = "- " + objective.GetAsset().ObjectiveShort;
             }
             if(objective.m_isLast)
                 FindObjectOfType<FadeOutManager>().StartFade();

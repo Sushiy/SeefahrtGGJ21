@@ -14,8 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _objectiveTitle: Controlling your Ship!
   _objectiveTexts:
-  - 'Next let''s learn about turning!
+  - 'Time sure flies on the sea! We should return {Place(Home)}
 
+
+    But before
+    that: Let''s learn about turning!
 
     Turn your ship with {RawDirection(A)}
     and {RawDirection(D)}
@@ -23,6 +26,7 @@ MonoBehaviour:
 
     You can also {RawDirection(Drag)} to rotate the camera
     with {RawDirection(Left-Mouse Click)}'
+  _objectiveShort: Return home
   _prefabToInstantiate: {fileID: 7722018539782406556, guid: 43ee0fb7caeac964ebf5465c8fa5584b, type: 3}
   ConfirmText: Onwards!
   _objectiveTeller: {fileID: 21300000, guid: de005c1e8625c8d41aa176e39b6e4d63, type: 3}

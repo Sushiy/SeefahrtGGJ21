@@ -28,6 +28,7 @@ MonoBehaviour:
     the mighty {Starsign(Skorpion)} in the sky and bet their fate on the protection
     of that poisonous beast! And fateful it was, as the suitor crashed at {Place(Shipwreck
     Stinger)} and they were finally free.'
+  _objectiveShort: Question the pirates on Shipwreck Stinger
   _prefabToInstantiate: {fileID: 7722018539782406556, guid: 43ee0fb7caeac964ebf5465c8fa5584b, type: 3}
   ConfirmText: Onwards!
   _objectiveTeller: {fileID: 21300000, guid: de005c1e8625c8d41aa176e39b6e4d63, type: 3}

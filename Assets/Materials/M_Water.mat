@@ -62,6 +62,7 @@ Material:
     m_Floats:
     - Vector1_16B5FF51: 15
     - Vector1_1E3BBA55: -0.52
+    - Vector1_3A2A9256: 1
     - Vector1_A4B319C: 0.71
     - _Alpha: 0.3
     - _BumpScale: 1
@@ -85,7 +86,7 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - Color_57C5B26C: {r: 0.57564974, g: 0.8301887, b: 0.8140846, a: 0.5019608}
-    - Color_729CDCD7: {r: 0.25854394, g: 0.46116924, b: 0.6603774, a: 0.9019608}
+    - Color_729CDCD7: {r: 0.25882348, g: 0.5423576, b: 0.65882355, a: 0.9372549}
     - _Color: {r: 0.29716974, g: 0.6498447, b: 1, a: 0.20784314}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SphereOrigin: {r: 0, g: 0, b: 0, a: 1}
