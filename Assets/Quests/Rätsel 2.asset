@@ -12,17 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78704c3b0d194a14ab6d31176cf4b08e, type: 3}
   m_Name: "R\xE4tsel 2"
   m_EditorClassIdentifier: 
-  _objectiveTitle: 'Destination: Mystico'
+  _objectiveTitle: Finding a Monster
   _objectiveTexts:
   - 'The old sailors seacharts? Oh man. I think they were taken by the seaserpent
-    last year! You can find her at {Place(Spinereef)}! It''s not that hard to get
+    a while ago! You can find her at {Place(Spinereef)}! It''s not that hard to get
     there:
 
 
-    Sail towards {Himmelsrichtung} until you pass the {Place(Twin Palms)}.
-    When, you reach it, make a sharp turn to {RawDirection(North-West)}. After {Time(1
-    days)} you must change your course {RawDirection(90 degrees starboard)}. On the
-    next day you should hear the seagulls on the shores of the {Place(Spinereef)}.'
+    Sail towards {RawDirection(South-East)} until you pass through the
+    {Place(Twin Palms)}. Look for a group of whales circling the island!
+
+
+    Immediately
+    after you pass {Place(Twin Palms)} take a sharp port turn {RawDirection(West)}.
+    After a day you should hear the seagulls on the rocks of the {Place(Spinereef)}.'
   _objectiveShort: Find the seaserpent at Spinereef
   _prefabToInstantiate: {fileID: 7722018539782406556, guid: 43ee0fb7caeac964ebf5465c8fa5584b, type: 3}
   ConfirmText: Onwards!

@@ -19,28 +19,28 @@ MonoBehaviour:
   DirectionMapping:
   - MinAngle: 337.5
     MaxAngle: 360
-    ReplacementText: NORTH
+    ReplacementText: North
   - MinAngle: 0
     MaxAngle: 22.5
-    ReplacementText: NORTH
+    ReplacementText: North
   - MinAngle: 22.5
     MaxAngle: 67.5
-    ReplacementText: NORTH-EAST
+    ReplacementText: North-East
   - MinAngle: 67.5
     MaxAngle: 112.5
-    ReplacementText: EAST
+    ReplacementText: East
   - MinAngle: 112.5
     MaxAngle: 157.5
-    ReplacementText: SOUTH-EAST
+    ReplacementText: South-East
   - MinAngle: 157.5
     MaxAngle: 202.5
-    ReplacementText: SOUTH
+    ReplacementText: South
   - MinAngle: 202.5
     MaxAngle: 247.5
-    ReplacementText: SOUTH-WEST
+    ReplacementText: South-West
   - MinAngle: 247.5
     MaxAngle: 292.5
-    ReplacementText: WEST
+    ReplacementText: West
   - MinAngle: 292.5
     MaxAngle: 337.5
-    ReplacementText: NORTH-WEST
+    ReplacementText: North-West

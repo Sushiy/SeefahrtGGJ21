@@ -12,22 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78704c3b0d194a14ab6d31176cf4b08e, type: 3}
   m_Name: "R\xE4tsel 3"
   m_EditorClassIdentifier: 
-  _objectiveTitle: 'Destination: Mystico'
+  _objectiveTitle: On the way to parley!
   _objectiveTexts:
-  - 'What did you say little human? You want to have the old sailors seacharts? No
-    can do! But I can help you along your journey...the pirates of {Place(Shipwreck
-    Stinger)} told me they hunted a ship with an old couple a few weeks back! There''s
-    an old Legend on how you can get to {Place(Shipwreck Stinger)} from here! If
-    you can make it, they''ll surely help you!
+  - 'You want to have the old sailors seacharts? No can do! But I can help you along
+    your journey...the pirates on {Place(Shipwreck Stinger)} told me they hunted
+    a ship with an old couple! Here''s an old Legend on how you can get to there:
 
 
-    A suitor chased after {Starsign(Jungfrau)}.
-    He was a real creep about it and didn''t leave them alone, though they denied
-    him! He followed them {Time(night and day)}, and they ran from him straight ahead.
-    At last when they reached  {Place(Red Bay)} the fleeing {Starsign(Jungfrau) noticed
-    the mighty {Starsign(Skorpion)} in the sky and bet their fate on the protection
-    of that poisonous beast! And fateful it was, as the suitor crashed at {Place(Shipwreck
-    Stinger)} and they were finally free.'
+    A
+    suitor chased after {Starsign(Jungfrau)}. He was a real creep about it and didn''t
+    leave them alone, though they denied him! He followed them {Time(night and day)},
+    and they ran from him straight ahead. At last when they reached  {Place(Red Bay)}
+    the fleeing {Starsign(Jungfrau) noticed the mighty {Starsign(Skorpion)} in the
+    sky and bet their fate on the protection of that poisonous beast! And fateful
+    it was, as the suitor crashed at {Place(Shipwreck Stinger)} and they were finally
+    free.'
   _objectiveShort: Question the pirates on Shipwreck Stinger
   _prefabToInstantiate: {fileID: 7722018539782406556, guid: 43ee0fb7caeac964ebf5465c8fa5584b, type: 3}
   ConfirmText: Onwards!
