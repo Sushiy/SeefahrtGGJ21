@@ -32,3 +32,4 @@ MonoBehaviour:
   _objectiveTeller: {fileID: 21300000, guid: de005c1e8625c8d41aa176e39b6e4d63, type: 3}
   TextProcessors:
   - {fileID: 11400000, guid: c3f5b4810c8ac96458d3e518af5c7131, type: 2}
+  - {fileID: 11400000, guid: 57b116ae7f4cdeb4daff9afb4c0045b0, type: 2}
