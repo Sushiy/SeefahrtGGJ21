@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _objectiveTitle: Nighttime Navigation.
   _objectiveTexts:
-  - 'Finally Home! It seems there''s another workrequest:
+  - 'Finally {Place(Home)}! It seems there''s another workrequest:
 
 
-    "Please pick up some
-    lost cargo {Himmelsrichtung} of here."
+    "Please
+    pick up some lost cargo {Himmelsrichtung} of here."
 
 
     Oh it''s already dark!
@@ -32,3 +32,4 @@ MonoBehaviour:
   _objectiveTeller: {fileID: 21300000, guid: de005c1e8625c8d41aa176e39b6e4d63, type: 3}
   TextProcessors:
   - {fileID: 11400000, guid: de08bae9e55e1394f81fee8872d5753c, type: 2}
+  - {fileID: 11400000, guid: 57b116ae7f4cdeb4daff9afb4c0045b0, type: 2}

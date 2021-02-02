@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78704c3b0d194a14ab6d31176cf4b08e, type: 3}
   m_Name: Tutorial0.0
   m_EditorClassIdentifier: 
-  _objectiveTitle: Welcome to Calm Horizons
+  _objectiveTitle: Welcome!
   _objectiveTexts:
   - 'Welcome to {Place(Calm Horizons)}!
 

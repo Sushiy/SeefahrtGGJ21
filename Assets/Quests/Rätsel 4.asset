@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78704c3b0d194a14ab6d31176cf4b08e, type: 3}
   m_Name: "R\xE4tsel 4"
   m_EditorClassIdentifier: 
-  _objectiveTitle: 'Destination: Mystico'
+  _objectiveTitle: The final voyage!
   _objectiveTexts:
   - 'Ahoyyy visitarrr! What brings ya to this ''ere stinky old dump! Your grandparents?
 
@@ -31,14 +31,14 @@ MonoBehaviour:
 
     Suddenly earrrsplitting
     thunderr shook our boat! By the nine devils! A storm was acoming! In our confusion.
-    suddenly your grandma did a sharp {RawDirection(clock-wise quarter turn)}, slipping
-    through some {Place(nasty Rocks)}. With the storm closing in and the rocks in
-    sight, we decided this was not a wagerr we''d like to take. So we let them go!
-    But they could''t have gotten far, sailing straight into the storm like that.
+    suddenly your grandma did a sharp {RawDirection(clock-wise 45 degree turn)},
+    slipping through some {Place(nasty Rocks)}. With the storm closing in and the
+    rocks in sight, we decided this was not a wagerr we''d like to take. So we let
+    them go! But they could''t have gotten far, sailing straight into the storm like
+    that.
 
 
-    Well
-    there ya have it little one!
+    Well there ya have it little one!
 
     Good Luck, aye?!'
   _objectiveShort: Follow the route to Isle Mystico

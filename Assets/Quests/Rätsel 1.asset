@@ -17,14 +17,14 @@ MonoBehaviour:
   - "Ye're looking for {Place(Isle Mystico)}? \nNever heard of it, but you can check
     my old seacharts! I left them at {Place(Swanport)}!\n\nYou can follow this old
     story to get there:\n\r\nSo back in the day proud {Starsign(L\xF6we)} lived as
-    a fisher on lonely {Place(Pine Peak)}. One day, when their fishing didn' quite
-    keep 'em fed and the {Starsign(L\xF6we)} was gettin real hangry, they started\r
-    chasing their neighbour, the {Starsign(Schwan)} - to eat'em you see? \n\n{Time(One
-    day and one night)} they chased them until the swan managed to hide out on the
-    desolate rocks of {Place(Swanport)}, where they founded the small town that stands
-    there today! Even build a lighthouse! You can see it from far away at night!\n\r\nWell
-    get going then, will ye! Follow the {Starsign(L\xF6we)} {RawDirection(westwards)}
-    to {Place(Pine Peak)} to start your journey! Its only a short ride!"
+    a fisher on lonely {Place(Pinefalls)}. One day {Starsign(L\xF6we)} was gettin
+    real hangry and started\r chasing their neighbour, the {Starsign(Schwan)} - to
+    eat'em you see? \n\n{Time(One day and one night)} they chased them until the
+    swan managed to hide out on the desolate rocks of {Place(Swanport)}, where they
+    founded the small town that stands there today! Even build a lighthouse! You
+    can see it from far away at night!\n\r\nWell get going then, will ye! Follow
+    the {Starsign(L\xF6we)} {RawDirection(westwards)} to {Place(Pinefalls)} to start
+    your journey! Its only a short ride!"
   _objectiveShort: Get the seacharts from Swanport
   _prefabToInstantiate: {fileID: 7722018539782406556, guid: 43ee0fb7caeac964ebf5465c8fa5584b, type: 3}
   ConfirmText: Onwards!
