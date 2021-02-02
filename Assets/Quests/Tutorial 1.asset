@@ -16,16 +16,12 @@ MonoBehaviour:
   _objectiveTexts:
   - 'Finally {Place(Home)}! It seems there''s another workrequest:
 
+    "Please pick
+    up some lost cargo {Himmelsrichtung} of here."'
+  - 'Oh it''s already dark!
 
-    "Please
-    pick up some lost cargo {Himmelsrichtung} of here."
-
-
-    Oh it''s already dark!
-
-    Luckily,
-    at night you can navigate using the bright, white polar star, which is always
-    {Himmelsrichtung} of you.'
+    Luckily, at night you can navigate using the bright,
+    white polar star, which is always {Himmelsrichtung} of you.'
   _objectiveShort: Find lost cargo (0/2)
   _prefabToInstantiate: {fileID: 7722018539782406556, guid: 43ee0fb7caeac964ebf5465c8fa5584b, type: 3}
   ConfirmText: Onwards!
