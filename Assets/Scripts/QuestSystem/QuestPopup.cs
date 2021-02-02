@@ -7,7 +7,8 @@ using TMPro;
 public class QuestPopup : MonoBehaviour
 {
     public TMP_Text TitleTextElement;
-    public TMP_Text ContentTextElement;
+    public TMP_Text contentTextElement;
+    public TextTyper contentTyper;
 
     public Image TellerIcon;
 
@@ -29,7 +30,8 @@ public class QuestPopup : MonoBehaviour
         CompletionParams = Params;
 
         ContentTexts = Asset.ObjectiveTexts;
-        StartCoroutine(DisplayFurtherText());
+        //StartCoroutine(DisplayFurtherText());
+        contentTyper.SetText(ProcessString(ContentTexts[0]));
 
         TellerIcon.sprite = Asset.ObjectiveTeller;
         ConfirmButtonText.text = Asset.ConfirmText;
@@ -47,7 +49,7 @@ public class QuestPopup : MonoBehaviour
     private IEnumerator DisplayFurtherText()
     {
         int i = 0;
-        ContentTextElement.text = "";
+        contentTextElement.text = "";
         for (; i < ContentTexts.Length; ++i)
         {
             string NewContent = ContentTexts[i];
@@ -61,9 +63,25 @@ public class QuestPopup : MonoBehaviour
                 } while (NewContent != previousProcess);
             }
 
-            ContentTextElement.text += NewContent;
+            contentTextElement.text += NewContent;
             yield return new WaitForSeconds(0.5F);
-            ContentTextElement.text += '\n';
+            contentTextElement.text += '\n';
         }
+    }
+
+    private string ProcessString(string input)
+    {
+        string output = input;
+        foreach (var questTextProcessor in Processors)
+        {
+            string previousProcess;
+            do
+            {
+                previousProcess = output;
+                output = questTextProcessor.Process(output, CompletionParams);
+            } while (output != previousProcess);
+        }
+
+        return output;
     }
 }
