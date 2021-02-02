@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: GreenARrow
-  m_Shader: {fileID: -6465566751694194690, guid: e6cefed8caf68804ca16cf623ce124f9, type: 3}
+  m_Name: M_BottomAnimated
+  m_Shader: {fileID: -6465566751694194690, guid: cff78d6923f2c72478666d399b5fad61, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -19,7 +19,27 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - Texture2D_15F94300:
+    - NormalNoiseA:
+        m_Texture: {fileID: 2800000, guid: 62b1c1f2b01cc484e8b067ca21dce975, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - NormalNoiseB:
+        m_Texture: {fileID: 2800000, guid: 62b1c1f2b01cc484e8b067ca21dce975, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_2D475857:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_8CD40B5F:
+        m_Texture: {fileID: 2800000, guid: 62b1c1f2b01cc484e8b067ca21dce975, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_DB5E1BD7:
+        m_Texture: {fileID: 2800000, guid: 4232be93f8fccb745a46ca8b54de454d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_F9005EAF:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -51,8 +71,17 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_D0168025_Out_0:
+        m_Texture: {fileID: 2800000, guid: 62b1c1f2b01cc484e8b067ca21dce975, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_16B5FF51: 15
+    - Vector1_3C9C99F5: 0.005
+    - Vector1_6ECE2204: -0.13
+    - Vector1_7D720D65: 3
+    - Vector1_80AB9FEA: 0.1
+    - Vector1_9FF29BF6: 0.3
+    - Vector1_C1C082E: 0.3
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -67,7 +96,6 @@ Material:
     - _OcclusionStrength: 1
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _SampleGI: 0
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -76,13 +104,15 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_729CDCD7: {r: 0.04696948, g: 0.5, b: 0.011792451, a: 1}
-    - _BaseColor: {r: 0.16153437, g: 0.6226415, b: 0.21077877, a: 1}
+    - Color_606FAC2A: {r: 0.8018868, g: 0.5673558, b: 0.23073158, a: 1}
+    - Color_DADE89C7: {r: 0.31626016, g: 0.5170701, b: 0.6509434, a: 0.3254902}
+    - Color_E110DDBD: {r: 1, g: 1, b: 1, a: 0}
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
---- !u!114 &6183583173874970604
+--- !u!114 &2562912874615539943
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
