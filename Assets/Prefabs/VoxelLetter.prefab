@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7534786578186712101}
   - component: {fileID: 7534786578186712099}
   - component: {fileID: 7534786578186712098}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: VoxelLetter
   m_TagString: Untagged
   m_Icon: {fileID: 0}

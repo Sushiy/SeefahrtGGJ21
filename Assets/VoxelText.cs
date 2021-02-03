@@ -2,19 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[ExecuteAlways]
+[ExecuteInEditMode]
 public class VoxelText : MonoBehaviour
 {
     public VoxelLetter[] letters;
 
     public float voxelWidth = 0.1f;
 
-    private string visibleText;
+    private string visibleText = "";
     public string text;
+    private int trimmedTextLen;
 
     public GameObject prefab;
 
-    private List<GameObject> letterGOs;
+    public List<GameObject> letterGOs;
     public Transform letterParent;
 
     Dictionary<char, int> letterTable = new Dictionary<char, int>
@@ -30,43 +31,84 @@ public class VoxelText : MonoBehaviour
 
     private void Awake()
     {
-        visibleText = "";
         if(letterGOs == null)
+        {
+            //print("LetterGOs null");
             letterGOs = new List<GameObject>();
-        PrintText();
+        }
     }
 
     private void Update()
     {
         if(!text.Equals(visibleText))
         {
+            //print(text + " vs " + visibleText);
             PrintText();
         }
     }
 
+    public void CleanHiearchy()
+    {
+        int count = 0;
+        foreach (Transform t in letterParent.GetComponentsInChildren<Transform>())
+        {
+            if (t == letterParent) continue;
+            if (!letterGOs.Contains(t.gameObject))
+            {
+                count++;
+                if (Application.isPlaying)
+                {
+                    Destroy(t.gameObject);
+                }
+                else
+                {
+                    DestroyImmediate(t.gameObject);
+                }
+            }
+        }
+        //print(text + ": Removed " + count + " unnecessary letters");
+    }
+
     public void PrintText()
     {
+        if (text == "") return;
+
         if(letterGOs == null)
         {
+            //print(text + ": letterGOs null");
             letterGOs = new List<GameObject>();
         }
 
-        if(text.Length < visibleText.Length)
+        //print(text + ": starts with " + letterGOs.Count + "|" + letterParent.childCount + " letters");
+        CleanHiearchy();
+
+        if (text.Length < visibleText.Length)
         {
-            for(int i = letterGOs.Count - 1; i >= text.Length; i--)
+            //print(text + ": remove from: " + (letterGOs.Count - 1) + " to " + text.Length);
+            for (int i = letterGOs.Count - 1; i >= text.Length; i--)
             {
                 GameObject g = letterGOs[i];
                 letterGOs.Remove(g);
                 if (g != null)
                 {
                     g.SetActive(false);
-                    DestroyImmediate(g);
+                    if(Application.isPlaying)
+                    {
+                        Destroy(g);
+                    }
+                    else
+                    {
+                        DestroyImmediate(g);
+                    }
                 }
             }
         }
 
+        //print(text + ": There are: " + letterGOs.Count + "|" + letterParent.childCount + " letters left. " + text.Length + " are needed.");
+
         char[] chars = text.ToCharArray();
         int currentVoxelWidth = 0;
+        trimmedTextLen = 0;
         for (int i = 0; i < text.Length; i++)
         {
             char c = chars[i];
@@ -89,12 +131,18 @@ public class VoxelText : MonoBehaviour
                         if(go == null)
                         {
                             go = GameObject.Instantiate(prefab, letterParent);
+                            go.name = c.ToString();
                             letterGOs.Add(go);
+                        }
+                        else
+                        {
+                            go.name = c.ToString();
                         }
                     }
                     else
                     {
                         go = GameObject.Instantiate(prefab, letterParent);
+                        go.name = c.ToString();
                         letterGOs.Add(go);
                     }
 
@@ -102,6 +150,7 @@ public class VoxelText : MonoBehaviour
 
                     go.transform.localPosition = new Vector3((-voxelWidth * currentVoxelWidth), 0, 0);
                     currentVoxelWidth += l.voxelwidth + 1;
+                    trimmedTextLen++;
 
                 }
                 catch(KeyNotFoundException e)
@@ -115,6 +164,8 @@ public class VoxelText : MonoBehaviour
         letterParent.localPosition = new Vector3(voxelWidth * currentVoxelWidth * 0.5f, 0, 0);
 
         visibleText = text;
+
+        //print(text + ": ends with " + letterGOs.Count + "|" + letterParent.childCount + " letters");
     }
 
 }
