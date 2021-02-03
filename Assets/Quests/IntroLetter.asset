@@ -14,15 +14,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _objectiveTitle: Message in a bottle!
   _objectiveTexts:
-  - "Dear Descendant,\n\nif you read this letter, that means through chance or fate,
-    it has found it's way far enough northward to reach you. \nAs you know, we have
-    gone on a journey to uncharted islands. But our journey came to an abrupt end,
-    when our ship capsized in a storm. Luckily we were swept onto a small island
-    called {Place(Isle Mystico)}. There is not much here, but a large birdstatue
-    that overlooks a hill and our wrecked ship. \n\nPerhaps you could send help?
-    Try asking the old sailor at the foot of {Place(Snow Peak)}. You can follow the
-    {Starsign(Sch\xFCtze)} {Himmelsrichtung} to reach it.\n\nBest Regards,\nNanna
-    and Granda!"
+  - 'There''s a message in a bottle stuck in the wreck! It must have been carried
+    here from far away!
+
+
+    Let''s have a look!
+
+'
+  - '"Dear Descendant,
+
+    Our adventure on the sea came to an abrupt end, when
+    our ship capsized in a storm.
+
+    We are stranded on {Place(Isle Mystico)},
+    far to the south.
+
+    ..."'
+  - "\"Perhaps you could send help? Try asking the old sailor at the foot of {Place(Snow
+    Peak)}. You can follow the {Starsign(Sch\xFCtze)} {Himmelsrichtung} to reach
+    it.\n\nBest Regards,\nNanna and Granda!\""
   _objectiveShort: Reach the sailor on Snowpeak
   _prefabToInstantiate: {fileID: 7722018539782406556, guid: 43ee0fb7caeac964ebf5465c8fa5584b, type: 3}
   ConfirmText: Onwards!
@@ -31,3 +41,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 57b116ae7f4cdeb4daff9afb4c0045b0, type: 2}
   - {fileID: 11400000, guid: d844ecffa23b6954aabb86ecf6844355, type: 2}
   - {fileID: 11400000, guid: de08bae9e55e1394f81fee8872d5753c, type: 2}
+  - {fileID: 11400000, guid: c3f5b4810c8ac96458d3e518af5c7131, type: 2}

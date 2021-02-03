@@ -14,6 +14,7 @@ public abstract class QuestTextProcessor : ScriptableObject
     {
         TagBeginIndex = -1;
         TagEndIndex = -1;
+        if (InputText == null) return null;
         if (index < 0) return null;
 
 

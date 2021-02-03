@@ -15,16 +15,16 @@ MonoBehaviour:
   _objectiveTitle: Lion and Swan
   _objectiveTexts:
   - "Ye're looking for {Place(Isle Mystico)}? \nNever heard of it, but you can check
-    my old seacharts! I left them at {Place(Swanport)}!\n\nYou can follow this old
-    story to get there:\n\r\nSo back in the day proud {Starsign(L\xF6we)} lived as
-    a fisher on lonely {Place(Pinefalls)}. One day {Starsign(L\xF6we)} was gettin
-    real hangry and started\r chasing their neighbour, the {Starsign(Schwan)} - to
-    eat'em you see? \n\n{Time(One day and one night)} they chased them until the
-    swan managed to hide out on the desolate rocks of {Place(Swanport)}, where they
-    founded the small town that stands there today! Even build a lighthouse! You
-    can see it from far away at night!\n\r\nWell get going then, will ye! Follow
-    the {Starsign(L\xF6we)} {RawDirection(westwards)} to {Place(Pinefalls)} to start
-    your journey! Its only a short ride!"
+    my old seacharts! I left them at {Place(Swanport)}!\n\nI'll have an old story
+    that will tell you how to get there!"
+  - "So back in the day proud {Starsign(L\xF6we)} lived as a fisher on lonely {Place(Pinefalls)}.
+    One day {Starsign(L\xF6we)} was gettin real hungry and didn't know better than
+    to start chasing their neighbour, the {Starsign(Schwan)} - to eat'em you see?"
+  - '{Time(One day and one night)} they chased them until the swan managed to hide
+    out on the some desolate rocks where they founded then founded the town {Place(Swanport)}!
+    Even build a lighthouse! You can see it from far away at night!'
+  - "Well get going then, will ye! Follow the {Starsign(L\xF6we)} {RawDirection(westwards)}
+    to {Place(Pinefalls)} to start your journey! Its only a short ride!"
   _objectiveShort: Get the seacharts from Swanport
   _prefabToInstantiate: {fileID: 7722018539782406556, guid: 43ee0fb7caeac964ebf5465c8fa5584b, type: 3}
   ConfirmText: Onwards!

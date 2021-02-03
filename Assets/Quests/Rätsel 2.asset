@@ -15,17 +15,18 @@ MonoBehaviour:
   _objectiveTitle: Finding a Monster
   _objectiveTexts:
   - 'The old sailors seacharts? Oh man. I think they were taken by the seaserpent
-    a while ago! You can find her at {Place(Spinereef)}! It''s not that hard to get
-    there:
+    a while ago! You can find her at {Place(Spinereef)}!
 
 
-    Sail towards {RawDirection(South-East)} until you pass through the
-    {Place(Twin Palms)}. Look for a group of whales circling the island!
+    It''s actually not
+    that hard to get there!'
+  - 'Sail towards {RawDirection(South-East)} until you pass through the {Place(Twin
+    Palms)}. Look for a group of whales circling the island!
 
 
-    Immediately
-    after you pass {Place(Twin Palms)} take a sharp port turn {RawDirection(West)}.
-    After a day you should hear the seagulls on the rocks of the {Place(Spinereef)}.'
+    Immediately after
+    you pass {Place(Twin Palms)} take a sharp port turn {RawDirection(West)}. After
+    a day you should hear the seagulls on the rocks of the {Place(Spinereef)}.'
   _objectiveShort: Find the seaserpent at Spinereef
   _prefabToInstantiate: {fileID: 7722018539782406556, guid: 43ee0fb7caeac964ebf5465c8fa5584b, type: 3}
   ConfirmText: Onwards!
