@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _objectiveTitle: Controlling your Ship!
   _objectiveTexts:
-  - 'Time sure flies on the sea! We should return {Place(Home)}
+  - 'Time sure flies on the sea!
+
+    We should return {Place(Home)}
 
 
     But before
