@@ -10,6 +10,8 @@ public class TextTyper : MonoBehaviour
 
     private TMP_Text textObject;
 
+    bool isTyping = false;
+
     private void Awake()
     {
         textObject = GetComponent<TMP_Text>();
@@ -27,6 +29,7 @@ public class TextTyper : MonoBehaviour
 
     IEnumerator TypeText()
     {
+        isTyping = true;
         int totalVisibleCharacters = textObject.GetTextInfo(textObject.text).characterCount;
         textObject.maxVisibleCharacters = 0;
         print("Total: " + totalVisibleCharacters + "Text:" + textObject.text);
@@ -36,6 +39,17 @@ public class TextTyper : MonoBehaviour
         {
             textObject.maxVisibleCharacters = i;
             yield return new WaitForSecondsRealtime(typingInterval);
+        }
+        isTyping = false;
+    }
+
+    public void SkipToEnd()
+    {
+        if(isTyping)
+        {
+            StopAllCoroutines();
+            isTyping = false;
+            textObject.maxVisibleCharacters = textObject.GetTextInfo(textObject.text).characterCount;
         }
     }
 }

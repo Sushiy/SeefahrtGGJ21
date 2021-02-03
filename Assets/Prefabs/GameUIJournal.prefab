@@ -514,18 +514,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: QuestPopup_UI
       objectReference: {fileID: 0}
-    - target: {fileID: 1914776172131556681, guid: 10c89fc5f1b13da4b89f45716cc0054b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6477355688653066224, guid: 10c89fc5f1b13da4b89f45716cc0054b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6772609965705700772, guid: 10c89fc5f1b13da4b89f45716cc0054b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 8009907328569647266, guid: 10c89fc5f1b13da4b89f45716cc0054b, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

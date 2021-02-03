@@ -13,10 +13,10 @@ public class QuestPopup : MonoBehaviour
     public Image TellerIcon;
 
     public Button CloseButton;
+    public Button previousButton;
+    public Button nextButton;
 
     private List<JournalPage> pages;
-
-    private QuestCompletionParameters CompletionParams;
 
     public TMP_Text pagecounter;
 
@@ -72,21 +72,32 @@ public class QuestPopup : MonoBehaviour
     private void ShowPage(int i)
     {
         textIndex = i;
+        nextButton.gameObject.SetActive(true);
+        previousButton.gameObject.SetActive(true);
+        if (textIndex == 0)
+        {
+            previousButton.gameObject.SetActive(false);
+        }
+        if(textIndex == pages.Count-1)
+        {
+            nextButton.gameObject.SetActive(false);
+        }
+
         if(textIndex > lastTypedPage)
         {
-            contentTyper.SetText(ProcessString(pages[textIndex].text, pages[i].processors));
+            contentTyper.SetText(ProcessString(pages[textIndex].text, pages[i].processors, pages[i].questParams));
             lastTypedPage = textIndex;
         }
         else
         {
-            contentTyper.SetText(ProcessString(pages[textIndex].text, pages[i].processors), false);
+            contentTyper.SetText(ProcessString(pages[textIndex].text, pages[i].processors, pages[i].questParams), false);
         }
         pagecounter.text = (textIndex + 1) + "/" + pages.Count;
         TitleTextElement.text = pages[i].title;
         TellerIcon.sprite = pages[i].icon;
     }
 
-    private string ProcessString(string input, QuestTextProcessor[] processors)
+    private string ProcessString(string input, QuestTextProcessor[] processors, QuestCompletionParameters completionParams)
     {
         string output = input;
         foreach (var questTextProcessor in processors)
@@ -95,7 +106,7 @@ public class QuestPopup : MonoBehaviour
             do
             {
                 previousProcess = output;
-                output = questTextProcessor.Process(output, CompletionParams);
+                output = questTextProcessor.Process(output, completionParams);
             } while (output != previousProcess);
         }
 
