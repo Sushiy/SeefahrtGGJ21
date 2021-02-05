@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: BottomSphere
-  m_Shader: {fileID: -6465566751694194690, guid: d205be023adbba344b447578c753628c, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: cff78d6923f2c72478666d399b5fad61, type: 3}
   m_ShaderKeywords: _ALPHAPREMULTIPLY_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -20,6 +20,18 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - NormalNoiseA:
+        m_Texture: {fileID: 2800000, guid: fcf789406d2082d4ea20b5b68643775a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_6C0EACEE:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_8CD40B5F:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BaseMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -60,12 +72,36 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _PlanarReflectionTexture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_EDFDD5A0_Out_0:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Vector1_3C9C99F5: 0.008
+    - Vector1_5638F6B0: 1
+    - Vector1_61A0F438: 2
     - Vector1_6ECE2204: -3
+    - Vector1_7A22AC81: -1.57
+    - Vector1_7D720D65: 256
+    - Vector1_80AB9FEA: 0.28
+    - Vector1_8915B101: 1
+    - Vector1_9D5DDD06: 1.13
+    - Vector1_9FF29BF6: 0.5
+    - Vector1_B1B3CAD3: 9
+    - Vector1_C1C082E: 0.3
+    - Vector1_CAC4B095: 10
+    - Vector1_DB74186B: 1
+    - Vector1_E0E31773: 0.5
+    - Vector1_FA25A15B: 1
+    - Vector1_FF1DE26F: 0.001
     - _AlphaClip: 0
     - _Blend: 1
     - _BumpScale: 1
@@ -92,8 +128,12 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 0
     m_Colors:
+    - Color_2EE5A2CA: {r: 0.3962264, g: 0.3962264, b: 0.3962264, a: 0}
     - Color_606FAC2A: {r: 0.9529412, g: 0.7882353, b: 0.45490196, a: 1}
     - Color_DADE89C7: {r: 0.2588235, g: 0.54509807, b: 0.65882355, a: 0.78431374}
+    - Color_E110DDBD: {r: 1, g: 1, b: 1, a: 0}
+    - Color_E75183FB: {r: 0.375534, g: 0.75151724, b: 0.9150943, a: 0.6941177}
+    - Color_FECED2FB: {r: 0.39315593, g: 0.47557336, b: 0.8773585, a: 0.5882353}
     - _BaseColor: {r: 0.24313726, g: 0.77979195, b: 0.93333334, a: 0.5019608}
     - _Color: {r: 0.44691172, g: 0.77979195, b: 0.7830189, a: 0.45490196}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
