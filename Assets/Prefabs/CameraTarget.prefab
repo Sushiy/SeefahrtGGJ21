@@ -1481,6 +1481,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1894e38cb1ddd0742869bdc587dab551, type: 2}
+    - target: {fileID: -5754084199372789682, guid: 101b7176065a1e644947d21a33df4c90, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -7610718243112001305, guid: 892e2958fe77a5a48806f21e9f41a194, type: 3}
     - target: {fileID: 919132149155446097, guid: 101b7176065a1e644947d21a33df4c90, type: 3}
       propertyPath: m_Name
       value: S_HalfSphere
