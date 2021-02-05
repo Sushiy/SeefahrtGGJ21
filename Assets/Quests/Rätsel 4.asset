@@ -19,26 +19,23 @@ MonoBehaviour:
 
     Aye
     we''ve seen that daring old couple! Almost caught''em too! Let me tell ya the
-    storry of how it went down, arrr!
-
-    We''d been out on plunder and were just
-    returning to this ''ere beautiful island! So..we arrrrived at {Place(Shipwreck
-    Stinger)} from the {RawDirection(North)}, aye? When suddenly Bobby here called
-    out! He''d spotted your grandda''s ship moving to {RawDirection(9 o'' clock)}
-    and we decided to seize them for  even more booty! {Time(Two days)} we tailed
-    them that way, aye? We thought we''d catch them for surrrre!
-
-
-    Suddenly earrrsplitting
-    thunderr shook our boat! By the nine devils! A storm was acoming! In our confusion.
-    suddenly your grandma did a sharp {RawDirection(clock-wise 45 degree turn)},
-    slipping through some {Place(nasty Rocks)}. With the storm closing in and the
-    rocks in sight, we decided this was not a wagerr we''d like to take. So we let
-    them go! But they could''t have gotten far, sailing straight into the storm like
-    that.
+    storry of how it went down, arrr!'
+  - "We'd been out on plunder and were just returning to this 'ere beautiful island!
+    So..we arrrrived at {Place(Shipwreck Stinger)} from the {RawDirection(North)},
+    aye? When suddenly Bobby here called out! \n\n\"Ship Ahoy!\""
+  - He'd spotted your grandda's ship moving to {RawDirection(9 o' clock)} and we
+    decided to seize them for  even more booty! {Time(Two days)} we tailed them that
+    way, aye? We thought we'd catch them for surrrre!
+  - "Suddenly earrrsplitting thunderr shook our boat! By the nine devils! A storm
+    was acoming! In our confusion. suddenly your grandma did a sharp {RawDirection(clock-wise
+    45 degree turn)}, slipping through some {Place(nasty Rocks)}. \n"
+  - 'With the storm closing in and the rocks in sight, we decided this was not a
+    wagerr we''d like to take. So we let them go! But they could''t have gotten far,
+    sailing straight into the storm like that.
 
 
-    Well there ya have it little one!
+    Well there ya have it little
+    one!
 
     Good Luck, aye?!'
   _objectiveShort: Follow the route to Isle Mystico

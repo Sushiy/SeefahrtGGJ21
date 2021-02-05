@@ -116,8 +116,8 @@ Material:
     - _ReceiveShadows: 1
     - _Reflectivity: 10
     - _ScaleRatioA: 0.8
-    - _ScaleRatioB: 0.7
-    - _ScaleRatioC: 0.7
+    - _ScaleRatioB: 0.5
+    - _ScaleRatioC: 0.5
     - _ScaleX: 1
     - _ScaleY: 1
     - _ShaderFlags: 0
@@ -141,7 +141,7 @@ Material:
     - _UnderlaySoftness: 0
     - _VertexOffsetX: 0
     - _VertexOffsetY: 0
-    - _WeightBold: 0.5
+    - _WeightBold: 1.5
     - _WeightNormal: 0
     - _WorkflowMode: 1
     - _ZWrite: 1

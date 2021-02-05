@@ -14,6 +14,7 @@ public abstract class QuestTextProcessor : ScriptableObject
     {
         TagBeginIndex = -1;
         TagEndIndex = -1;
+        if (InputText == null) return null;
         if (index < 0) return null;
 
 
@@ -22,6 +23,11 @@ public abstract class QuestTextProcessor : ScriptableObject
 
 
         int EndOfTag = TagBeginIndex + TagWithoutEnd.Length;
+        if (EndOfTag >= InputText.Length)
+        {
+            Debug.Log("Too long!" + EndOfTag + "/" + InputText.Length + ":" + InputText);
+            return null;
+        }
         string ArgString = InputText.Substring(EndOfTag);
 
         if (ArgString.Length > 0)

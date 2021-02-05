@@ -7,63 +7,132 @@ using TMPro;
 public class QuestPopup : MonoBehaviour
 {
     public TMP_Text TitleTextElement;
-    public TMP_Text ContentTextElement;
+    public TMP_Text contentTextElement;
+    public TextTyper contentTyper;
 
     public Image TellerIcon;
 
-    public Button ConfirmButton;
-    public TMP_Text ConfirmButtonText;
+    public Button CloseButton;
+    public Button previousButton;
+    public Button nextButton;
 
-    private string[] ContentTexts;
+    private List<JournalPage> pages;
 
-    private QuestTextProcessor[] Processors;
-    private QuestCompletionParameters CompletionParams;
+    public TMP_Text pagecounter;
 
+    private int textIndex = 0;
+    private int lastTypedPage = -1;
 
-    public virtual void Setup(QuestObjectiveAsset Asset, QuestCompletionParameters Params)
+    struct JournalPage
     {
-        TitleTextElement.text = Asset.ObjectiveTitle;
+        public string title;
+        public string text;
+        public Sprite icon;
+        public QuestCompletionParameters questParams;
+        public QuestTextProcessor[] processors;
 
-        Processors = Asset.TextProcessors.ToArray();
-
-        CompletionParams = Params;
-
-        ContentTexts = Asset.ObjectiveTexts;
-        StartCoroutine(DisplayFurtherText());
-
-        TellerIcon.sprite = Asset.ObjectiveTeller;
-        ConfirmButtonText.text = Asset.ConfirmText;
-
-        ConfirmButton.onClick.AddListener(() =>
+        public JournalPage(string title, string text, Sprite icon, QuestCompletionParameters questParams, QuestTextProcessor[] processors)
         {
-            PopupOpenButton.PopPopup(this);
-            
-            Destroy(this.gameObject);
-        });
+            this.title = title;
+            this.text = text;
+            this.icon = icon;
+            this.questParams = questParams;
+            this.processors = processors;
+        }
+    }
+
+    private void Awake()
+    {
+        pages = new List<JournalPage>();
+    }
+
+    public void OpenJournal()
+    {
+        gameObject.SetActive(true);
+        ShowPage(textIndex);
+    }
+
+    public virtual void AddToJournalAndShow(QuestObjectiveAsset Asset, QuestCompletionParameters Params)
+    {
+        if (Asset.ObjectiveTexts.Length == 0) return;
+
+        textIndex = pages.Count;
+
+        for (int i = 0; i < Asset.ObjectiveTexts.Length; i++)
+        {
+            pages.Add(new JournalPage(Asset.ObjectiveTitle, Asset.ObjectiveTexts[i], Asset.ObjectiveTeller, Params, Asset.TextProcessors.ToArray()));
+        }
+
+        ShowPage(textIndex);
+
 
         PopupOpenButton.PushPopup(this);
     }
 
-    private IEnumerator DisplayFurtherText()
+    private void ShowPage(int i)
     {
-        int i = 0;
-        ContentTextElement.text = "";
-        for (; i < ContentTexts.Length; ++i)
+        textIndex = i;
+        nextButton.gameObject.SetActive(true);
+        previousButton.gameObject.SetActive(true);
+        if (textIndex == 0)
         {
-            string NewContent = ContentTexts[i];
-            foreach (var questTextProcessor in Processors)
-            {
-                string previousProcess;
-                do
-                {
-                    previousProcess = NewContent;
-                    NewContent = questTextProcessor.Process(NewContent, CompletionParams);
-                } while (NewContent != previousProcess);
-            }
+            previousButton.gameObject.SetActive(false);
+        }
+        if(textIndex == pages.Count-1)
+        {
+            nextButton.gameObject.SetActive(false);
+        }
 
-            ContentTextElement.text += NewContent;
-            yield return new WaitForSeconds(0.5F);
-            ContentTextElement.text += '\n';
+        if(textIndex > lastTypedPage)
+        {
+            contentTyper.SetText(ProcessString(pages[textIndex].text, pages[i].processors, pages[i].questParams));
+            lastTypedPage = textIndex;
+        }
+        else
+        {
+            contentTyper.SetText(ProcessString(pages[textIndex].text, pages[i].processors, pages[i].questParams), false);
+        }
+        pagecounter.text = (textIndex + 1) + "/" + pages.Count;
+        TitleTextElement.text = pages[i].title;
+        TellerIcon.sprite = pages[i].icon;
+    }
+
+    private string ProcessString(string input, QuestTextProcessor[] processors, QuestCompletionParameters completionParams)
+    {
+        string output = input;
+        foreach (var questTextProcessor in processors)
+        {
+            string previousProcess;
+            do
+            {
+                previousProcess = output;
+                output = questTextProcessor.Process(output, completionParams);
+            } while (output != previousProcess);
+        }
+
+        return output;
+    }
+
+    public void Close()
+    {
+        PopupOpenButton.PopPopup(this);
+
+        gameObject.SetActive(false);
+    }
+
+    public void NextPage()
+    {
+        if(textIndex < pages.Count-1)
+        {
+            ShowPage(textIndex + 1);
+        }
+    }
+
+    public void PreviousPage()
+    {
+        if (textIndex > 0)
+        {
+            ShowPage(textIndex - 1);
         }
     }
 }

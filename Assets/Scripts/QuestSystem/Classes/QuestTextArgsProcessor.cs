@@ -48,6 +48,7 @@ public class QuestTextArgsProcessor : QuestTextProcessor
 
         if (Arg != null && HasKey(Arg, out foundArg))
         {
+            if (TagFrom < 0) return InputText;
             InputText = InputText.Remove(TagFrom, TagTo - TagFrom + 1);
             return InputText.Insert(TagFrom, Bold(Colorize(foundArg)));
         }

@@ -32,19 +32,6 @@ public class QuestJournalButton : MonoBehaviour
                     _selfButton.image.sprite = opened ? openImage : closedImage;
                 }
             });
-
-
-            _selfButton.onClick.AddListener(() =>
-            {
-                Tuple<QuestObjectiveAsset, QuestCompletionParameters> LastFinishedQuest;
-                if (_questSubsystem.GetLastQuest(out LastFinishedQuest))
-                {
-                    var cb = _questSubsystem.OpenJournal(LastFinishedQuest.Item1, LastFinishedQuest.Item2);
-                    if (cb != null)
-                    {
-                    }
-                }
-            });
         }
     }
 

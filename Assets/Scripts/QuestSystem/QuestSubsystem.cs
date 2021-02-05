@@ -24,9 +24,12 @@ public class QuestSubsystem : MonoBehaviour
 
     public TMPro.TMP_Text text;
 
+    public QuestPopup journal;
+
     private void Awake()
     {
         controller = GetComponent<BoatControl>();
+        journal.CloseButton.onClick.AddListener(() => onJournalOpened.Invoke(false));
     }
 
     private void Start()
@@ -73,7 +76,7 @@ public class QuestSubsystem : MonoBehaviour
                     NextObjective = objective.NextObjective,
                 };
 
-                OpenJournal(objective.GetAsset(), questCompletionParameters);
+                AddToJournal(objective.GetAsset(), questCompletionParameters);
 
                 onNewQuestFinished.Invoke(playerTransform.position);
 
@@ -85,22 +88,21 @@ public class QuestSubsystem : MonoBehaviour
         }
     }
 
-    public UnityEvent OpenJournal(QuestObjectiveAsset Asset, QuestCompletionParameters Params)
+
+    public void OpenJournal()
     {
-        var go = GameObject.Instantiate(Asset.PrefabToInstantiate);
-        var popup = go.GetComponent<QuestPopup>();
-        if (popup)
+        if(journal)
+            journal.OpenJournal();
+    }
+
+    public void AddToJournal(QuestObjectiveAsset Asset, QuestCompletionParameters Params)
+    {
+        if (journal)
         {
+            journal.gameObject.SetActive(true);
             onJournalOpened.Invoke(true);
-            popup.Setup(Asset, Params);
-            popup.ConfirmButton.onClick.AddListener(() => onJournalOpened.Invoke(false));
-
-            return (UnityEvent) popup.ConfirmButton.onClick;
+            journal.AddToJournalAndShow(Asset, Params);
         }
-
-        Destroy(go);
-
-        return null;
     }
 
     public bool GetLastQuest(out Tuple<QuestObjectiveAsset, QuestCompletionParameters> FinishedQuest)
