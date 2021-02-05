@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PhysicsBoat : MonoBehaviour, ISailLevelProvider
+public class SimplePhysicsBoat : MonoBehaviour, ISailLevelProvider
 {
     [Header("Runtime Variables")]
     /// <summary>
@@ -24,7 +24,6 @@ public class PhysicsBoat : MonoBehaviour, ISailLevelProvider
 
     public float windFactor;
     public float effectiveWind;
-    public float keelStraghteningPower;
 
     [Header("Turning Settings")]
     public float rudderPower;
@@ -56,7 +55,7 @@ public class PhysicsBoat : MonoBehaviour, ISailLevelProvider
         sailPower += v * sailRaisingSpeed * Time.deltaTime;
         sailPower = Mathf.Clamp(sailPower, 0, 1);
         currentSteeringValue = Mathf.Lerp(currentSteeringValue, h, 1 - Mathf.Exp(-turnResetSpeed * Time.deltaTime));
-        if(Mathf.Abs(currentSteeringValue - h) < 0.01f)
+        if (Mathf.Abs(currentSteeringValue - h) < 0.01f)
         {
             currentSteeringValue = h;
         }
@@ -67,10 +66,10 @@ public class PhysicsBoat : MonoBehaviour, ISailLevelProvider
         DrawArrowHelper.DrawRay(transform.position, acceleration * 1.0f, Color.white);
 
         DrawArrowHelper.DrawRay(rudderPosition.position, transform.TransformDirection(-localRudderDirection), Color.green);
-        DrawArrowHelper.DrawRay(rudderPosition.position + transform.TransformDirection(-localRudderDirection)/2, transform.TransformDirection(localRudderForce), Color.red);
+        DrawArrowHelper.DrawRay(rudderPosition.position + transform.TransformDirection(-localRudderDirection) / 2, transform.TransformDirection(localRudderForce), Color.red);
 
         DrawArrowHelper.DrawRay(keelPosition.position, transform.TransformDirection(localKeelStraighteningForce), Color.red);
-        
+
         DrawArrowHelper.DrawRay(transform.position, WindSource.WindDirection, Color.blue);
 
         float swayT = currentSteeringValue;
@@ -89,19 +88,15 @@ public class PhysicsBoat : MonoBehaviour, ISailLevelProvider
 
         //Calculate Sailacceleration
         effectiveWind = WindSource.WindForce * windFactor;
-        acceleration = transform.forward * (sailPower  * sailEfficiencyFactor* effectiveWind);
-
-        //Calculate Keel straighteningForce
-        localKeelStraighteningForce = rigid.velocity.sqrMagnitude * keelStraghteningPower * Vector3.right * (Vector3.Dot(rigid.velocity, transform.right));
+        acceleration = transform.forward * (sailPower * sailEfficiencyFactor * effectiveWind);
 
         //Update the rigidBody
-        //rigid.AddForceAtPosition(transform.TransformDirection(localRudderForce) * rudderPower * rigid.velocity.sqrMagnitude * Time.fixedDeltaTime, rudderPosition.position, ForceMode.Acceleration);
-
-        rigid.AddTorque(-currentSteeringValue * transform.TransformDirection(transform.up) * rudderPower * rigid.velocity.sqrMagnitude * Time.fixedDeltaTime, ForceMode.Acceleration);
-
-        //rigid.AddForceAtPosition(transform.TransformDirection(localKeelStraighteningForce) * Time.fixedDeltaTime, keelPosition.position, ForceMode.Acceleration);
-        rigid.AddForce(acceleration * Time.fixedDeltaTime, ForceMode.Acceleration);
+        rigid.AddForceAtPosition(transform.TransformDirection(localRudderForce) * rudderPower * rigid.velocity.sqrMagnitude * Time.fixedDeltaTime, rudderPosition.position, ForceMode.Acceleration);
+        rigid.velocity = acceleration * Time.fixedDeltaTime * Time.fixedDeltaTime;
+        
         rigid.angularDrag = Mathf.Lerp(minAngularDrag, maxAngularDrag, rigid.velocity.sqrMagnitude / maxAngularDragSpeed);
+
+
     }
 
     public float GetSailLevel()

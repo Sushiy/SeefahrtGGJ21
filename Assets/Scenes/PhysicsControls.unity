@@ -555,7 +555,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8029445295634027419, guid: 509313f8ded036040a0100870e478346, type: 3}
       propertyPath: windPower
-      value: 60
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 509313f8ded036040a0100870e478346, type: 3}
@@ -2649,6 +2649,7 @@ GameObject:
   - component: {fileID: 3894090639739373551}
   - component: {fileID: 3894090639739373550}
   - component: {fileID: 7104021998196618593}
+  - component: {fileID: 7104021998196618594}
   m_Layer: 0
   m_Name: MovingShip
   m_TagString: Untagged
@@ -2663,7 +2664,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7104021998196618592}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9ce77d65963286e42a47416bd3c655c4, type: 3}
   m_Name: 
@@ -2671,15 +2672,41 @@ MonoBehaviour:
   sailPower: 0
   currentSteeringValue: 0
   sailRaisingSpeed: 1
-  sailEfficiencyFactor: 1
+  sailEfficiencyFactor: 100
   windFactor: 1
   effectiveWind: 0
-  keelStraghteningPower: 0.3
-  rudderPower: 3
+  keelStraghteningPower: 2
+  rudderPower: 2
   turnResetSpeed: 1
-  minAngularDrag: 0.3
+  minAngularDrag: 0.4
   maxAngularDrag: 0.9
-  maxAngularDragSpeed: 3
+  maxAngularDragSpeed: 1.5
+  rudderPosition: {fileID: 2090973601}
+  keelPosition: {fileID: 202614624}
+  child: {fileID: 6803649719108681786}
+--- !u!114 &7104021998196618594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7104021998196618592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18aeca84a5aeb8e4c95587ee61ce6e8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sailPower: 0
+  currentSteeringValue: 0
+  sailRaisingSpeed: 1
+  sailEfficiencyFactor: 50
+  windFactor: 1
+  effectiveWind: 0
+  rudderPower: 2
+  turnResetSpeed: 1
+  minAngularDrag: 0.4
+  maxAngularDrag: 0.9
+  maxAngularDragSpeed: 2
   rudderPosition: {fileID: 2090973601}
   keelPosition: {fileID: 202614624}
   child: {fileID: 6803649719108681786}
