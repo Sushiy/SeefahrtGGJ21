@@ -21,7 +21,6 @@ public class OrbitalCamera : MonoBehaviour
     
     void Start()
     {
-        m_target = FindObjectOfType<BoatManager>().transform;
         transform.LookAt(m_target);
         m_shouldRotate = false;
         Quaternion lookRot = Quaternion.Euler(m_orbitAngles);

@@ -12,6 +12,8 @@ public class WindSource : MonoBehaviour
 
     public static float WindForce;
 
+    public float windPower = 20.0f;
+
     private float targetAngle;
     public float currentAngle;
     public float windChangeSpeed = 0.5f;
@@ -34,6 +36,8 @@ public class WindSource : MonoBehaviour
                 currentAngle = targetAngle;
             }
         }
+
+        WindForce = windPower;
     }
 
     private void OnDrawGizmos()

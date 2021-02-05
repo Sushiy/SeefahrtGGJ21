@@ -24,11 +24,14 @@ public class SailAnimator : MonoBehaviour
     float rightMaxDot;
     Vector3 lerpTarget;
 
+    ISailLevelProvider sailProvider;
+
     // Start is called before the first frame update
     void Start()
     {
         controller = GetComponentInParent<BoatControl>();
         anim = GetComponent<Animator>();
+        sailProvider = GetComponentInParent<ISailLevelProvider>();
     }
 
     // Update is called once per frame
@@ -65,10 +68,8 @@ public class SailAnimator : MonoBehaviour
         Debug.DrawRay(sailParent.position, shipParent.TransformDirection(rightMaxVector), Color.yellow);
         Debug.DrawRay(sailParent.position, -sailParent.forward, Color.blue);
 
-
-
         //AnimatorStuff
-        anim.SetFloat(sailId, controller.ForwardVel / controller.m_maxVerticalSpeed);
-        anim.SetFloat(windId, controller.m_currentWindFactor);
+        anim.SetFloat(sailId, sailProvider.GetSailLevel());
+        anim.SetFloat(windId, sailProvider.GetWindFactor());
     }
 }

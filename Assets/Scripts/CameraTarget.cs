@@ -7,9 +7,7 @@ public class CameraTarget : MonoBehaviour
     int shader_SphereOriginID;
     int shader_useClip;
 
-    public Material[] dioramaMaterials;
-
-    public BoatControl ship;
+    public Rigidbody ship;
     public float followSpeed;
 
     public float aheadFactor = 5.0f;
@@ -31,7 +29,7 @@ public class CameraTarget : MonoBehaviour
     {
         Shader.SetGlobalVector(shader_SphereOriginID, transform.position);
 
-        transform.position = Vector3.Lerp(transform.position, ship.transform.position + ship.transform.forward * ship.m_windVelocity * aheadFactor, 1 - Mathf.Exp(-followSpeed * Time.deltaTime));
+        transform.position = Vector3.Lerp(transform.position, ship.transform.position + ship.transform.forward * ship.velocity.magnitude * aheadFactor, 1 - Mathf.Exp(-followSpeed * Time.deltaTime));
     }
 
     private void OnDisable()

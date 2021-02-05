@@ -33,7 +33,7 @@ public class NighttimeLight : MonoBehaviour
         FlickerValue = FlickerTarget;
 
         _skyManager = FindObjectOfType<SkyManager>();
-
+        if(_skyManager)
         _skyManager.DayNightEvent.AddListener((float V) =>
         {
             _isNighttime = V < 0.5F;
