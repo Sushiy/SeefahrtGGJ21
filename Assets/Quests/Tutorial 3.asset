@@ -19,7 +19,7 @@ MonoBehaviour:
   _objectiveShort: Investigate the shipwreck
   _prefabToInstantiate: {fileID: 7722018539782406556, guid: 43ee0fb7caeac964ebf5465c8fa5584b, type: 3}
   ConfirmText: Onwards!
-  _objectiveTeller: {fileID: 21300000, guid: de005c1e8625c8d41aa176e39b6e4d63, type: 3}
+  _objectiveTeller: {fileID: 21300000, guid: 0612f5dc4f8f04440affb5e1251529d3, type: 3}
   TextProcessors:
   - {fileID: 11400000, guid: de08bae9e55e1394f81fee8872d5753c, type: 2}
   - {fileID: 11400000, guid: da7163114d1a1d044bd367de0e283f7d, type: 2}
