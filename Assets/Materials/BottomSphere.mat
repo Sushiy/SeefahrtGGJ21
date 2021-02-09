@@ -85,21 +85,24 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Vector1_23FC6394: 1.05
     - Vector1_3C9C99F5: 0.008
     - Vector1_5638F6B0: 1
-    - Vector1_61A0F438: 2
+    - Vector1_61A0F438: -0.73
     - Vector1_6ECE2204: -3
     - Vector1_7A22AC81: -1.57
     - Vector1_7D720D65: 256
     - Vector1_80AB9FEA: 0.28
     - Vector1_8915B101: 1
-    - Vector1_9D5DDD06: 1.13
+    - Vector1_909C96C6: 0.05
+    - Vector1_9D5DDD06: 0.58
     - Vector1_9FF29BF6: 0.5
     - Vector1_B1B3CAD3: 9
     - Vector1_C1C082E: 0.3
     - Vector1_CAC4B095: 10
     - Vector1_DB74186B: 1
     - Vector1_E0E31773: 0.5
+    - Vector1_ECDAB002: 0.0085
     - Vector1_FA25A15B: 1
     - Vector1_FF1DE26F: 0.001
     - _AlphaClip: 0
@@ -122,6 +125,7 @@ Material:
     - _Smoothness: 0.747
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
+    - _SphereOrigin: 0
     - _SrcBlend: 1
     - _Surface: 1
     - _UVSec: 0
@@ -132,8 +136,8 @@ Material:
     - Color_606FAC2A: {r: 0.9529412, g: 0.7882353, b: 0.45490196, a: 1}
     - Color_DADE89C7: {r: 0.2588235, g: 0.54509807, b: 0.65882355, a: 0.78431374}
     - Color_E110DDBD: {r: 1, g: 1, b: 1, a: 0}
-    - Color_E75183FB: {r: 0.375534, g: 0.75151724, b: 0.9150943, a: 0.6941177}
-    - Color_FECED2FB: {r: 0.39315593, g: 0.47557336, b: 0.8773585, a: 0.5882353}
+    - Color_E75183FB: {r: 0.40494838, g: 0.858941, b: 0.9433962, a: 0.6941177}
+    - Color_FECED2FB: {r: 0.39315584, g: 0.47557336, b: 0.8773585, a: 0.9882353}
     - _BaseColor: {r: 0.24313726, g: 0.77979195, b: 0.93333334, a: 0.5019608}
     - _Color: {r: 0.44691172, g: 0.77979195, b: 0.7830189, a: 0.45490196}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
