@@ -27,7 +27,7 @@ MonoBehaviour:
   _objectiveShort: Reach the green arrow
   _prefabToInstantiate: {fileID: 7722018539782406556, guid: 43ee0fb7caeac964ebf5465c8fa5584b, type: 3}
   ConfirmText: Onwards!
-  _objectiveTeller: {fileID: 21300000, guid: de005c1e8625c8d41aa176e39b6e4d63, type: 3}
+  _objectiveTeller: {fileID: 21300000, guid: a5762b1443e111d4789731220e38e964, type: 3}
   TextProcessors:
   - {fileID: 11400000, guid: c3f5b4810c8ac96458d3e518af5c7131, type: 2}
   - {fileID: 11400000, guid: 57b116ae7f4cdeb4daff9afb4c0045b0, type: 2}
