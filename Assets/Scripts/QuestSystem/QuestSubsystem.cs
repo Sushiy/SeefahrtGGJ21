@@ -26,10 +26,15 @@ public class QuestSubsystem : MonoBehaviour
 
     public QuestPopup journal;
 
+    public AudioSource soundFX;
+    public AudioClip journalSFX;
+    public AudioClip objectiveSFX;
+
     private void Awake()
     {
         controller = GetComponent<BoatControl>();
         journal.CloseButton.onClick.AddListener(() => onJournalOpened.Invoke(false));
+        soundFX = GetComponent<AudioSource>();
     }
 
     private void Start()
@@ -53,6 +58,10 @@ public class QuestSubsystem : MonoBehaviour
 
             FinishedQuests.Add(objective);
             objective.onQuestReached.Invoke();
+            //Play sound to feedback objective reached (this is anyoing fast, so I removed it for now)
+            //soundFX.clip = objectiveSFX;
+            //soundFX.Play();
+
 
             objective.ToggleArrow(false);
             NextObjective = objective.NextObjective;
@@ -92,7 +101,13 @@ public class QuestSubsystem : MonoBehaviour
     public void OpenJournal()
     {
         if(journal)
+        {
             journal.OpenJournal();
+            soundFX.clip = journalSFX;
+            soundFX.Play();
+        }
+
+
     }
 
     public void AddToJournal(QuestObjectiveAsset Asset, QuestCompletionParameters Params)
