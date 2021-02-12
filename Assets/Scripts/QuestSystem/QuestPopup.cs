@@ -19,6 +19,7 @@ public class QuestPopup : MonoBehaviour
     private List<JournalPage> pages;
 
     public TMP_Text pagecounter;
+    public bool open;
 
     private int textIndex = 0;
     private int lastTypedPage = -1;
@@ -43,6 +44,7 @@ public class QuestPopup : MonoBehaviour
 
     private void Awake()
     {
+        open = true;
         pages = new List<JournalPage>();
     }
 
@@ -50,6 +52,7 @@ public class QuestPopup : MonoBehaviour
     {
         gameObject.SetActive(true);
         ShowPage(textIndex);
+        open = true;
     }
 
     public virtual void AddToJournalAndShow(QuestObjectiveAsset Asset, QuestCompletionParameters Params)
@@ -116,6 +119,7 @@ public class QuestPopup : MonoBehaviour
     public void Close()
     {
         PopupOpenButton.PopPopup(this);
+        open = false;
 
         gameObject.SetActive(false);
     }

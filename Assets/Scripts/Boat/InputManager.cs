@@ -7,6 +7,7 @@ namespace UnityTemplateProjects.Boat
     {
         private BoatManager m_boatManager;
         private OrbitalCamera m_camera;
+        private QuestSubsystem m_quest;
 
         public bool m_areAxisInverted;
 
@@ -14,6 +15,7 @@ namespace UnityTemplateProjects.Boat
         {
             m_boatManager = FindObjectOfType<BoatManager>();
             m_camera = FindObjectOfType<OrbitalCamera>();
+            m_quest = FindObjectOfType<QuestSubsystem>();
         }
 
         private void Update()
@@ -64,6 +66,13 @@ namespace UnityTemplateProjects.Boat
             else
             {
                 m_camera.RotateCamera(controllerInput, magnitudeC, true);
+            }
+
+            //UI stuff
+
+            if (Input.GetButtonDown("Submit"))
+            {
+                m_quest.SkipTyping();
             }
         }
     }

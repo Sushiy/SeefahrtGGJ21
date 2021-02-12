@@ -106,8 +106,22 @@ public class QuestSubsystem : MonoBehaviour
             soundFX.clip = journalSFX;
             soundFX.Play();
         }
+    }
 
+    public void CloseJournal()
+    {
+        if(journal)
+        {
+            journal.Close();
+        }
+    }
 
+    public void SkipTyping()
+    {
+        if(journal)
+        {
+            journal.contentTyper.SkipToEnd();
+        }
     }
 
     public void AddToJournal(QuestObjectiveAsset Asset, QuestCompletionParameters Params)
